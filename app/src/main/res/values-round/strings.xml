@@ -1,0 +1,3 @@
+<resources>
+    <string name="hello_world">Hello, %1$s!\n I know where you live…</string>
+</resources>
