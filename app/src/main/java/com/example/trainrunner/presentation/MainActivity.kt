@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
         setTheme(android.R.style.Theme_DeviceDefault)
 
         setContent {
-            WearApp("Hermione")
+            WearApp("Bob")
         }
     }
 }
@@ -66,7 +66,7 @@ fun Greeting(greetingName: String) {
     )
 }
 
-@Preview(device = Devices.WEAR_OS_SMALL_ROUND, showSystemUi = true)
+@Preview(device = Devices.WEAR_OS_LARGE_ROUND, showSystemUi = true)
 @Composable
 fun DefaultPreview() {
     WearApp("Preview Android")
