@@ -1,0 +1,2839 @@
+{
+    "farezone": "5",
+    "closed": false,
+    "departures": [
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT1M41S",
+            "vehicle_id": "4279",
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-21T18:46:00+13:00",
+                "expected": "2024-02-21T18:47:41+13:00"
+            },
+            "departure": {
+                "aimed": "2024-02-21T18:46:00+13:00",
+                "expected": "2024-02-21T18:49:01+13:00"
+            },
+            "status": "delayed",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3643__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "-PT26S",
+            "vehicle_id": "4237",
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-21T19:04:00+13:00",
+                "expected": "2024-02-21T19:03:34+13:00"
+            },
+            "departure": {
+                "aimed": "2024-02-21T19:04:00+13:00",
+                "expected": "2024-02-21T19:04:00+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3646__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-21T19:16:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-21T19:16:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3645__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-21T19:34:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-21T19:34:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3648__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-21T19:46:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-21T19:46:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3647__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-21T20:04:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-21T20:04:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3650__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-21T20:16:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-21T20:16:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3649__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-21T20:34:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-21T20:34:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3652__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-21T21:04:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-21T21:04:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3654__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-21T21:16:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-21T21:16:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3653__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-21T21:34:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-21T21:34:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3656__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-21T22:04:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-21T22:04:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3658__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-21T22:16:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-21T22:16:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3657__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-21T22:34:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-21T22:34:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3660__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-21T23:04:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-21T23:04:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3662__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-21T23:16:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-21T23:16:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3661__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-21T23:34:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-21T23:34:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3664__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T04:46:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T04:46:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2601__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T05:46:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T05:46:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2603__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-Express"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T06:17:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T06:17:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2605__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T06:19:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T06:19:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__2608__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "TAIT1",
+                "name": "TaitaStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T06:20:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__4601__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T06:37:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T06:37:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__2610__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-Express"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T06:37:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T06:37:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2607__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "TAIT1",
+                "name": "TaitaStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T06:40:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__4603__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-Express"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T06:57:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T06:57:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2609__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "TAIT1",
+                "name": "TaitaStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T07:00:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__4605__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T07:13:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T07:13:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__2614__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-Express"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T07:17:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T07:17:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2611__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "TAIT1",
+                "name": "TaitaStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T07:20:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__4607__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-Express"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T07:33:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T07:33:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2613__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T07:37:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T07:37:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__2616__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "TAIT1",
+                "name": "TaitaStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T07:37:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__4609__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T07:57:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T07:57:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__2618__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-Express"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T07:57:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T07:57:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2615__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "TAIT1",
+                "name": "TaitaStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T08:00:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__4611__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T08:16:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T08:16:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__2620__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-Express"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T08:17:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T08:17:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2617__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "TAIT1",
+                "name": "TaitaStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T08:20:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__4613__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T08:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T08:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__2622__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T08:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T08:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2619__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T08:56:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T08:56:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2621__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T08:59:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T08:59:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__2624__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T09:16:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T09:16:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2623__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T09:19:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T09:19:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__2626__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T09:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T09:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2625__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T09:39:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T09:39:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__2628__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T09:56:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T09:56:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2627__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T09:59:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T09:59:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__2630__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T10:16:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T10:16:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2629__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T10:19:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T10:19:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__2632__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T10:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T10:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2631__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T10:39:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T10:39:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__2634__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T10:56:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T10:56:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2633__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T10:59:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T10:59:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__2636__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T11:16:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T11:16:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2635__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T11:19:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T11:19:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__2638__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T11:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T11:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2637__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T11:39:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T11:39:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__2640__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T11:56:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T11:56:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__2639__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T11:59:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T11:59:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__2642__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T12:16:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T12:16:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3601__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T12:19:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T12:19:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__2644__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T12:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T12:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3603__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T12:39:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T12:39:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3606__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T12:56:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T12:56:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3605__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T12:59:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T12:59:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3608__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T13:16:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T13:16:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3607__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T13:19:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T13:19:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3610__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T13:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T13:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3609__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T13:39:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T13:39:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3612__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T13:56:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T13:56:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3611__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T13:59:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T13:59:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3614__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T14:16:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T14:16:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3613__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T14:19:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T14:19:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3616__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T14:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T14:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3615__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T14:39:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T14:39:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3618__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T14:56:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T14:56:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3617__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T14:59:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T14:59:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3620__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T15:16:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T15:16:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3619__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T15:19:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T15:19:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3622__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T15:35:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T15:35:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3624__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T15:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T15:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3621__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T15:41:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T15:41:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3626__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T15:55:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T15:55:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3623__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T15:59:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T15:59:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3628__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T16:18:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T16:18:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3625__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T16:20:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T16:20:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3630__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-Express"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T16:38:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T16:38:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3629__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T16:40:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T16:40:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3632__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "TAIT1",
+                "name": "TaitaStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T16:42:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__4619__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T17:00:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T17:00:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3634__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "TAIT1",
+                "name": "TaitaStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T17:01:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__4621__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T17:20:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T17:20:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3636__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T17:20:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T17:20:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3633__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T17:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T17:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3638__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT1",
+            "service_id": "HVL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "UPPE",
+                "name": "UpperHuttStn"
+            },
+            "destination": {
+                "stop_id": "WELL",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T17:38:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T17:38:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__1__3635__RAIL__Rail_MTuWThF-XHol_20240211"
+        },
+        {
+            "stop_id": "TAIT2",
+            "service_id": "HVL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "UPPE",
+                "name": "UPPE-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "TaitaStn",
+            "arrival": {
+                "aimed": "2024-02-22T17:45:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-02-22T17:45:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "HVL__0__3640__RAIL__Rail_MTuWThF-XHol_20240211"
+        }
+    ]
+}
