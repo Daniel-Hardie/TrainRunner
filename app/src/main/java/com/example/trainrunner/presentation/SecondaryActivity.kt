@@ -27,7 +27,7 @@ import androidx.wear.compose.material.TimeText
 import com.example.trainrunner.R
 import com.example.trainrunner.presentation.theme.TrainRunnerTheme
 
-class MainActivity : ComponentActivity() {
+class SecondaryActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
 
@@ -36,38 +36,12 @@ class MainActivity : ComponentActivity() {
         setTheme(android.R.style.Theme_DeviceDefault)
 
         setContent {
-            WearApp("Bob")
+            WearApp2("Bob")
         }
     }
 }
 
 @Composable
-fun WearApp(greetingName: String) {
-    TrainRunnerTheme {
-        Box(
-                modifier = Modifier
-                        .fillMaxSize()
-                        .background(MaterialTheme.colors.background),
-                contentAlignment = Alignment.Center
-        ) {
-            TimeText()
-            Greeting(greetingName = greetingName)
-        }
-    }
-}
+fun WearApp2(greetingName: String) {
 
-@Composable
-fun Greeting(greetingName: String) {
-    Text(
-            modifier = Modifier.fillMaxWidth(),
-            textAlign = TextAlign.Center,
-            color = MaterialTheme.colors.primary,
-            text = stringResource(R.string.hello_world, greetingName)
-    )
-}
-
-@Preview(device = Devices.WEAR_OS_LARGE_ROUND, showSystemUi = true)
-@Composable
-fun DefaultPreview() {
-    WearApp("Preview Android")
 }
