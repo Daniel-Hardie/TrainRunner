@@ -10,16 +10,13 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -27,10 +24,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.core.app.NotificationCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import androidx.wear.compose.material.Button
 import androidx.wear.compose.material.ButtonDefaults
 import androidx.wear.compose.material.MaterialTheme
@@ -46,22 +44,78 @@ class HomeActivity : ComponentActivity() {
         setTheme(android.R.style.Theme_DeviceDefault)
 
         setContent {
-            WearApp("Hermione")
+            TrainRunnerTheme {
+                val navController = rememberNavController()
+
+                // NavHost contains all of the screens of the app
+                NavHost(
+                    navController = navController,
+                    startDestination = Route.homeScreen
+                ){
+                    composable(route = Route.homeScreen){
+                        HomeScreen(
+                            greetingName = "Player 1",
+                            navigateToSettingsScreen = {
+                                navController.navigate(Route.settingsScreen)
+                            }
+                        )
+                    }
+                    composable(route = Route.settingsScreen){
+                        SettingsScreen(
+                            navigateToEditScreen = {
+                               navController.navigate(Route.editScreen)
+                            },
+                            navigateBack = {
+                                navController.popBackStack()
+                            }
+                        )
+                    }
+                    composable(route = Route.editScreen){
+                        EditScreen(
+                            navigateToHomeScreen = {
+                                navController.popBackStack(
+                                    route = Route.homeScreen,
+                                    // if set to true, would remove home screen from backstack and would be empty screen
+                                    inclusive = false
+                                )
+                            },
+                            navigateBack = {
+                                navController.popBackStack()
+                            }
+                        )
+                    }
+                }
+
+            }
+//            HomeScreen("Player 1")
         }
     }
 }
 
-@Preview(device = "id:wearos_small_round")
+// good example of using resources
 @Composable
-fun WearApp(greetingName: String="test") {
-    var number = remember { mutableStateOf(0)}
+fun Greeting(greetingName: String, count: Int) {
+    Text(
+        modifier = Modifier.fillMaxWidth(),
+        textAlign = TextAlign.Center,
+        color = MaterialTheme.colors.primary,
+        text = stringResource(R.string.hello_world, greetingName, count)
+    )
+}
 
-    // https://developer.android.com/develop/ui/views/notifications/build-notification#kotlin
-    var builder = NotificationCompat.Builder(this, "12345")
-//        .setSmallIcon(R.drawable.notification_icon)
-        .setContentTitle("Title")
-        .setContentText("Content")
-        .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+object Route {
+    const val homeScreen = "homeScreen"
+    const val settingsScreen = "settingsScreen"
+    const val editScreen = "editScreen"
+}
+
+//@Preview(device = "id:wearos_small_round")
+@Composable
+fun HomeScreen(
+    greetingName: String="test",
+    navigateToSettingsScreen: () -> Unit
+) {
+    var number = remember { mutableStateOf(0)}
 
     TrainRunnerTheme {
         Box(
@@ -98,25 +152,59 @@ fun WearApp(greetingName: String="test") {
                 ) {
                     Text(text = "Reset")
                 }
+
+                Button(
+                    onClick = {
+                        navigateToSettingsScreen()
+                    },
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.DarkGray),
+                ) {
+                    Text(text = "Settings")
+                }
+
+
+
             }
         }
     }
 }
 
-// good example of using resources
 @Composable
-fun Greeting(greetingName: String, count: Int) {
-    Text(
-            modifier = Modifier.fillMaxWidth(),
-            textAlign = TextAlign.Center,
-            color = MaterialTheme.colors.primary,
-            text = stringResource(R.string.hello_world, greetingName, count)
-    )
+fun SettingsScreen(
+    navigateToEditScreen: () -> Unit,
+    navigateBack: () -> Unit
+){
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ){
+        Text(text = "Settings")
+        Button(onClick = { navigateToEditScreen() }) {
+            Text(text = "Edit Screen")
+        }
+        Button(onClick = { navigateBack() }) {
+            Text(text = "Go back")
+        }
+    }
 }
 
-// good example of using resources
 @Composable
-fun IncrementNumber() {
-
-
+fun EditScreen(
+    navigateToHomeScreen: () -> Unit,
+    navigateBack: () -> Unit
+){
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ){
+        Text(text = "Edit")
+        Button(onClick = { navigateBack() }) {
+            Text(text = "Go back")
+        }
+        Button(onClick = { navigateToHomeScreen() }) {
+            Text(text = "Back to Home Screen")
+        }
+    }
 }
