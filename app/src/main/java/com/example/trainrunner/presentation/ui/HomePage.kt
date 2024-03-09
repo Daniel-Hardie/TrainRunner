@@ -4,7 +4,7 @@
  * changes to the libraries and their usages.
  */
 
-package com.example.trainrunner.presentation
+package com.example.trainrunner.presentation.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -28,16 +28,16 @@ import androidx.compose.ui.unit.dp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
 import androidx.wear.compose.material.Button
 import androidx.wear.compose.material.ButtonDefaults
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
 import androidx.wear.compose.material.TimeText
+import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
 import com.example.trainrunner.R
 import com.example.trainrunner.presentation.theme.TrainRunnerTheme
 
-class HomeActivity : ComponentActivity() {
+class HomePage : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
         super.onCreate(savedInstanceState)
@@ -45,7 +45,7 @@ class HomeActivity : ComponentActivity() {
 
         setContent {
             TrainRunnerTheme {
-                val navController = rememberNavController()
+                val navController = rememberSwipeDismissableNavController()
 
                 // NavHost contains all of the screens of the app
                 NavHost(
@@ -87,7 +87,6 @@ class HomeActivity : ComponentActivity() {
                 }
 
             }
-//            HomeScreen("Player 1")
         }
     }
 }

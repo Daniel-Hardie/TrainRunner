@@ -1,17 +1,18 @@
 package com.example.trainrunner.presentation.theme
 
 import androidx.compose.runtime.Composable
+import androidx.wear.compose.material.Colors
 import androidx.wear.compose.material.MaterialTheme
 
+// See: https://developer.android.com/jetpack/compose/designsystems/custom
 @Composable
 fun TrainRunnerTheme(
-        content: @Composable () -> Unit
+    colors: Colors = initialThemeValues.colors,
+    content: @Composable () -> Unit
 ) {
-    /**
-     * Empty theme to customize for your app.
-     * See: https://developer.android.com/jetpack/compose/designsystems/custom
-     */
     MaterialTheme(
-            content = content
+        colors = colors,
+        typography = WearTypography,
+        content = content
     )
 }

@@ -1,9 +1,7 @@
 <resources>
     <string name="app_name">TrainRunner</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
     <string name="hello_world">Hello, %1$s!\n You have pressed the button %2$s times!</string>
     <string name="button_text">Click</string>
+    <string name="next_train">Next Train</string>
+    <string name="settings_button_label">Settings</string>
 </resources>
