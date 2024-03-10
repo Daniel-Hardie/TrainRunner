@@ -15,6 +15,7 @@ import com.example.trainrunner.presentation.navigation.Screen
 import com.example.trainrunner.presentation.theme.TrainRunnerTheme
 import com.example.trainrunner.presentation.theme.initialThemeValues
 import com.example.trainrunner.presentation.ui.HomeScreen
+import com.example.trainrunner.presentation.ui.RoutesScreen
 import com.example.trainrunner.presentation.ui.SettingsScreen
 import com.google.android.horologist.compose.layout.ScreenScaffold
 import com.google.android.horologist.compose.layout.rememberColumnState
@@ -58,7 +59,23 @@ fun TrainRunnerApp (
             ){
                 val columnState = rememberColumnState()
                 ScreenScaffold(scrollState = columnState) {
-                    SettingsScreen(columnState = columnState)
+                    SettingsScreen(
+                        columnState = columnState,
+                        onNavigate = { swipeDismissableNavController.navigate(it) }
+                    )
+                }
+            }
+
+            // Routes screen
+            composable(
+                route = Screen.Routes.route
+            ){
+                val columnState = rememberColumnState()
+                ScreenScaffold(scrollState = columnState) {
+                    RoutesScreen(
+                        columnState = columnState,
+                        onNavigate = { swipeDismissableNavController.navigate(it) }
+                    )
                 }
             }
         }

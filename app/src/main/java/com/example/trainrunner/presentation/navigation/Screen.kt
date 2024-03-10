@@ -5,5 +5,6 @@ sealed class Screen(
 ) {
     object Home : Screen("home")
     object Settings: Screen("settings")
+    object Routes: Screen("routes")
 
 }
