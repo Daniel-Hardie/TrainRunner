@@ -7,7 +7,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.wear.compose.material.Button
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
 import com.example.trainrunner.R
@@ -15,6 +14,8 @@ import com.example.trainrunner.presentation.menuNameAndCallback
 import com.example.trainrunner.presentation.navigation.Screen
 import com.google.android.horologist.compose.layout.ScalingLazyColumn
 import com.google.android.horologist.compose.layout.ScalingLazyColumnState
+import com.google.android.horologist.compose.material.Button
+import com.google.android.horologist.compose.material.ButtonSize
 
 @Composable
 fun HomeScreen(
@@ -62,12 +63,12 @@ fun HomeScreen(
             }
             item {
                 Button(
+                    id = R.drawable.ic_settings,
+                    contentDescription = "",
                     onClick = settingsInfo.clickHandler,
-                ) {
-                    Text(text = settingsInfo.name)
-                }
+                    buttonSize = ButtonSize.Small,
+                )
             }
-
         }
     }
 }
