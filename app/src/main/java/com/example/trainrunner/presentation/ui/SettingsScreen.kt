@@ -19,7 +19,7 @@ import com.google.android.horologist.compose.material.Chip
 fun SettingsScreen(
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
-    onNavigate: (String) -> Unit,
+    onNavigate: (String) -> Unit
 ){
     val routesInfo = menuNameAndCallback(
         onNavigate = onNavigate,
@@ -56,25 +56,13 @@ fun SettingsScreen(
                 )
             }
             item {
-//                ChipComponent(
-//                    title = "Routes",
-//                    secondaryLabel = "2 active routes",
-//                    onClick = { routesInfo.clickHandler }
-//                )
                 Chip(
                     modifier = modifier,
                     label = "Routes",
-                    secondaryLabel = "3 active routes",
-                    onClick = routesInfo.clickHandler
+                    secondaryLabel = "2 active routes",
+                    onClick = settingsMenuItems[0].clickHandler
                 )
             }
-//            item {
-//                ChipComponent(
-//                    title = "Notifications",
-//                    secondaryLabel = "Enabled",
-//                    onClick = { settingsMenuItems[1].clickHandler }
-//                )
-//            }
         }
     }
 }

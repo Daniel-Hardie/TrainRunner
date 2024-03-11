@@ -9,8 +9,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
 import com.example.trainrunner.R
+import com.example.trainrunner.presentation.menuNameAndCallback
+import com.example.trainrunner.presentation.navigation.Screen
 import com.google.android.horologist.compose.layout.ScalingLazyColumn
 import com.google.android.horologist.compose.layout.ScalingLazyColumnState
+import com.google.android.horologist.compose.material.Button
+import com.google.android.horologist.compose.material.ButtonSize
 import com.google.android.horologist.compose.material.Chip
 import com.google.android.horologist.images.base.paintable.DrawableResPaintable
 
@@ -20,6 +24,12 @@ fun RoutesScreen(
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
 ){
+    val editRouteInfo = menuNameAndCallback(
+        onNavigate = onNavigate,
+        menuNameResource = R.string.editroute_button_label,
+        screen = Screen.EditRoute
+    )
+
     Box(
         modifier = modifier.fillMaxSize()
     ) {
@@ -49,6 +59,14 @@ fun RoutesScreen(
                     secondaryLabel = "4:17pm M,T,W,T,F",
                     icon = DrawableResPaintable(R.drawable.ic_train),
                     onClick = { /*onClickWatch*/ }
+                )
+            }
+            item {
+                Button(
+                    id = R.drawable.ic_add,
+                    contentDescription = "",
+                    onClick = editRouteInfo.clickHandler,
+                    buttonSize = ButtonSize.Small,
                 )
             }
         }
