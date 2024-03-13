@@ -27,7 +27,7 @@ fun RoutesScreen(
     val addRouteInfo = menuNameAndCallback(
         onNavigate = onNavigate,
         menuNameResource = R.string.add_route_button_label,
-        screen = Screen.EditRoute
+        screen = Screen.AddRoute
     )
 
     val editRouteInfo = menuNameAndCallback(
