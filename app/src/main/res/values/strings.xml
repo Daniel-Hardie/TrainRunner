@@ -4,5 +4,6 @@
     <string name="settings_button_label">Settings</string>
     <string name="routes_label">Routes Saved</string>
     <string name="notifications_label">Notifications</string>
-    <string name="editroute_button_label">Edit Route</string>
+    <string name="edit_route_button_label">Edit Route</string>
+    <string name="add_route_button_label">Add Route</string>
 </resources>

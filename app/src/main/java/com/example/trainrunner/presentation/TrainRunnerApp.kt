@@ -14,6 +14,7 @@ import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
 import com.example.trainrunner.presentation.navigation.Screen
 import com.example.trainrunner.presentation.theme.TrainRunnerTheme
 import com.example.trainrunner.presentation.theme.initialThemeValues
+import com.example.trainrunner.presentation.ui.AddRouteScreen
 import com.example.trainrunner.presentation.ui.EditRouteScreen
 import com.example.trainrunner.presentation.ui.HomeScreen
 import com.example.trainrunner.presentation.ui.RoutesScreen
@@ -74,6 +75,19 @@ fun TrainRunnerApp (
                 val columnState = rememberColumnState()
                 ScreenScaffold(scrollState = columnState) {
                     RoutesScreen(
+                        columnState = columnState,
+                        onNavigate = { swipeDismissableNavController.navigate(it) }
+                    )
+                }
+            }
+
+            // AddRoute screen
+            composable(
+                route = Screen.AddRoute.route
+            ){
+                val columnState = rememberColumnState()
+                ScreenScaffold(scrollState = columnState) {
+                    AddRouteScreen(
                         columnState = columnState,
                         onNavigate = { swipeDismissableNavController.navigate(it) }
                     )
