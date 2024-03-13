@@ -24,9 +24,15 @@ fun RoutesScreen(
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
 ){
+    val addRouteInfo = menuNameAndCallback(
+        onNavigate = onNavigate,
+        menuNameResource = R.string.add_route_button_label,
+        screen = Screen.EditRoute
+    )
+
     val editRouteInfo = menuNameAndCallback(
         onNavigate = onNavigate,
-        menuNameResource = R.string.editroute_button_label,
+        menuNameResource = R.string.edit_route_button_label,
         screen = Screen.EditRoute
     )
 
@@ -50,7 +56,7 @@ fun RoutesScreen(
                     label = "TAIT -> WELL",
                     secondaryLabel = "6:57am M,T,W,T,F",
                     icon = DrawableResPaintable(R.drawable.ic_train),
-                    onClick = { /*onClickWatch*/ }
+                    onClick = editRouteInfo.clickHandler
                 )
             }
             item{
@@ -58,14 +64,14 @@ fun RoutesScreen(
                     label = "WELL -> TAIT",
                     secondaryLabel = "4:17pm M,T,W,T,F",
                     icon = DrawableResPaintable(R.drawable.ic_train),
-                    onClick = { /*onClickWatch*/ }
+                    onClick = editRouteInfo.clickHandler
                 )
             }
             item {
                 Button(
                     id = R.drawable.ic_add,
                     contentDescription = "",
-                    onClick = editRouteInfo.clickHandler,
+                    onClick = addRouteInfo.clickHandler,
                     buttonSize = ButtonSize.Small,
                 )
             }
