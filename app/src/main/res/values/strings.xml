@@ -6,4 +6,5 @@
     <string name="notifications_label">Notifications</string>
     <string name="edit_route_button_label">Edit Route</string>
     <string name="add_route_button_label">Add Route</string>
+    <string name="destination_list_chip">Destination List</string>
 </resources>

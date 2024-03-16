@@ -14,11 +14,12 @@ import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
 import com.example.trainrunner.presentation.navigation.Screen
 import com.example.trainrunner.presentation.theme.TrainRunnerTheme
 import com.example.trainrunner.presentation.theme.initialThemeValues
-import com.example.trainrunner.presentation.ui.AddRouteScreen
 import com.example.trainrunner.presentation.ui.EditRouteScreen
 import com.example.trainrunner.presentation.ui.HomeScreen
 import com.example.trainrunner.presentation.ui.RoutesScreen
 import com.example.trainrunner.presentation.ui.SettingsScreen
+import com.example.trainrunner.presentation.ui.route.AddRouteScreen
+import com.example.trainrunner.presentation.ui.route.InitialStationListScreen
 import com.google.android.horologist.compose.layout.ScreenScaffold
 import com.google.android.horologist.compose.layout.rememberColumnState
 
@@ -29,6 +30,9 @@ fun TrainRunnerApp (
 ){
     var themeColors by remember { mutableStateOf(initialThemeValues.colors) }
     TrainRunnerTheme(colors = themeColors) {
+        var initialStation by remember { mutableStateOf("TAIT") }
+        var finalStation by remember { mutableStateOf("WELL") }
+
         SwipeDismissableNavHost(
             navController = swipeDismissableNavController,
             startDestination = Screen.Home.route
@@ -89,7 +93,12 @@ fun TrainRunnerApp (
                 ScreenScaffold(scrollState = columnState) {
                     AddRouteScreen(
                         columnState = columnState,
-                        onNavigate = { swipeDismissableNavController.navigate(it) }
+                        initialStation = "TAIT",
+                        finalStation = "WELL",
+                        onNavigate = { swipeDismissableNavController.navigate(it) },
+                        onClickDestinationList = {
+                            swipeDismissableNavController.navigate(Screen.InitialStationList.route)
+                        },
                     )
                 }
             }
@@ -103,6 +112,21 @@ fun TrainRunnerApp (
                     EditRouteScreen(
                         columnState = columnState,
                         onNavigate = { swipeDismissableNavController.navigate(it) }
+                    )
+                }
+            }
+
+            // DestinationList screen
+            composable(
+                route = Screen.InitialStationList.route
+            ){
+                val columnState = rememberColumnState()
+                ScreenScaffold(scrollState = columnState) {
+                    InitialStationListScreen(
+                        columnState = columnState,
+                        onNavigate = {
+                            swipeDismissableNavController.navigate(it)
+                        }
                     )
                 }
             }
