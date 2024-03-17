@@ -30,9 +30,6 @@ fun TrainRunnerApp (
 ){
     var themeColors by remember { mutableStateOf(initialThemeValues.colors) }
     TrainRunnerTheme(colors = themeColors) {
-        var initialStation by remember { mutableStateOf("TAIT") }
-        var finalStation by remember { mutableStateOf("WELL") }
-
         SwipeDismissableNavHost(
             navController = swipeDismissableNavController,
             startDestination = Screen.Home.route

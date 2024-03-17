@@ -1,4 +1,4 @@
-package com.example.trainrunner.data
+package com.example.trainrunner.presentation.data
 
 import androidx.lifecycle.viewmodel.CreationExtras
 

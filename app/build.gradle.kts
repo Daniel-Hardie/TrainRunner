@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -59,6 +60,9 @@ dependencies {
     implementation("androidx.wear.compose:compose-navigation:1.3.0")
     implementation("com.google.android.horologist:horologist-compose-layout:0.5.24")
     implementation("com.google.android.horologist:horologist-compose-material:0.5.24")
+    implementation("androidx.room:room-common:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
     androidTestImplementation(platform("androidx.compose:compose-bom:2023.08.00"))
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
