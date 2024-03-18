@@ -7,11 +7,12 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.example.trainrunner.presentation.data.room.converters.DateConverter
 import com.example.trainrunner.presentation.data.room.models.Route
+import com.example.trainrunner.presentation.data.room.models.RouteNotification
 import com.example.trainrunner.presentation.data.room.models.Station
 
 @TypeConverters(value = [DateConverter::class])
 @Database(
-    entities = [Station::class, Route::class],
+    entities = [Station::class, Route::class, RouteNotification::class],
     version = 1,
     exportSchema = false   //not sure why it is false
 )
