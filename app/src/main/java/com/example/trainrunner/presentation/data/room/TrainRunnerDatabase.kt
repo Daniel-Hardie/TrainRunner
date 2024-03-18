@@ -20,6 +20,7 @@ import com.example.trainrunner.presentation.data.room.models.Station
 abstract class TrainRunnerDatabase: RoomDatabase() {
     abstract fun stationDao(): StationDao
     abstract fun routeDao(): RouteDao
+    abstract fun routeNotificationDao(): RouteDao
 
     // Helps create instance of this class without instantiating it
     companion object {

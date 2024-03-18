@@ -11,7 +11,8 @@ object Graph {
     val repository by lazy {
         Repository(
             stationDao = db.stationDao(),
-            routeDao = db.routeDao()
+            routeDao = db.routeDao(),
+            routeNotificationDao = db.routeNotificationDao()
         )
     }
 
