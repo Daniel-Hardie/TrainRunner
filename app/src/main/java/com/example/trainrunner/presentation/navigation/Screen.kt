@@ -9,6 +9,6 @@ sealed class Screen(
     object Notifications: Screen("notifications")
     object AddRoute: Screen("add-route")
     object EditRoute: Screen("edit-route")
-    object InitialStationList: Screen("initial-station-list")
+    object StationSelect: Screen("station-select")
 
 }

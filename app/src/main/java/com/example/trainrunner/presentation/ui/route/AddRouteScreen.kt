@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
 import com.example.trainrunner.R
@@ -19,17 +20,41 @@ import com.google.android.horologist.compose.material.Chip
 
 @Composable
 fun AddRouteScreen(
+    routeId: Int,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
-    initialStation: String,
-    finalStation: String,
     onClickDestinationList: () -> Unit,
+    navigateUp: () -> Unit,
+) {
+    val viewModel = viewModel<RouteViewModel>(factory = RouteViewModelFactory(routeId))
+
+    RouteScreen(
+        state = viewModel.state,
+        columnState = columnState,
+        modifier = modifier,
+        onNavigate = onNavigate,
+        onClickDestinationList = onClickDestinationList,
+        saveRoute = viewModel::addRoute
+    ){
+        navigateUp.invoke()
+    }
+}
+
+@Composable
+fun RouteScreen(
+    state: RouteState,
+    columnState: ScalingLazyColumnState,
+    modifier: Modifier = Modifier,
+    onNavigate: (String) -> Unit,
+    onClickDestinationList: () -> Unit,
+    saveRoute: () -> Unit,
+    navigateUp: () -> Unit
 ){
     val destinationListInfo = menuNameAndCallback(
         onNavigate = onNavigate,
         menuNameResource = R.string.add_route_button_label,
-        screen = Screen.InitialStationList
+        screen = Screen.StationSelect
     )
 
     Box(
@@ -49,23 +74,17 @@ fun AddRouteScreen(
             }
             item{
                 Chip(
-                    label = "Initial Station",
-                    secondaryLabel = initialStation,
-                    onClick = onClickDestinationList
+                    label = "Station One",
+                    secondaryLabel = "sdhbisdf",
+//                    onClick = onClickDestinationList
+                    onClick = {}
                 )
             }
             item{
                 Chip(
                     label = "Destination Station",
-                    secondaryLabel = finalStation,
-                    onClick = onClickDestinationList
-                )
-            }
-            item{
-                Chip(
-                    label = "Days Tracked",
-                    secondaryLabel = "3 selected",
-                    onClick = destinationListInfo.clickHandler
+                    secondaryLabel = "asdasd",
+                    onClick = {}
                 )
             }
             item{
@@ -84,9 +103,12 @@ fun AddRouteScreen(
             }
             item {
                 Button(
-                    id = R.drawable.ic_settings,
-                    contentDescription = "",
-                    onClick = { },
+                    id = R.drawable.ic_train,
+                    contentDescription = "Save",
+                    onClick = {
+                        saveRoute.invoke()
+                        navigateUp.invoke()
+                    },
                     buttonSize = ButtonSize.Small,
                 )
             }

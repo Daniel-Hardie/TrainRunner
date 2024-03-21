@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.wear.compose.foundation.lazy.items
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
@@ -20,7 +21,7 @@ import com.google.android.horologist.compose.material.Chip
 // https://developer.android.com/training/wearables/compose/lists
 
 @Composable
-fun InitialStationListScreen(
+fun StationSelectScreen(
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit
@@ -29,8 +30,12 @@ fun InitialStationListScreen(
 //        factory = InitialStationListViewModel.Factory
 //    )
 //    val stations by viewModel.initialStations
+
+    val viewModel = viewModel(modelClass = StationSelectViewModel::class.java)
+    val stationState = viewModel.state
+
     val stations = listOf<String>("blah", "blah2")
-    InitialStationListScreen(
+    StationSelectScreen(
         columnState = columnState,
         modifier = modifier,
         onNavigate = onNavigate,
@@ -40,7 +45,7 @@ fun InitialStationListScreen(
 
 
 @Composable
-fun InitialStationListScreen(
+fun StationSelectScreen(
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,

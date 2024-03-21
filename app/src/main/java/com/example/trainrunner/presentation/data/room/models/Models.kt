@@ -12,17 +12,14 @@ data class Route(
     @ColumnInfo(name = "routeId")
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
+    val trainLineId: Int = -1,
     val stationOneId: Int = -1,
     val stationTwoId: Int = -1,
-    val trackMonday: Boolean = false,
-    val trackTuesday: Boolean = false,
-    val trackWednesday: Boolean = false,
-    val trackThursday: Boolean = false,
-    val trackFriday: Boolean = false,
-    val trackSaturday: Boolean = false,
-    val trackSunday: Boolean = false,
-    val time: Date,  //use LocalTime property of Date
-    val isActive: Boolean = true
+    val stationOneCode: String = "",
+    val stationTwoCode: String = "",
+    val toWellington: Boolean,
+    val isActive: Boolean = true,
+
 )
 
 @Entity(tableName = "routeNotification")
@@ -31,7 +28,7 @@ data class RouteNotification(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     val routeId: Int = -1,
-    val time: Date,
+    val date: Date,
     val isActive: Boolean = true
 )
 
