@@ -19,7 +19,7 @@ import com.example.trainrunner.presentation.ui.HomeScreen
 import com.example.trainrunner.presentation.ui.RoutesScreen
 import com.example.trainrunner.presentation.ui.SettingsScreen
 import com.example.trainrunner.presentation.ui.route.AddRouteScreen
-import com.example.trainrunner.presentation.ui.route.InitialStationListScreen
+import com.example.trainrunner.presentation.ui.route.StationSelectScreen
 import com.google.android.horologist.compose.layout.ScreenScaffold
 import com.google.android.horologist.compose.layout.rememberColumnState
 
@@ -89,14 +89,15 @@ fun TrainRunnerApp (
                 val columnState = rememberColumnState()
                 ScreenScaffold(scrollState = columnState) {
                     AddRouteScreen(
+                        routeId = -1,
                         columnState = columnState,
-                        initialStation = "TAIT",
-                        finalStation = "WELL",
                         onNavigate = { swipeDismissableNavController.navigate(it) },
                         onClickDestinationList = {
-                            swipeDismissableNavController.navigate(Screen.InitialStationList.route)
-                        },
-                    )
+                            swipeDismissableNavController.navigate(Screen.StationSelect.route)
+                        }
+                    ){
+                        swipeDismissableNavController.navigateUp()
+                    }
                 }
             }
 
@@ -115,11 +116,11 @@ fun TrainRunnerApp (
 
             // DestinationList screen
             composable(
-                route = Screen.InitialStationList.route
+                route = Screen.StationSelect.route
             ){
                 val columnState = rememberColumnState()
                 ScreenScaffold(scrollState = columnState) {
-                    InitialStationListScreen(
+                    StationSelectScreen(
                         columnState = columnState,
                         onNavigate = {
                             swipeDismissableNavController.navigate(it)
@@ -129,6 +130,14 @@ fun TrainRunnerApp (
             }
         }
     }
+}
+
+
+@Composable
+internal fun PopulateStations(
+
+){
+
 }
 
 @Composable

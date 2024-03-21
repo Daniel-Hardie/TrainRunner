@@ -52,6 +52,14 @@ interface RouteDao {
     """)
     fun getRoute(routeId: Int): Flow<Route>
 
+    @Query("""
+       SELECT COUNT(*) FROM route AS r
+       INNER JOIN routeNotification AS rn ON r.routeId = rn.routeId
+       WHERE r.routeId =:routeId
+    """
+    )
+    fun getNumberRouteDaysTracked(routeId: Int): Flow<Int>
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertRoute(route: Route)
 

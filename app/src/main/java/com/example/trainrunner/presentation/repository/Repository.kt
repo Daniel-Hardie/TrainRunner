@@ -19,6 +19,8 @@ class Repository(
 
     val getAllRoutes = routeDao.getAllRoutes()
 
+    fun getNumberRouteDaysTracked(id: Int) = routeDao.getNumberRouteDaysTracked(id)
+
     suspend fun insertRoute(route: Route){
         routeDao.insertRoute(route)
     }
