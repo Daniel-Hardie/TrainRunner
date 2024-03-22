@@ -14,9 +14,6 @@ class MainActivity: ComponentActivity() {
         super.onCreate(savedInstanceState)
         setTheme(android.R.style.Theme_DeviceDefault)
 
-        // Sets up the database
-//        Graph.provide(this)
-
         setContent {
             navController = rememberSwipeDismissableNavController()
 
@@ -25,12 +22,4 @@ class MainActivity: ComponentActivity() {
             )
         }
     }
-
-//    override val defaultViewModelCreationExtras: CreationExtras
-//        get() = MutableCreationExtras(super.defaultViewModelCreationExtras).apply {
-//            set(
-//                StationRepository.INITIAL_STATION_REPOSITORY_KEY,
-//                (application as BaseApplication).stationRepository
-//            )
-//        }
 }

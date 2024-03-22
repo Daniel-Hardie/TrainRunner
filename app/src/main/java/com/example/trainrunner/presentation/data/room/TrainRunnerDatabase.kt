@@ -6,13 +6,14 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.example.trainrunner.presentation.data.room.converters.DateConverter
+import com.example.trainrunner.presentation.data.room.models.MetlinkRoute
 import com.example.trainrunner.presentation.data.room.models.Route
 import com.example.trainrunner.presentation.data.room.models.RouteNotification
 import com.example.trainrunner.presentation.data.room.models.Station
 
 @TypeConverters(value = [DateConverter::class])
 @Database(
-    entities = [Station::class, Route::class, RouteNotification::class],
+    entities = [Station::class, Route::class, RouteNotification::class, MetlinkRoute::class],
     version = 1,
     exportSchema = false   //not sure why it is false
 )
@@ -22,6 +23,7 @@ abstract class TrainRunnerDatabase: RoomDatabase() {
     abstract fun stationDao(): StationDao
     abstract fun routeDao(): RouteDao
     abstract fun routeNotificationDao(): RouteNotificationDao
+    abstract fun metlinkRouteDao(): MetlinkRouteDao
 
     // Helps create instance of this class without instantiating it
     companion object {

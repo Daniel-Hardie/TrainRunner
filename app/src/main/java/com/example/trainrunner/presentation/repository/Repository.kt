@@ -1,8 +1,10 @@
 package com.example.trainrunner.presentation.repository
 
+import com.example.trainrunner.presentation.data.room.MetlinkRouteDao
 import com.example.trainrunner.presentation.data.room.RouteDao
 import com.example.trainrunner.presentation.data.room.RouteNotificationDao
 import com.example.trainrunner.presentation.data.room.StationDao
+import com.example.trainrunner.presentation.data.room.models.MetlinkRoute
 import com.example.trainrunner.presentation.data.room.models.Route
 import com.example.trainrunner.presentation.data.room.models.RouteNotification
 import com.example.trainrunner.presentation.data.room.models.Station
@@ -12,7 +14,8 @@ import com.example.trainrunner.presentation.data.room.models.Station
 class Repository(
     private val stationDao: StationDao,
     private val routeDao: RouteDao,
-    private val routeNotificationDao: RouteNotificationDao
+    private val routeNotificationDao: RouteNotificationDao,
+    private val metlinkRouteDuo: MetlinkRouteDao
 ) {
     // Route table
     fun getRoute(id: Int) = routeDao.getRoute(id)
@@ -35,17 +38,19 @@ class Repository(
     // Station table
     val getAllStations = stationDao.getAllStations()
     fun getStationById(id: Int) = stationDao.getStationById(id)
-    fun getAllStationsOnLine(lineId: Int) = stationDao.getAllStationsOnLine(lineId)
+    fun getAllStationsOnLine(lineId: String) = stationDao.getAllStationsOnLine(lineId)
     fun getStationByCode(code: String) = stationDao.getStationByCode(code)
     suspend fun insertStation(station: Station){
         stationDao.insertStation(station)
     }
+    suspend fun deleteAllStations(){
+        stationDao.deleteAllStations()
+    }
 
 
-    // Route Notification Table
+    // RouteNotification table
     val getAllRouteNotifications = routeNotificationDao.getAllRouteNotifications()
 
-//    val getAllRouteNotificationsForRoute = routeNotificationDao.
     suspend fun insertRouteNotification(routeNotification: RouteNotification){
         routeNotificationDao.insertRouteNotification(routeNotification)
     }
@@ -54,5 +59,13 @@ class Repository(
     }
     suspend fun deleteRouteNotification(routeId: Int){
         routeNotificationDao.deleteRouteNotification(routeId)
+    }
+
+
+    // MetlinkRoute table
+    val getAllMetlinkRoutes = metlinkRouteDuo.getAllMetlinkRoutes()
+
+    suspend fun insertMetlinkRoute(metlinkRoute: MetlinkRoute){
+        metlinkRouteDuo.insertMetlinkRoute(metlinkRoute)
     }
 }

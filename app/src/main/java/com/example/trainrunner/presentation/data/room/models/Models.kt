@@ -32,13 +32,31 @@ data class RouteNotification(
     val isActive: Boolean = true
 )
 
-
+// metlink properties populated from https://api.opendata.metlink.org.nz/v1/gtfs/stops?route_id=X
+// Where X is route id
 @Entity(tableName = "station")
 data class Station(
     @ColumnInfo(name = "stationId")
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
-    val trainLineId: Int = -1,
-    val name: String = "",
-    val code: String = ""
+    val metlinkRouteId: String = "",
+    val metlinkStopId: String = "",
+    val metlinkStopCode: String = "",
+    val metlinkStopName: String = "",
+    val metlinkStopLatitude: Double = -1.00,
+    val metlinkStopLongitude: Double = -1.00,
+    val metlinkZoneId: Int = -1,
+    val metlinkParentStation: String = ""
+)
+
+// Populated from https://api.opendata.metlink.org.nz/v1/gtfs/routes
+// Where route_type = 2 (trains)
+@Entity(tableName = "metlinkRoute")
+data class MetlinkRoute(
+    @PrimaryKey
+    val id: Int = 0,
+    val metlinkRouteId: String = "",
+    val metlinkRouteShortName: String = "",
+    val metlinkRouteLongName: String = "",
+    val metlinkRouteDesc: String = ""
 )

@@ -12,7 +12,8 @@ object Graph {
         Repository(
             stationDao = db.stationDao(),
             routeDao = db.routeDao(),
-            routeNotificationDao = db.routeNotificationDao()
+            routeNotificationDao = db.routeNotificationDao(),
+            metlinkRouteDuo = db.metlinkRouteDao()
         )
     }
 

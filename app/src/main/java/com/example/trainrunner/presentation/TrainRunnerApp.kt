@@ -7,10 +7,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.wear.compose.navigation.SwipeDismissableNavHost
 import androidx.wear.compose.navigation.composable
 import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
+import com.example.trainrunner.presentation.data.StationModel
+import com.example.trainrunner.presentation.data.StationModelFactory
 import com.example.trainrunner.presentation.navigation.Screen
 import com.example.trainrunner.presentation.theme.TrainRunnerTheme
 import com.example.trainrunner.presentation.theme.initialThemeValues
@@ -28,6 +31,7 @@ fun TrainRunnerApp (
     modifier: Modifier = Modifier,
     swipeDismissableNavController: NavHostController = rememberSwipeDismissableNavController()
 ){
+    PopulateStationsInDatabase()
     var themeColors by remember { mutableStateOf(initialThemeValues.colors) }
     var routeId: Int = -1
 
@@ -136,10 +140,8 @@ fun TrainRunnerApp (
 
 
 @Composable
-internal fun PopulateStations(
-
-){
-
+fun PopulateStationsInDatabase(){
+    viewModel<StationModel>(factory = StationModelFactory())
 }
 
 @Composable

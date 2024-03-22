@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
+import com.example.trainrunner.presentation.data.room.models.MetlinkRoute
 import com.example.trainrunner.presentation.data.room.models.Route
 import com.example.trainrunner.presentation.data.room.models.RouteNotification
 import com.example.trainrunner.presentation.data.room.models.Station
@@ -20,9 +21,9 @@ interface StationDao {
     fun getAllStations(): Flow<List<Station>>
 
     @Query("""
-        SELECT * FROM station WHERE trainLineId =:lineId
+        SELECT * FROM station WHERE metlinkRouteId =:lineId
     """)
-    fun getAllStationsOnLine(lineId: Int): Flow<List<Station>>
+    fun getAllStationsOnLine(lineId: String): Flow<List<Station>>
 
     @Query("""
         SELECT * FROM station WHERE stationId =:id
@@ -30,12 +31,17 @@ interface StationDao {
     fun getStationById(id: Int): Flow<Station>
 
     @Query("""
-        SELECT * FROM station WHERE code =:code
+        SELECT * FROM station WHERE metlinkStopCode =:code
     """)
     fun getStationByCode(code: String): Flow<Station>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertStation(station: Station)
+
+    @Query("""
+        DELETE FROM station
+    """)
+    suspend fun deleteAllStations()
 }
 
 @Dao
@@ -89,4 +95,15 @@ interface RouteNotificationDao {
         WHERE routeId =:routeId
     """)
     suspend fun deleteRouteNotification(routeId: Int)
+}
+
+@Dao
+interface MetlinkRouteDao {
+    @Query("""
+       SELECT * FROM metlinkRoute
+    """)
+    fun getAllMetlinkRoutes(): Flow<List<MetlinkRoute>>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertMetlinkRoute(metlinkRoute: MetlinkRoute)
 }
