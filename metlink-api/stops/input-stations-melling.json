@@ -1,0 +1,80 @@
+[
+    {
+        "stop_id": "WELL1",
+        "stop_code": "WELL1",
+        "stop_name": "Wellington Station",
+        "stop_desc": "",
+        "stop_lat": -41.27832,
+        "stop_lon": 174.78063,
+        "zone_id": "1",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": "WELL",
+        "stop_timezone": ""
+    },
+    {
+        "stop_id": "PETO2",
+        "stop_code": "PETO2",
+        "stop_name": "Petone Station",
+        "stop_desc": "",
+        "stop_lat": -41.22199619,
+        "stop_lon": 174.86945863,
+        "zone_id": "4",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": "PETO",
+        "stop_timezone": ""
+    },
+    {
+        "stop_id": "NGAU",
+        "stop_code": "NGAU",
+        "stop_name": "Ngauranga Station",
+        "stop_desc": "",
+        "stop_lat": -41.249038,
+        "stop_lon": 174.813013,
+        "zone_id": "3",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": "",
+        "stop_timezone": "Pacific/Auckland"
+    },
+    {
+        "stop_id": "WEST",
+        "stop_code": "WEST",
+        "stop_name": "Western Hutt Station",
+        "stop_desc": "",
+        "stop_lat": -41.21187,
+        "stop_lon": 174.889995,
+        "zone_id": "4",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": "",
+        "stop_timezone": "Pacific/Auckland"
+    },
+    {
+        "stop_id": "MELL",
+        "stop_code": "MELL",
+        "stop_name": "Melling Station",
+        "stop_desc": "",
+        "stop_lat": -41.20348555,
+        "stop_lon": 174.90540041,
+        "zone_id": "4",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": "",
+        "stop_timezone": "Pacific/Auckland"
+    },
+    {
+        "stop_id": "PETO1",
+        "stop_code": "PETO1",
+        "stop_name": "Petone Station",
+        "stop_desc": "",
+        "stop_lat": -41.22202574,
+        "stop_lon": 174.86951757,
+        "zone_id": "4",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": "PETO",
+        "stop_timezone": ""
+    }
+]

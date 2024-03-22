@@ -1,0 +1,15 @@
+Lines:
+Find using https://api.opendata.metlink.org.nz/v1/gtfs/routes and finding route_type = 2
+
+- Kapiti line, route id 2
+- Melling line, route id 3
+- Wairarapa line, route id 4
+- Hutt Valley line, route id 5
+- Johnsonville line, route id 6
+
+
+Stations/stops on line:
+Find using https://api.opendata.metlink.org.nz/v1/gtfs/stops?route_id={route id from line}
+
+Input station json files are straight from Metlink
+Data-source-stations files are for copying straight into TrainRunner to populate the Station table. This is done in StationSources.kt
