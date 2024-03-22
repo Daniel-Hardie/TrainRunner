@@ -27,8 +27,8 @@ class Repository(
     suspend fun updateRoute(route: Route){
         routeDao.updateRoute(route)
     }
-    suspend fun deleteRoute(route: Route){
-        routeDao.deleteRoute(route)
+    suspend fun deleteRoute(routeId: Int){
+        routeDao.deleteRoute(routeId)
     }
 
 
@@ -44,13 +44,15 @@ class Repository(
 
     // Route Notification Table
     val getAllRouteNotifications = routeNotificationDao.getAllRouteNotifications()
+
+//    val getAllRouteNotificationsForRoute = routeNotificationDao.
     suspend fun insertRouteNotification(routeNotification: RouteNotification){
         routeNotificationDao.insertRouteNotification(routeNotification)
     }
     suspend fun updateRouteNotification(routeNotification: RouteNotification){
         routeNotificationDao.updateRouteNotification(routeNotification)
     }
-    suspend fun deleteRouteNotification(routeNotification: RouteNotification){
-        routeNotificationDao.deleteRouteNotification(routeNotification)
+    suspend fun deleteRouteNotification(routeId: Int){
+        routeNotificationDao.deleteRouteNotification(routeId)
     }
 }

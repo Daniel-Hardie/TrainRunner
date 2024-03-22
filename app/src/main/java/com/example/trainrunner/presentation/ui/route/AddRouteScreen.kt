@@ -1,11 +1,15 @@
 package com.example.trainrunner.presentation.ui.route
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
@@ -17,6 +21,7 @@ import com.google.android.horologist.compose.layout.ScalingLazyColumnState
 import com.google.android.horologist.compose.material.Button
 import com.google.android.horologist.compose.material.ButtonSize
 import com.google.android.horologist.compose.material.Chip
+import kotlin.reflect.KFunction1
 
 @Composable
 fun AddRouteScreen(
@@ -30,12 +35,14 @@ fun AddRouteScreen(
     val viewModel = viewModel<RouteViewModel>(factory = RouteViewModelFactory(routeId))
 
     RouteScreen(
+        routeId = routeId,
         state = viewModel.state,
         columnState = columnState,
         modifier = modifier,
         onNavigate = onNavigate,
         onClickDestinationList = onClickDestinationList,
-        saveRoute = viewModel::addRoute
+        saveRoute = viewModel::addRoute,
+        deleteRoute = viewModel::deleteRoute
     ){
         navigateUp.invoke()
     }
@@ -43,12 +50,14 @@ fun AddRouteScreen(
 
 @Composable
 fun RouteScreen(
+    routeId: Int,
     state: RouteState,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
     onClickDestinationList: () -> Unit,
     saveRoute: () -> Unit,
+    deleteRoute: KFunction1<Int, Unit>,
     navigateUp: () -> Unit
 ){
     val destinationListInfo = menuNameAndCallback(
@@ -56,6 +65,17 @@ fun RouteScreen(
         menuNameResource = R.string.add_route_button_label,
         screen = Screen.StationSelect
     )
+
+    val stationOneCode = state.stationOneCode
+    val stationTwoCode = state.stationTwoCode
+    val daysTracked = state.daysTrackedCount
+    val timeTracked = state.timeTracked
+    val isActive: String = if(state.isActive){
+        "Enabled"
+    }
+    else{
+        "Disabled"
+    }
 
     Box(
         modifier = modifier.fillMaxSize()
@@ -75,50 +95,67 @@ fun RouteScreen(
             item{
                 Chip(
                     label = "Station One",
-                    secondaryLabel = "sdhbisdf",
+                    secondaryLabel = stationOneCode,
 //                    onClick = onClickDestinationList
                     onClick = {}
                 )
             }
             item{
                 Chip(
-                    label = "Destination Station",
-                    secondaryLabel = "asdasd",
+                    label = "Station 2",
+                    secondaryLabel = stationTwoCode,
                     onClick = {}
                 )
             }
             item{
                 Chip(
                     label = "Days Tracked",
-                    secondaryLabel = "3 selected",
+                    secondaryLabel = "$daysTracked selected",
                     onClick = destinationListInfo.clickHandler
                 )
             }
             item{
                 Chip(
                     label = "Time",
-                    secondaryLabel = "6:57am",
+                    secondaryLabel = timeTracked.time.toString(),
+                    onClick = destinationListInfo.clickHandler
+                )
+            }
+            item{
+                Chip(
+                    label = "Notifications",
+                    secondaryLabel = isActive,
                     onClick = destinationListInfo.clickHandler
                 )
             }
             item {
-                Button(
-                    id = R.drawable.ic_train,
-                    contentDescription = "Save",
-                    onClick = {
-                        saveRoute.invoke()
-                        navigateUp.invoke()
-                    },
-                    buttonSize = ButtonSize.Small,
-                )
-            }
-            item {
-                Button(
-                    id = R.drawable.ic_settings,
-                    contentDescription = "",
-                    onClick = {},
-                    buttonSize = ButtonSize.Small,
-                )
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(3.dp),
+                    horizontalArrangement = Arrangement.Center
+                ) {
+                    Button(
+                        modifier = modifier.padding(8.dp),
+                        id = R.drawable.ic_done,
+                        contentDescription = "Save",
+                        onClick = {
+                            saveRoute.invoke()
+                            navigateUp.invoke()
+                        },
+                        buttonSize = ButtonSize.Small,
+                    )
+                    Button(
+                        modifier = modifier.padding(8.dp),
+                        id = R.drawable.ic_delete,
+                        contentDescription = "Delete",
+                        onClick = {
+                            deleteRoute.invoke(routeId)
+                            navigateUp.invoke()
+                        },
+                        buttonSize = ButtonSize.Small,
+                    )
+                }
             }
         }
     }

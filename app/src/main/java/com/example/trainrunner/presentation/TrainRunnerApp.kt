@@ -29,6 +29,8 @@ fun TrainRunnerApp (
     swipeDismissableNavController: NavHostController = rememberSwipeDismissableNavController()
 ){
     var themeColors by remember { mutableStateOf(initialThemeValues.colors) }
+    var routeId: Int = -1
+
     TrainRunnerTheme(colors = themeColors) {
         SwipeDismissableNavHost(
             navController = swipeDismissableNavController,
@@ -89,7 +91,7 @@ fun TrainRunnerApp (
                 val columnState = rememberColumnState()
                 ScreenScaffold(scrollState = columnState) {
                     AddRouteScreen(
-                        routeId = -1,
+                        routeId = 1,
                         columnState = columnState,
                         onNavigate = { swipeDismissableNavController.navigate(it) },
                         onClickDestinationList = {

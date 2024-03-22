@@ -1,7 +1,6 @@
 package com.example.trainrunner.presentation.data.room
 
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
@@ -66,8 +65,11 @@ interface RouteDao {
     @Update(onConflict = OnConflictStrategy.REPLACE)
     suspend fun updateRoute(route: Route)
 
-    @Delete
-    suspend fun deleteRoute(route: Route)
+    @Query("""
+        DELETE FROM route
+        WHERE routeId =:routeId
+    """)
+    suspend fun deleteRoute(routeId: Int)
 }
 
 @Dao
@@ -82,6 +84,9 @@ interface RouteNotificationDao {
     @Update(onConflict = OnConflictStrategy.REPLACE)
     suspend fun updateRouteNotification(routeNotification: RouteNotification)
 
-    @Delete
-    suspend fun deleteRouteNotification(routeNotification: RouteNotification)
+    @Query("""
+        DELETE FROM routeNotification
+        WHERE routeId =:routeId
+    """)
+    suspend fun deleteRouteNotification(routeId: Int)
 }

@@ -26,11 +26,15 @@ class RouteViewModel(
                 repository
                     .getRoute(routeId)
                     .collectLatest {
-                        state = state.copy(
-                            stationOneCode = it.stationOneCode,
-                            stationTwoCode = it.stationTwoCode,
-                            isActive = it.isActive
-                        )
+                        // Shouldnt really have problem in the end where we query something not in database
+                        // TODO see if this can be taken out when routes id is not hardcoded in TrainRunnerApp.kt
+                        if(it != null){
+                            state = state.copy(
+                                stationOneCode = it.stationOneCode,
+                                stationTwoCode = it.stationTwoCode,
+                                isActive = it.isActive
+                            )
+                        }
                     }
                 repository
                     .getNumberRouteDaysTracked(routeId)
@@ -40,6 +44,15 @@ class RouteViewModel(
                         )
                     }
             }
+        }
+        else{
+            state = state.copy(
+                stationOneCode = "Pick station to board train",
+                stationTwoCode = "Pick station to arrive at",
+                daysTrackedCount = 0,
+                timeTracked = Date(),
+                isActive = true,
+            )
         }
     }
 
@@ -70,6 +83,13 @@ class RouteViewModel(
             )
         }
     }
+
+    fun deleteRoute(routeId: Int){
+        viewModelScope.launch {
+            repository.deleteRoute(routeId)
+            repository.deleteRouteNotification(routeId)
+        }
+    }
 }
 
 @Suppress("UNCHECKED_CAST")
@@ -80,8 +100,8 @@ class RouteViewModelFactory(private  val id: Int): ViewModelProvider.Factory{
 }
 
 data class RouteState(
-    val stationOneCode: String = "",
-    val stationTwoCode: String = "",
+    val stationOneCode: String = "Plz select value",
+    val stationTwoCode: String = "Plz select value",
     val daysTrackedCount: Int = 0,
     val timeTracked: Date = Date(),
     val isActive: Boolean = false,
