@@ -1,4 +1,4 @@
-package com.example.trainrunner.presentation.ui.route
+package com.example.trainrunner.presentation.ui.station
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

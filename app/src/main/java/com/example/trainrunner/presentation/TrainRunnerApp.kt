@@ -12,8 +12,10 @@ import androidx.navigation.NavHostController
 import androidx.wear.compose.navigation.SwipeDismissableNavHost
 import androidx.wear.compose.navigation.composable
 import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
-import com.example.trainrunner.presentation.data.StationModel
-import com.example.trainrunner.presentation.data.StationModelFactory
+import com.example.trainrunner.presentation.data.room.sources.route.MetlinkRouteModel
+import com.example.trainrunner.presentation.data.room.sources.route.MetlinkRouteModelFactory
+import com.example.trainrunner.presentation.data.room.sources.station.StationModel
+import com.example.trainrunner.presentation.data.room.sources.station.StationModelFactory
 import com.example.trainrunner.presentation.navigation.Screen
 import com.example.trainrunner.presentation.theme.TrainRunnerTheme
 import com.example.trainrunner.presentation.theme.initialThemeValues
@@ -22,7 +24,7 @@ import com.example.trainrunner.presentation.ui.HomeScreen
 import com.example.trainrunner.presentation.ui.RoutesScreen
 import com.example.trainrunner.presentation.ui.SettingsScreen
 import com.example.trainrunner.presentation.ui.route.AddRouteScreen
-import com.example.trainrunner.presentation.ui.route.StationSelectScreen
+import com.example.trainrunner.presentation.ui.station.StationSelectScreen
 import com.google.android.horologist.compose.layout.ScreenScaffold
 import com.google.android.horologist.compose.layout.rememberColumnState
 
@@ -31,7 +33,7 @@ fun TrainRunnerApp (
     modifier: Modifier = Modifier,
     swipeDismissableNavController: NavHostController = rememberSwipeDismissableNavController()
 ){
-    PopulateStationsInDatabase()
+    PopulateDatabase()
     var themeColors by remember { mutableStateOf(initialThemeValues.colors) }
     var routeId: Int = -1
 
@@ -140,8 +142,9 @@ fun TrainRunnerApp (
 
 
 @Composable
-fun PopulateStationsInDatabase(){
+fun PopulateDatabase(){
     viewModel<StationModel>(factory = StationModelFactory())
+    viewModel<MetlinkRouteModel>(factory = MetlinkRouteModelFactory())
 }
 
 @Composable

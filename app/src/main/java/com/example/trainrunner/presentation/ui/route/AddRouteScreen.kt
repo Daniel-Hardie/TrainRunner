@@ -66,6 +66,7 @@ fun RouteScreen(
         screen = Screen.StationSelect
     )
 
+    val trainLine = ""
     val stationOneCode = state.stationOneCode
     val stationTwoCode = state.stationTwoCode
     val daysTracked = state.daysTrackedCount
@@ -90,6 +91,14 @@ fun RouteScreen(
                     textAlign = TextAlign.Center,
                     color = MaterialTheme.colors.primary,
                     text = "Add Route"
+                )
+            }
+            item{
+                // TODO implement train line functionality which blanks the station selection
+                Chip(
+                    label = "Train Line",
+                    secondaryLabel = trainLine,
+                    onClick = {}
                 )
             }
             item{

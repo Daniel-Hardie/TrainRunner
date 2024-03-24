@@ -53,7 +53,7 @@ data class Station(
 // Where route_type = 2 (trains)
 @Entity(tableName = "metlinkRoute")
 data class MetlinkRoute(
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     val metlinkRouteId: String = "",
     val metlinkRouteShortName: String = "",

@@ -1,4 +1,4 @@
-package com.example.trainrunner.presentation.data
+package com.example.trainrunner.presentation.data.room.sources.route
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -7,26 +7,26 @@ import com.example.trainrunner.presentation.Graph
 import com.example.trainrunner.presentation.repository.Repository
 import kotlinx.coroutines.launch
 
-class StationModel(
+class MetlinkRouteModel(
     private val repository: Repository = Graph.repository
 ) : ViewModel() {
 
     init {
         viewModelScope.launch {
             repository
-                .deleteAllStations()
+                .deleteAllMetlinkRoutes()
 
-            StationsSource.stations.forEach {
-                station -> repository
-                .insertStation(station)
+            MetlinkRouteSource.routes.forEach {
+                route -> repository
+                .insertMetlinkRoute(route)
             }
         }
     }
 }
 
 @Suppress("UNCHECKED_CAST")
-class StationModelFactory(): ViewModelProvider.Factory{
+class MetlinkRouteModelFactory(): ViewModelProvider.Factory{
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return StationModel() as T
+        return MetlinkRouteModel() as T
     }
 }

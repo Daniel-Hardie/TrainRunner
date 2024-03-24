@@ -68,4 +68,8 @@ class Repository(
     suspend fun insertMetlinkRoute(metlinkRoute: MetlinkRoute){
         metlinkRouteDuo.insertMetlinkRoute(metlinkRoute)
     }
+
+    suspend fun deleteAllMetlinkRoutes(){
+        metlinkRouteDuo.deleteAllMetlinkRoutes()
+    }
 }

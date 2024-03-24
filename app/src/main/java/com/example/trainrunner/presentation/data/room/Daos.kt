@@ -106,4 +106,9 @@ interface MetlinkRouteDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertMetlinkRoute(metlinkRoute: MetlinkRoute)
+
+    @Query("""
+        DELETE FROM metlinkRoute
+    """)
+    suspend fun deleteAllMetlinkRoutes()
 }

@@ -1,7 +1,9 @@
-package com.example.trainrunner.presentation.data
+package com.example.trainrunner.presentation.data.room.sources.station
 
 import com.example.trainrunner.presentation.data.room.models.Station
 
+// MetlinkStopId with 1 at the end = inbound, e.g. to Wellington Station
+// MetlinkStopId with 2 at the end = outbound, e.g. from Wellington Station
 object StationsSource {
     val stations = listOf(
         // Kapiti stops
