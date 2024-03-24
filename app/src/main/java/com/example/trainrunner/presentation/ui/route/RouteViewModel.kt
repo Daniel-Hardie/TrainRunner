@@ -93,7 +93,7 @@ class RouteViewModel(
 }
 
 @Suppress("UNCHECKED_CAST")
-class RouteViewModelFactory(private  val id: Int): ViewModelProvider.Factory{
+class RouteViewModelFactory(private val id: Int): ViewModelProvider.Factory{
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return RouteViewModel(routeId = id) as T
     }

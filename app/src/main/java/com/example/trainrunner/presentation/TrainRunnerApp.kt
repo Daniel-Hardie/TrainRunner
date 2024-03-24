@@ -23,6 +23,7 @@ import com.example.trainrunner.presentation.ui.EditRouteScreen
 import com.example.trainrunner.presentation.ui.HomeScreen
 import com.example.trainrunner.presentation.ui.RoutesScreen
 import com.example.trainrunner.presentation.ui.SettingsScreen
+import com.example.trainrunner.presentation.ui.line.LineSelectScreen
 import com.example.trainrunner.presentation.ui.route.AddRouteScreen
 import com.example.trainrunner.presentation.ui.station.StationSelectScreen
 import com.google.android.horologist.compose.layout.ScreenScaffold
@@ -122,7 +123,7 @@ fun TrainRunnerApp (
                 }
             }
 
-            // DestinationList screen
+            // StationSelect screen
             composable(
                 route = Screen.StationSelect.route
             ){
@@ -134,6 +135,20 @@ fun TrainRunnerApp (
                             swipeDismissableNavController.navigate(it)
                         }
                     )
+                }
+            }
+
+            // LineSelect screen
+            composable(
+                route = Screen.LineSelect.route
+            ){
+                val columnState = rememberColumnState()
+                ScreenScaffold(scrollState = columnState) {
+                    LineSelectScreen(
+                        columnState = columnState
+                    ) {
+                        swipeDismissableNavController.navigateUp()
+                    }
                 }
             }
         }

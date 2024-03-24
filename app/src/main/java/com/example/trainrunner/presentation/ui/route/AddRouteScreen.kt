@@ -60,7 +60,7 @@ fun RouteScreen(
     deleteRoute: KFunction1<Int, Unit>,
     navigateUp: () -> Unit
 ){
-    val destinationListInfo = menuNameAndCallback(
+    val stationSelect = menuNameAndCallback(
         onNavigate = onNavigate,
         menuNameResource = R.string.add_route_button_label,
         screen = Screen.StationSelect
@@ -94,47 +94,45 @@ fun RouteScreen(
                 )
             }
             item{
-                // TODO implement train line functionality which blanks the station selection
                 Chip(
                     label = "Train Line",
                     secondaryLabel = trainLine,
-                    onClick = {}
+                    onClick = {onNavigate(Screen.LineSelect.route)}
                 )
             }
             item{
                 Chip(
                     label = "Station One",
                     secondaryLabel = stationOneCode,
-//                    onClick = onClickDestinationList
-                    onClick = {}
+                    onClick = {onNavigate(Screen.StationSelect.route)}
                 )
             }
             item{
                 Chip(
-                    label = "Station 2",
+                    label = "Station Two",
                     secondaryLabel = stationTwoCode,
-                    onClick = {}
+                    onClick = {onNavigate(Screen.StationSelect.route)}
                 )
             }
             item{
                 Chip(
                     label = "Days Tracked",
                     secondaryLabel = "$daysTracked selected",
-                    onClick = destinationListInfo.clickHandler
+                    onClick = stationSelect.clickHandler
                 )
             }
             item{
                 Chip(
                     label = "Time",
                     secondaryLabel = timeTracked.time.toString(),
-                    onClick = destinationListInfo.clickHandler
+                    onClick = stationSelect.clickHandler
                 )
             }
             item{
                 Chip(
                     label = "Notifications",
                     secondaryLabel = isActive,
-                    onClick = destinationListInfo.clickHandler
+                    onClick = stationSelect.clickHandler
                 )
             }
             item {
