@@ -4,7 +4,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.example.trainrunner.presentation.Graph
 import com.example.trainrunner.presentation.data.room.models.MetlinkRoute
@@ -33,14 +32,6 @@ class LineSelectViewModel(
 
     }
 }
-
-@Suppress("UNCHECKED_CAST")
-class LineSelectViewModelFactory(): ViewModelProvider.Factory{
-    override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return LineSelectViewModel() as T
-    }
-}
-
 
 data class LineSelectState(
     val lineList: List<MetlinkRoute> = emptyList()

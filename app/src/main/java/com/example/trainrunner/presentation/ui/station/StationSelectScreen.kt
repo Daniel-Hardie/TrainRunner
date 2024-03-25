@@ -10,9 +10,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.wear.compose.foundation.lazy.items
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
-import com.example.trainrunner.R
 import com.example.trainrunner.presentation.data.room.models.Station
-import com.example.trainrunner.presentation.menuNameAndCallback
 import com.example.trainrunner.presentation.navigation.Screen
 import com.google.android.horologist.compose.layout.ScalingLazyColumn
 import com.google.android.horologist.compose.layout.ScalingLazyColumnState
@@ -24,25 +22,24 @@ import com.google.android.horologist.compose.material.Chip
 @Composable
 fun StationSelectScreen(
     columnState: ScalingLazyColumnState,
+    stopSelect: Int,
+    selectedStationOneCode: (String) -> Unit,
+    selectedStationTwoCode: (String) -> Unit,
     modifier: Modifier = Modifier,
-    onNavigate: (String) -> Unit
+    navigateUp: () -> Unit,
 ) {
-//    val viewModel: InitialStationListViewModel = viewModel(
-//        factory = InitialStationListViewModel.Factory
-//    )
-//    val stations by viewModel.initialStations
-
     val viewModel = viewModel(modelClass = StationSelectViewModel::class.java)
     val stationState = viewModel.state
-
     val stations = stationState.stations
 
-//    val stations = listOf<String>("blah", "blah2")
     StationSelectScreen(
         columnState = columnState,
+        stopSelect = stopSelect,
+        selectedStationOneCode = selectedStationOneCode,
+        selectedStationTwoCode = selectedStationTwoCode,
         modifier = modifier,
-        onNavigate = onNavigate,
-        stations = stations
+        stations = stations,
+        navigateUp = navigateUp
     )
 }
 
@@ -50,16 +47,13 @@ fun StationSelectScreen(
 @Composable
 fun StationSelectScreen(
     columnState: ScalingLazyColumnState,
+    stopSelect: Int,
+    selectedStationOneCode: (String) -> Unit,
+    selectedStationTwoCode: (String) -> Unit,
     modifier: Modifier = Modifier,
-    onNavigate: (String) -> Unit,
-    stations: List<Station>
+    stations: List<Station>,
+    navigateUp: () -> Unit,
 ){
-    val addRouteInfo = menuNameAndCallback(
-        onNavigate = onNavigate,
-        menuNameResource = R.string.add_route_button_label,
-        screen = Screen.AddRoute
-    )
-
     Box(
         modifier = modifier.fillMaxSize()
     ) {
@@ -78,7 +72,22 @@ fun StationSelectScreen(
             items(stations) { station ->
                 Chip(
                     label = station.metlinkStopId,
-                    onClick = addRouteInfo.clickHandler
+                    onClick = {
+                        Screen.AddRoute.route
+                    }
+                )
+                Chip(
+                    label = station.metlinkStopId,
+                    secondaryLabel = station.metlinkStopCode,
+                    onClick = {
+                        if(stopSelect == 1){
+                            selectedStationOneCode(station.metlinkStopCode)
+                        }
+                        else{
+                            selectedStationTwoCode(station.metlinkStopCode)
+                        }
+                        navigateUp.invoke()
+                    }
                 )
             }
         }

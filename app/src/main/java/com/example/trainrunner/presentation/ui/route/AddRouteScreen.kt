@@ -14,7 +14,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
 import com.example.trainrunner.R
-import com.example.trainrunner.presentation.menuNameAndCallback
 import com.example.trainrunner.presentation.navigation.Screen
 import com.google.android.horologist.compose.layout.ScalingLazyColumn
 import com.google.android.horologist.compose.layout.ScalingLazyColumnState
@@ -27,10 +26,11 @@ import kotlin.reflect.KFunction1
 fun AddRouteScreen(
     routeId: Int,
     selectedTrainLine: String,
+    selectedStationOneCode: String,
+    selectedStationTwoCode: String,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
-    onClickDestinationList: () -> Unit,
     navigateUp: () -> Unit,
 ) {
     val viewModel = viewModel<RouteViewModel>(factory = RouteViewModelFactory(routeId))
@@ -38,11 +38,12 @@ fun AddRouteScreen(
     RouteScreen(
         routeId = routeId,
         selectedTrainLine = selectedTrainLine,
+        selectedStationOneCode = selectedStationOneCode,
+        selectedStationTwoCode = selectedStationTwoCode,
         state = viewModel.state,
         columnState = columnState,
         modifier = modifier,
         onNavigate = onNavigate,
-        onClickDestinationList = onClickDestinationList,
         saveRoute = viewModel::addRoute,
         deleteRoute = viewModel::deleteRoute
     ){
@@ -54,24 +55,19 @@ fun AddRouteScreen(
 fun RouteScreen(
     routeId: Int,
     selectedTrainLine: String,
+    selectedStationOneCode: String,
+    selectedStationTwoCode: String,
     state: RouteState,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
-    onClickDestinationList: () -> Unit,
     saveRoute: () -> Unit,
     deleteRoute: KFunction1<Int, Unit>,
     navigateUp: () -> Unit
 ){
-    val stationSelect = menuNameAndCallback(
-        onNavigate = onNavigate,
-        menuNameResource = R.string.add_route_button_label,
-        screen = Screen.StationSelect
-    )
-
     val trainLine = selectedTrainLine
-    val stationOneCode = state.stationOneCode
-    val stationTwoCode = state.stationTwoCode
+    val stationOneCode = selectedStationOneCode
+    val stationTwoCode = selectedStationTwoCode
     val daysTracked = state.daysTrackedCount
     val timeTracked = state.timeTracked
     val isActive: String = if(state.isActive){
@@ -107,35 +103,35 @@ fun RouteScreen(
                 Chip(
                     label = "Station One",
                     secondaryLabel = stationOneCode,
-                    onClick = {onNavigate(Screen.StationSelect.route)}
+                    onClick = {onNavigate(Screen.StationOneSelect.route)}
                 )
             }
             item{
                 Chip(
                     label = "Station Two",
                     secondaryLabel = stationTwoCode,
-                    onClick = {onNavigate(Screen.StationSelect.route)}
+                    onClick = {onNavigate(Screen.StationTwoSelect.route)}
                 )
             }
             item{
                 Chip(
                     label = "Days Tracked",
                     secondaryLabel = "$daysTracked selected",
-                    onClick = stationSelect.clickHandler
+                    onClick = { }
                 )
             }
             item{
                 Chip(
                     label = "Time",
                     secondaryLabel = timeTracked.time.toString(),
-                    onClick = stationSelect.clickHandler
+                    onClick = { }
                 )
             }
             item{
                 Chip(
                     label = "Notifications",
                     secondaryLabel = isActive,
-                    onClick = stationSelect.clickHandler
+                    onClick = { }
                 )
             }
             item {
