@@ -37,6 +37,7 @@ fun TrainRunnerApp (
     PopulateDatabase()
     var themeColors by remember { mutableStateOf(initialThemeValues.colors) }
     var routeId: Int = -1
+    var selectedTrainLine by remember  { mutableStateOf("Please select a value") }
 
     TrainRunnerTheme(colors = themeColors) {
         SwipeDismissableNavHost(
@@ -99,6 +100,7 @@ fun TrainRunnerApp (
                 ScreenScaffold(scrollState = columnState) {
                     AddRouteScreen(
                         routeId = 1,
+                        selectedTrainLine = selectedTrainLine,
                         columnState = columnState,
                         onNavigate = { swipeDismissableNavController.navigate(it) },
                         onClickDestinationList = {
@@ -145,7 +147,8 @@ fun TrainRunnerApp (
                 val columnState = rememberColumnState()
                 ScreenScaffold(scrollState = columnState) {
                     LineSelectScreen(
-                        columnState = columnState
+                        columnState = columnState,
+                        selectedTrainLine = { selectedTrainLine = it}
                     ) {
                         swipeDismissableNavController.navigateUp()
                     }

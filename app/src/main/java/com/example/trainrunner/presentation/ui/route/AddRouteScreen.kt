@@ -26,6 +26,7 @@ import kotlin.reflect.KFunction1
 @Composable
 fun AddRouteScreen(
     routeId: Int,
+    selectedTrainLine: String,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
@@ -36,6 +37,7 @@ fun AddRouteScreen(
 
     RouteScreen(
         routeId = routeId,
+        selectedTrainLine = selectedTrainLine,
         state = viewModel.state,
         columnState = columnState,
         modifier = modifier,
@@ -51,6 +53,7 @@ fun AddRouteScreen(
 @Composable
 fun RouteScreen(
     routeId: Int,
+    selectedTrainLine: String,
     state: RouteState,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
@@ -66,7 +69,7 @@ fun RouteScreen(
         screen = Screen.StationSelect
     )
 
-    val trainLine = ""
+    val trainLine = selectedTrainLine
     val stationOneCode = state.stationOneCode
     val stationTwoCode = state.stationTwoCode
     val daysTracked = state.daysTrackedCount
