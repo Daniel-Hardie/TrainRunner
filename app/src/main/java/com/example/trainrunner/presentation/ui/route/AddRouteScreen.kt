@@ -65,9 +65,6 @@ fun RouteScreen(
     deleteRoute: KFunction1<Int, Unit>,
     navigateUp: () -> Unit
 ){
-    val trainLine = selectedTrainLine
-    val stationOneCode = selectedStationOneCode
-    val stationTwoCode = selectedStationTwoCode
     val daysTracked = state.daysTrackedCount
     val timeTracked = state.timeTracked
     val isActive: String = if(state.isActive){
@@ -76,6 +73,10 @@ fun RouteScreen(
     else{
         "Disabled"
     }
+
+    val isStationOneChipActive: Boolean = selectedTrainLine != "Select a line"
+    val isStationTwoChipActive: Boolean =
+        (selectedTrainLine != "Select a line") && (selectedStationOneCode != "Select entry station")
 
     Box(
         modifier = modifier.fillMaxSize()
@@ -95,21 +96,23 @@ fun RouteScreen(
             item{
                 Chip(
                     label = "Train Line",
-                    secondaryLabel = trainLine,
+                    secondaryLabel = selectedTrainLine,
                     onClick = {onNavigate(Screen.LineSelect.route)}
                 )
             }
             item{
                 Chip(
                     label = "Station One",
-                    secondaryLabel = stationOneCode,
+                    secondaryLabel = selectedStationOneCode,
+                    enabled = isStationOneChipActive,
                     onClick = { onNavigate(Screen.StationSelect.route + "/1") }
                 )
             }
             item{
                 Chip(
                     label = "Station Two",
-                    secondaryLabel = stationTwoCode,
+                    secondaryLabel = selectedStationTwoCode,
+                    enabled = isStationTwoChipActive,
                     onClick = { onNavigate(Screen.StationSelect.route + "/2") }
                 )
             }
