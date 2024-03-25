@@ -10,6 +10,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
+import androidx.navigation.navArgument
 import androidx.wear.compose.navigation.SwipeDismissableNavHost
 import androidx.wear.compose.navigation.composable
 import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
@@ -17,6 +19,7 @@ import com.example.trainrunner.presentation.data.room.sources.route.MetlinkRoute
 import com.example.trainrunner.presentation.data.room.sources.route.MetlinkRouteModelFactory
 import com.example.trainrunner.presentation.data.room.sources.station.StationModel
 import com.example.trainrunner.presentation.data.room.sources.station.StationModelFactory
+import com.example.trainrunner.presentation.navigation.STATION_SELECT_NAV_ARGUMENT
 import com.example.trainrunner.presentation.navigation.Screen
 import com.example.trainrunner.presentation.theme.TrainRunnerTheme
 import com.example.trainrunner.presentation.theme.initialThemeValues
@@ -130,13 +133,20 @@ fun TrainRunnerApp (
 
             // StationOneSelect screen
             composable(
-                route = Screen.StationOneSelect.route
+                route = Screen.StationSelect.route + "/{$STATION_SELECT_NAV_ARGUMENT}",
+                arguments = listOf(
+                    navArgument(STATION_SELECT_NAV_ARGUMENT) {
+                        type = NavType.IntType
+                    }
+                )
             ){
+                val stationSelectDropdown: Int = it.arguments!!.getInt(STATION_SELECT_NAV_ARGUMENT)
                 val columnState = rememberColumnState()
+
                 ScreenScaffold(scrollState = columnState) {
                     StationSelectScreen(
                         columnState = columnState,
-                        stopSelect = 1,
+                        stopSelect = stationSelectDropdown,
                         selectedStationOneCode = {selectedStationOneCode = it},
                         selectedStationTwoCode = {selectedStationTwoCode = it}
                     ){
@@ -144,24 +154,7 @@ fun TrainRunnerApp (
                     }
                 }
             }
-
-            // StationTwoSelect screen
-            composable(
-                route = Screen.StationTwoSelect.route
-            ){
-                val columnState = rememberColumnState()
-                ScreenScaffold(scrollState = columnState) {
-                    StationSelectScreen(
-                        columnState = columnState,
-                        stopSelect = 2,
-                        selectedStationOneCode = {selectedStationOneCode = it},
-                        selectedStationTwoCode = {selectedStationTwoCode = it}
-                    ){
-                        swipeDismissableNavController.navigateUp()
-                    }
-                }
-            }
-
+            
             // LineSelect screen
             composable(
                 route = Screen.LineSelect.route

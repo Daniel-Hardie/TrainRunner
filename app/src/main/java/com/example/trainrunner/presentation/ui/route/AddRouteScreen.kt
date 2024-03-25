@@ -31,7 +31,7 @@ fun AddRouteScreen(
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
-    navigateUp: () -> Unit,
+    navigateUp: () -> Unit
 ) {
     val viewModel = viewModel<RouteViewModel>(factory = RouteViewModelFactory(routeId))
 
@@ -103,14 +103,14 @@ fun RouteScreen(
                 Chip(
                     label = "Station One",
                     secondaryLabel = stationOneCode,
-                    onClick = {onNavigate(Screen.StationOneSelect.route)}
+                    onClick = { onNavigate(Screen.StationSelect.route + "/1") }
                 )
             }
             item{
                 Chip(
                     label = "Station Two",
                     secondaryLabel = stationTwoCode,
-                    onClick = {onNavigate(Screen.StationTwoSelect.route)}
+                    onClick = { onNavigate(Screen.StationSelect.route + "/2") }
                 )
             }
             item{
