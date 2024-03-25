@@ -75,8 +75,8 @@ class RouteViewModel(
                     trainLineId = 1,
                     stationOneId = 122,
                     stationTwoId = 123,
-                    stationOneCode = "",
-                    stationTwoCode = "",
+                    stationOneCode = state.stationOneCode,
+                    stationTwoCode = state.stationTwoCode,
                     toWellington = false,
                     isActive = true
                 )

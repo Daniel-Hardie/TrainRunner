@@ -20,7 +20,6 @@ import com.google.android.horologist.compose.layout.ScalingLazyColumnState
 import com.google.android.horologist.compose.material.Button
 import com.google.android.horologist.compose.material.ButtonSize
 import com.google.android.horologist.compose.material.Chip
-import kotlin.reflect.KFunction1
 
 @Composable
 fun AddRouteScreen(
@@ -45,7 +44,9 @@ fun AddRouteScreen(
         modifier = modifier,
         onNavigate = onNavigate,
         saveRoute = viewModel::addRoute,
-        deleteRoute = viewModel::deleteRoute
+        deleteRoute = { viewModel.deleteRoute(routeId) },
+        onStationOneCodeChanged = viewModel::onStationOneCodeChanged,
+        onStationTwoCodeChanged = viewModel::onStationTwoCodeChanged
     ){
         navigateUp.invoke()
     }
@@ -62,7 +63,9 @@ fun RouteScreen(
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
     saveRoute: () -> Unit,
-    deleteRoute: KFunction1<Int, Unit>,
+    deleteRoute: (Int) -> Unit,
+    onStationOneCodeChanged: (String) -> Unit,
+    onStationTwoCodeChanged: (String) -> Unit,
     navigateUp: () -> Unit
 ){
     val daysTracked = state.daysTrackedCount
@@ -74,9 +77,23 @@ fun RouteScreen(
         "Disabled"
     }
 
-    val isStationOneChipActive: Boolean = selectedTrainLine != "Select a line"
-    val isStationTwoChipActive: Boolean =
-        (selectedTrainLine != "Select a line") && (selectedStationOneCode != "Select entry station")
+    val isStationOneChipActive: Boolean
+    val isStationTwoChipActive: Boolean//= selectedTrainLine != "Select a line"
+    if(selectedTrainLine != "Select a line"){
+        onStationOneCodeChanged(selectedStationOneCode)
+        isStationOneChipActive = true
+    }
+    else{
+        isStationOneChipActive = false
+    }
+
+    if((selectedTrainLine != "Select a line") && (selectedStationOneCode != "Select entry station")){
+        onStationTwoCodeChanged(selectedStationTwoCode)
+        isStationTwoChipActive = true
+    }
+    else{
+        isStationTwoChipActive = false
+    }
 
     Box(
         modifier = modifier.fillMaxSize()

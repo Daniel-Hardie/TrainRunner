@@ -154,7 +154,7 @@ fun TrainRunnerApp (
                     }
                 }
             }
-            
+
             // LineSelect screen
             composable(
                 route = Screen.LineSelect.route
