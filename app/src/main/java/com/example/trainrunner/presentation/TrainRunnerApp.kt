@@ -147,6 +147,7 @@ fun TrainRunnerApp (
                     StationSelectScreen(
                         columnState = columnState,
                         stopSelect = stationSelectDropdown,
+                        lineSelected = selectedTrainLine,
                         selectedStationOneCode = {selectedStationOneCode = it},
                         selectedStationTwoCode = {selectedStationTwoCode = it}
                     ){

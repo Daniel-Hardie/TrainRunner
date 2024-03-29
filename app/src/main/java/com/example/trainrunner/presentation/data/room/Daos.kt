@@ -21,9 +21,11 @@ interface StationDao {
     fun getAllStations(): Flow<List<Station>>
 
     @Query("""
-        SELECT * FROM station WHERE metlinkRouteId =:lineId
+        SELECT * FROM station s 
+        INNER JOIN metlinkRoute mr ON s.metlinkRouteId = mr.metlinkRouteId
+        WHERE mr.metlinkRouteShortName =:lineShortName
     """)
-    fun getAllStationsOnLine(lineId: String): Flow<List<Station>>
+    fun getAllStationsOnLine(lineShortName: String): Flow<List<Station>>
 
     @Query("""
         SELECT * FROM station WHERE stationId =:id

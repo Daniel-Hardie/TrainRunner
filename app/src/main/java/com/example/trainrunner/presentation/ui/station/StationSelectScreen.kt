@@ -23,14 +23,14 @@ import com.google.android.horologist.compose.material.Chip
 fun StationSelectScreen(
     columnState: ScalingLazyColumnState,
     stopSelect: Int,
+    lineSelected: String,
     selectedStationOneCode: (String) -> Unit,
     selectedStationTwoCode: (String) -> Unit,
     modifier: Modifier = Modifier,
     navigateUp: () -> Unit,
 ) {
-    val viewModel = viewModel(modelClass = StationSelectViewModel::class.java)
-    val stationState = viewModel.state
-    val stations = stationState.stations
+    val viewModel = viewModel<StationSelectViewModel>(factory = StationSelectViewModelFactory(lineSelected))
+    val stations = viewModel.state.stations
 
     StationSelectScreen(
         columnState = columnState,
