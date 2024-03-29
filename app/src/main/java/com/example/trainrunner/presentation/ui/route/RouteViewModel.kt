@@ -56,6 +56,13 @@ class RouteViewModel(
         }
     }
 
+    fun onTrainLineChanged(lineShortName: String, selectedMetlinkRouteId: String){
+        state = state.copy(
+            metlinkRouteShortName = lineShortName,
+            selectedMetlinkRouteId = selectedMetlinkRouteId
+        )
+    }
+
     fun onStationOneCodeChanged(newCode: String){
         state = state.copy(stationOneCode = newCode)
     }
@@ -72,9 +79,8 @@ class RouteViewModel(
         viewModelScope.launch {
             repository.insertRoute(
                 Route(
-                    trainLineId = 1,
-                    stationOneId = 122,
-                    stationTwoId = 123,
+                    metlinkRouteId = state.selectedMetlinkRouteId,
+                    metlinkRouteShortName = state.metlinkRouteShortName,
                     stationOneCode = state.stationOneCode,
                     stationTwoCode = state.stationTwoCode,
                     toWellington = false,
@@ -100,6 +106,8 @@ class RouteViewModelFactory(private val id: Int): ViewModelProvider.Factory{
 }
 
 data class RouteState(
+    val selectedMetlinkRouteId: String = "",
+    val metlinkRouteShortName: String = "",
     val stationOneCode: String = "Plz select value",
     val stationTwoCode: String = "Plz select value",
     val daysTrackedCount: Int = 0,

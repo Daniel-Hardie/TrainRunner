@@ -25,6 +25,7 @@ import com.google.android.horologist.compose.material.Chip
 fun AddRouteScreen(
     routeId: Int,
     selectedTrainLine: String,
+    selectedMetlinkRouteId: String,
     selectedStationOneCode: String,
     selectedStationTwoCode: String,
     columnState: ScalingLazyColumnState,
@@ -36,6 +37,7 @@ fun AddRouteScreen(
 
     RouteScreen(
         routeId = routeId,
+        selectedMetlinkRouteId = selectedMetlinkRouteId,
         selectedTrainLine = selectedTrainLine,
         selectedStationOneCode = selectedStationOneCode,
         selectedStationTwoCode = selectedStationTwoCode,
@@ -45,6 +47,7 @@ fun AddRouteScreen(
         onNavigate = onNavigate,
         saveRoute = viewModel::addRoute,
         deleteRoute = { viewModel.deleteRoute(routeId) },
+        onLineChanged = viewModel::onTrainLineChanged,
         onStationOneCodeChanged = viewModel::onStationOneCodeChanged,
         onStationTwoCodeChanged = viewModel::onStationTwoCodeChanged
     ){
@@ -55,6 +58,7 @@ fun AddRouteScreen(
 @Composable
 fun RouteScreen(
     routeId: Int,
+    selectedMetlinkRouteId: String,
     selectedTrainLine: String,
     selectedStationOneCode: String,
     selectedStationTwoCode: String,
@@ -64,6 +68,7 @@ fun RouteScreen(
     onNavigate: (String) -> Unit,
     saveRoute: () -> Unit,
     deleteRoute: (Int) -> Unit,
+    onLineChanged: (String, String) -> Unit,
     onStationOneCodeChanged: (String) -> Unit,
     onStationTwoCodeChanged: (String) -> Unit,
     navigateUp: () -> Unit
@@ -78,7 +83,9 @@ fun RouteScreen(
     }
 
     val isStationOneChipActive: Boolean
-    val isStationTwoChipActive: Boolean//= selectedTrainLine != "Select a line"
+    val isStationTwoChipActive: Boolean
+    onLineChanged(selectedTrainLine, selectedMetlinkRouteId)
+
     if(selectedTrainLine != "Select a line"){
         onStationOneCodeChanged(selectedStationOneCode)
         isStationOneChipActive = true

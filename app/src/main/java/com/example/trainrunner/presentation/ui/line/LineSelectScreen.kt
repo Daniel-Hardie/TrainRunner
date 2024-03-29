@@ -18,6 +18,7 @@ import com.google.android.horologist.compose.material.Chip
 @Composable
 fun LineSelectScreen(
     columnState: ScalingLazyColumnState,
+    selectedMetlinkRouteId: (String) -> Unit,
     selectedTrainLine: (String) -> Unit,
     modifier: Modifier = Modifier,
     navigateUp: () -> Unit,
@@ -27,6 +28,7 @@ fun LineSelectScreen(
     LineSelectScreen(
         metlinkLines = metlinkLines,
         columnState = columnState,
+        selectedMetlinkRouteId = selectedMetlinkRouteId,
         selectedTrainLine = selectedTrainLine,
         modifier = modifier
     ) {
@@ -38,6 +40,7 @@ fun LineSelectScreen(
 fun LineSelectScreen(
     metlinkLines: List<MetlinkRoute>,
     columnState: ScalingLazyColumnState,
+    selectedMetlinkRouteId: (String) -> Unit,
     selectedTrainLine: (String) -> Unit,
     modifier: Modifier = Modifier,
     navigateUp: () -> Unit,
@@ -63,6 +66,7 @@ fun LineSelectScreen(
                     secondaryLabel = line.metlinkRouteLongName,
                     onClick = {
                         selectedTrainLine(line.metlinkRouteShortName)
+                        selectedMetlinkRouteId(line.metlinkRouteId)
                         navigateUp.invoke()
                     }
                 )

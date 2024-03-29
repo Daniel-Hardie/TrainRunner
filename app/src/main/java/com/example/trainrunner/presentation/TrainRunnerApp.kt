@@ -41,6 +41,7 @@ fun TrainRunnerApp (
     PopulateDatabase()
     var themeColors by remember { mutableStateOf(initialThemeValues.colors) }
     var routeId by remember { mutableIntStateOf(-1) }
+    var selectedMetlinkRouteId by remember  { mutableStateOf("") }
     var selectedTrainLine by remember  { mutableStateOf("Select a line") }
     var selectedStationOneCode by remember { mutableStateOf("Select entry station") }
     var selectedStationTwoCode by remember { mutableStateOf("Select destination station") }
@@ -106,7 +107,8 @@ fun TrainRunnerApp (
                 val columnState = rememberColumnState()
                 ScreenScaffold(scrollState = columnState) {
                     AddRouteScreen(
-                        routeId = 1,
+                        routeId = routeId,
+                        selectedMetlinkRouteId = selectedMetlinkRouteId,
                         selectedTrainLine = selectedTrainLine,
                         selectedStationOneCode = selectedStationOneCode,
                         selectedStationTwoCode = selectedStationTwoCode,
@@ -164,6 +166,7 @@ fun TrainRunnerApp (
                 ScreenScaffold(scrollState = columnState) {
                     LineSelectScreen(
                         columnState = columnState,
+                        selectedMetlinkRouteId = {selectedMetlinkRouteId = it},
                         selectedTrainLine = { selectedTrainLine = it}
                     ) {
                         swipeDismissableNavController.navigateUp()

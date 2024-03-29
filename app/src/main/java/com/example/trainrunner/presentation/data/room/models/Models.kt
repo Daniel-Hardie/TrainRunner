@@ -12,14 +12,12 @@ data class Route(
     @ColumnInfo(name = "routeId")
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
-    val trainLineId: Int = -1,
-    val stationOneId: Int = -1,
-    val stationTwoId: Int = -1,
+    val metlinkRouteId: String = "",
+    val metlinkRouteShortName: String = "",
     val stationOneCode: String = "",
     val stationTwoCode: String = "",
     val toWellington: Boolean,
-    val isActive: Boolean = true,
-
+    val isActive: Boolean = true
 )
 
 @Entity(tableName = "routeNotification")
