@@ -173,6 +173,20 @@ fun TrainRunnerApp (
                     }
                 }
             }
+
+            // DaysTracked screen
+            composable(
+                route = Screen.DaysTracked.route
+            ){
+                val columnState = rememberColumnState()
+                ScreenScaffold(scrollState = columnState) {
+                    DaysTrackedScreen(
+                        columnState = columnState
+                    ) {
+                        swipeDismissableNavController.navigateUp()
+                    }
+                }
+            }
         }
     }
 }

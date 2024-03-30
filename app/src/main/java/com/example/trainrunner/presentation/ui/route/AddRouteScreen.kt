@@ -145,6 +145,7 @@ fun RouteScreen(
                     label = "Days Tracked",
                     secondaryLabel = "$daysTracked selected",
                     onClick = { }
+                    onClick = {onNavigate(Screen.DaysTracked.route)}
                 )
             }
             item{

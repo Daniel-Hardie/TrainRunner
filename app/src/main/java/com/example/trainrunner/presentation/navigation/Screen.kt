@@ -13,5 +13,6 @@ sealed class Screen(
     object EditRoute: Screen("edit-route")
     object StationSelect: Screen("station-select")
     object LineSelect: Screen("line-select")
+    object DaysTracked: Screen("days-tracked")
 
 }

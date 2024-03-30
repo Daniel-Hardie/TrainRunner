@@ -43,7 +43,7 @@ fun LineSelectScreen(
     selectedMetlinkRouteId: (String) -> Unit,
     selectedTrainLine: (String) -> Unit,
     modifier: Modifier = Modifier,
-    navigateUp: () -> Unit,
+    navigateUp: () -> Unit
 ){
     Box(
         modifier = modifier.fillMaxSize()
