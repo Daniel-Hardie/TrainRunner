@@ -1,4 +1,4 @@
-package com.example.trainrunner.presentation.ui.daysTracked
+package com.example.trainrunner.presentation.ui.mars
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -81,23 +81,9 @@ class DaysTrackedViewModel(
 //        )
 
 //        var modifiedDay = state[dayChanged.orderId].copy(isActive = !dayChanged.isActive)
-
         val newActiveState = !state[dayChanged.orderId].isActive
         state[dayChanged.orderId] = state[dayChanged.orderId].copy(isActive = newActiveState)
 
-        var newList: MutableList<Day> = mutableListOf()
-        for (day in state){
-            newList.add(
-                Day(
-                    orderId = day.orderId,
-                    text = day.text,
-                    shortText = day.shortText,
-                    isActive = day.isActive
-                )
-            )
-        }
-
-        state = newList
     }
 }
 

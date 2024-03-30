@@ -16,17 +16,30 @@ import com.google.android.horologist.compose.material.ToggleChipToggleControl
 @Composable
 fun DaysTrackedScreen(
     columnState: ScalingLazyColumnState,
-//    selectedDaysToTrack: (String) -> Unit,
+//    selectedDays: ListOfDays,
+    selectedDays: MutableList<Day>,
+//    selectedDaysOnChange: (ListOfDays) -> Unit,
+    selectedDaysOnChange: (List<Day>) -> Unit,
     modifier: Modifier = Modifier,
     navigateUp: () -> Unit,
 ){
-    val viewModel = viewModel(modelClass = DaysTrackedViewModel::class.java)
-    val listOfPossibleDays = viewModel.state.listOfDays
+//    val viewModel = viewModel(modelClass = DaysTrackedViewModel::class.java)
+//    val viewModel = viewModel<DaysTrackedViewModel>(factory = DaysTrackedViewModelFactory(selectedDays))
+    val viewModel = viewModel<DaysTrackedViewModel>(factory = DaysTrackedViewModelFactory(selectedDays))
+
+//    if(!selectedDays.isEmpty()){
+//        viewModel.populateDaysTracked(selectedDays)
+//    }
+//    val listOfPossibleDays = viewModel.state.listOfDays
 
     DaysTrackedList(
+        state = viewModel.state,
         columnState = columnState,
         modifier = modifier,
-        listOfDays = listOfPossibleDays
+//        listOfDays = listOfPossibleDays,
+//        selectedDays = selectedDays,
+        selectedDaysOnChange = selectedDaysOnChange,
+        onDayChanged = viewModel::onDayChanged
     ){
         navigateUp.invoke()
     }
@@ -34,9 +47,15 @@ fun DaysTrackedScreen(
 
 @Composable
 fun DaysTrackedList(
+    state: MutableList<Day>,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
-    listOfDays: List<Day>,
+//    listOfDays: List<Day>,
+//    selectedDays: ListOfDays,
+//    selectedDays: MutableList<Day>,
+//    selectedDaysOnChange: (ListOfDays) -> Unit,
+    selectedDaysOnChange: (List<Day>) -> Unit,
+    onDayChanged: (Day) -> Unit,
     navigateUp: () -> Unit
 ) {
     Box(
@@ -46,11 +65,32 @@ fun DaysTrackedList(
             columnState = columnState,
             modifier = modifier.fillMaxSize()
         ) {
-            for(day in listOfDays){
+
+            // using an outdated state when this shit happens
+            for(day in state){
                 item{
                     ToggleChip(
                         checked = day.isActive,
-                        onCheckedChanged = {},
+                        onCheckedChanged = {
+                            onDayChanged(day)
+//                            selectedDays[day.orderId] = selectedDays[day.orderId].copy(isActive = !day.isActive)
+
+                            val returnList = mutableListOf<Day>()
+                            for (dayTest in state){
+                                returnList.add(
+                                    Day(
+                                        orderId = dayTest.orderId,
+                                        text = dayTest.text,
+                                        shortText = dayTest.shortText,
+                                        isActive = dayTest.isActive
+                                    )
+                                )
+                            }
+
+                            selectedDaysOnChange(returnList)
+                            // I dont think this is working because state is the same list/object?
+//                            selectedDaysOnChange(state)
+                        },
                         label = day.text,
                         toggleControl = ToggleChipToggleControl.Switch
                     )
@@ -62,7 +102,6 @@ fun DaysTrackedList(
                     id = R.drawable.ic_done,
                     contentDescription = "Save",
                     onClick = {
-//                        saveRoute.invoke()
                         navigateUp.invoke()
                     },
                     buttonSize = ButtonSize.Small,

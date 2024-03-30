@@ -28,6 +28,7 @@ fun AddRouteScreen(
     selectedMetlinkRouteId: String,
     selectedStationOneCode: String,
     selectedStationTwoCode: String,
+//    selectedDays: ListOfDays,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
@@ -41,6 +42,7 @@ fun AddRouteScreen(
         selectedTrainLine = selectedTrainLine,
         selectedStationOneCode = selectedStationOneCode,
         selectedStationTwoCode = selectedStationTwoCode,
+//        selectedDays = selectedDays,
         state = viewModel.state,
         columnState = columnState,
         modifier = modifier,
@@ -62,6 +64,7 @@ fun RouteScreen(
     selectedTrainLine: String,
     selectedStationOneCode: String,
     selectedStationTwoCode: String,
+//    selectedDays: ListOfDays,
     state: RouteState,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
@@ -144,7 +147,6 @@ fun RouteScreen(
                 Chip(
                     label = "Days Tracked",
                     secondaryLabel = "$daysTracked selected",
-                    onClick = { }
                     onClick = {onNavigate(Screen.DaysTracked.route)}
                 )
             }
@@ -152,7 +154,7 @@ fun RouteScreen(
                 Chip(
                     label = "Time",
                     secondaryLabel = timeTracked.time.toString(),
-                    onClick = { }
+                    onClick = { onNavigate(Screen.Mars.route)}
                 )
             }
             item{

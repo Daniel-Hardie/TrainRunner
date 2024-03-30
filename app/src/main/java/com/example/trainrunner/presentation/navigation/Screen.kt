@@ -14,5 +14,6 @@ sealed class Screen(
     object StationSelect: Screen("station-select")
     object LineSelect: Screen("line-select")
     object DaysTracked: Screen("days-tracked")
+    object Mars: Screen("mars")
 
 }
