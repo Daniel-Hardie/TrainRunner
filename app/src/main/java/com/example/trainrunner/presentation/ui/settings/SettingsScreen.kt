@@ -22,6 +22,12 @@ fun SettingsScreen(
 ){
     val viewModel = viewModel(modelClass = SettingsViewModel::class.java)
     val numberOfRoutes = viewModel.state.numberOfRoutes
+    val routeLabel = if (numberOfRoutes == 1){
+        "$numberOfRoutes active route"
+    }
+    else{
+        "$numberOfRoutes active routes"
+    }
 
     Box(
         modifier = modifier.fillMaxSize()
@@ -42,7 +48,7 @@ fun SettingsScreen(
                 Chip(
                     modifier = modifier,
                     label = "Routes",
-                    secondaryLabel = "$numberOfRoutes active routes",
+                    secondaryLabel = routeLabel,
                     onClick = { onNavigate(Screen.Routes.route) }
                 )
             }
