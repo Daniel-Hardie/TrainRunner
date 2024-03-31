@@ -154,7 +154,7 @@ fun RouteScreen(
                 Chip(
                     label = "Time",
                     secondaryLabel = timeTracked.time.toString(),
-                    onClick = { onNavigate(Screen.Mars.route)}
+                    onClick = { }
                 )
             }
             item{

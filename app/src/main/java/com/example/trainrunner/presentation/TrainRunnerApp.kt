@@ -31,8 +31,6 @@ import com.example.trainrunner.presentation.ui.SettingsScreen
 import com.example.trainrunner.presentation.ui.daysTracked.Day
 import com.example.trainrunner.presentation.ui.daysTracked.DaysTrackedScreen
 import com.example.trainrunner.presentation.ui.line.LineSelectScreen
-import com.example.trainrunner.presentation.ui.mars.MarsObject
-import com.example.trainrunner.presentation.ui.mars.MarsScreen
 import com.example.trainrunner.presentation.ui.route.AddRouteScreen
 import com.example.trainrunner.presentation.ui.station.StationSelectScreen
 import com.google.android.horologist.compose.layout.ScreenScaffold
@@ -52,10 +50,7 @@ fun TrainRunnerApp (
     var selectedTrainLine by remember  { mutableStateOf("Select a line") }
     var selectedStationOneCode by remember { mutableStateOf("Select entry station") }
     var selectedStationTwoCode by remember { mutableStateOf("Select destination station") }
-//    var selectedDays by remember { mutableStateOf(ListOfDays()) }
-//    var selectedDays by remember { mutableStateOf(emptyList<Day>()) }
     val selectedDays = remember { mutableStateListOf<Day>() }
-    val marsObjectDays = remember { mutableStateListOf<MarsObject>() }
 
     TrainRunnerTheme(colors = themeColors) {
         SwipeDismissableNavHost(
@@ -196,24 +191,6 @@ fun TrainRunnerApp (
                         selectedDays = selectedDays,
 //                        selectedDaysOnChange = { selectedDays = it},
                         selectedDaysOnChange = {selectedDays.clear(); selectedDays.addAll(it)}
-                    ) {
-                        swipeDismissableNavController.navigateUp()
-                    }
-                }
-            }
-
-            // DaysTracked screen
-            composable(
-                route = Screen.Mars.route
-            ){
-                val columnState = rememberColumnState()
-                ScreenScaffold(scrollState = columnState) {
-                    MarsScreen(
-                        columnState = columnState,
-//                        marsDays = marsDays,
-                        marsObjectDays = marsObjectDays,
-//                        marsDaysOnChange = {marsDays.clear(); marsDays.addAll(it)},
-                        marsObjectDaysOnChange = {marsObjectDays.clear(); marsObjectDays.addAll(it)},
                     ) {
                         swipeDismissableNavController.navigateUp()
                     }
