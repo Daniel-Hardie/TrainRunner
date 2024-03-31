@@ -27,7 +27,7 @@ import com.example.trainrunner.presentation.theme.initialThemeValues
 import com.example.trainrunner.presentation.ui.EditRouteScreen
 import com.example.trainrunner.presentation.ui.HomeScreen
 import com.example.trainrunner.presentation.ui.routeList.RouteListScreen
-import com.example.trainrunner.presentation.ui.SettingsScreen
+import com.example.trainrunner.presentation.ui.settings.SettingsScreen
 import com.example.trainrunner.presentation.ui.daysTracked.Day
 import com.example.trainrunner.presentation.ui.daysTracked.DaysTrackedScreen
 import com.example.trainrunner.presentation.ui.line.LineSelectScreen

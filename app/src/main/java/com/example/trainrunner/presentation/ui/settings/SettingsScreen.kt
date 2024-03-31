@@ -1,4 +1,4 @@
-package com.example.trainrunner.presentation.ui
+package com.example.trainrunner.presentation.ui.settings
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -6,10 +6,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
-import com.example.trainrunner.R
-import com.example.trainrunner.presentation.menuNameAndCallback
 import com.example.trainrunner.presentation.navigation.Screen
 import com.google.android.horologist.compose.layout.ScalingLazyColumn
 import com.google.android.horologist.compose.layout.ScalingLazyColumnState
@@ -21,24 +20,8 @@ fun SettingsScreen(
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit
 ){
-    val routesInfo = menuNameAndCallback(
-        onNavigate = onNavigate,
-        menuNameResource = R.string.settings_button_label,
-        screen = Screen.Routes
-    )
-
-    val settingsMenuItems = listOf(
-        menuNameAndCallback(
-            onNavigate = onNavigate,
-            menuNameResource = R.string.routes_label,
-            screen = Screen.Routes
-        ),
-        menuNameAndCallback(
-            onNavigate = onNavigate,
-            menuNameResource = R.string.notifications_label,
-            screen = Screen.Notifications
-        )
-    )
+    val viewModel = viewModel(modelClass = SettingsViewModel::class.java)
+    val numberOfRoutes = viewModel.state.numberOfRoutes
 
     Box(
         modifier = modifier.fillMaxSize()
@@ -59,8 +42,8 @@ fun SettingsScreen(
                 Chip(
                     modifier = modifier,
                     label = "Routes",
-                    secondaryLabel = "2 active routes",
-                    onClick = settingsMenuItems[0].clickHandler
+                    secondaryLabel = "$numberOfRoutes active routes",
+                    onClick = { onNavigate(Screen.Routes.route) }
                 )
             }
         }

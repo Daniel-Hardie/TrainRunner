@@ -22,6 +22,8 @@ class Repository(
 
     val getAllRoutes = routeDao.getAllRoutes()
 
+    val getNumberRoutes = routeDao.getNumberRoutes()
+
     fun getNumberRouteDaysTracked(id: Int) = routeDao.getNumberRouteDaysTracked(id)
 
     // Returning id of newly inserted route to be used as FK in RouteNotification table

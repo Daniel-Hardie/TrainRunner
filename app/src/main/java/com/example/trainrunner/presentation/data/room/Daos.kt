@@ -60,6 +60,11 @@ interface RouteDao {
     fun getRoute(routeId: Int): Flow<Route>
 
     @Query("""
+        SELECT COUNT(*) from route
+    """)
+    fun getNumberRoutes(): Flow<Int>
+
+    @Query("""
        SELECT COUNT(*) FROM route AS r
        INNER JOIN routeNotification AS rn ON r.routeId = rn.routeUniqueId
        WHERE r.routeId =:routeId
