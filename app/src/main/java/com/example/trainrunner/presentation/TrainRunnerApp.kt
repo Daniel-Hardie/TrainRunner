@@ -26,7 +26,7 @@ import com.example.trainrunner.presentation.theme.TrainRunnerTheme
 import com.example.trainrunner.presentation.theme.initialThemeValues
 import com.example.trainrunner.presentation.ui.EditRouteScreen
 import com.example.trainrunner.presentation.ui.HomeScreen
-import com.example.trainrunner.presentation.ui.RoutesScreen
+import com.example.trainrunner.presentation.ui.routeList.RouteListScreen
 import com.example.trainrunner.presentation.ui.SettingsScreen
 import com.example.trainrunner.presentation.ui.daysTracked.Day
 import com.example.trainrunner.presentation.ui.daysTracked.DaysTrackedScreen
@@ -98,7 +98,7 @@ fun TrainRunnerApp (
             ){
                 val columnState = rememberColumnState()
                 ScreenScaffold(scrollState = columnState) {
-                    RoutesScreen(
+                    RouteListScreen(
                         columnState = columnState,
                         onNavigate = { swipeDismissableNavController.navigate(it) }
                     )

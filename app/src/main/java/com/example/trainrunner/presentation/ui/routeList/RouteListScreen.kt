@@ -1,4 +1,4 @@
-package com.example.trainrunner.presentation.ui
+package com.example.trainrunner.presentation.ui.routeList
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -19,7 +19,7 @@ import com.google.android.horologist.compose.material.Chip
 import com.google.android.horologist.images.base.paintable.DrawableResPaintable
 
 @Composable
-fun RoutesScreen(
+fun RouteListScreen(
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
