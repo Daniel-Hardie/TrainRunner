@@ -16,34 +16,20 @@ import com.google.android.horologist.compose.material.ToggleChipToggleControl
 @Composable
 fun DaysTrackedScreen(
     columnState: ScalingLazyColumnState,
-//    selectedDays: ListOfDays,
     selectedDays: MutableList<Day>,
-//    selectedDaysOnChange: (ListOfDays) -> Unit,
     selectedDaysOnChange: (List<Day>) -> Unit,
     modifier: Modifier = Modifier,
     navigateUp: () -> Unit,
 ){
-//    val viewModel = viewModel(modelClass = DaysTrackedViewModel::class.java)
-//    val viewModel = viewModel<DaysTrackedViewModel>(factory = DaysTrackedViewModelFactory(selectedDays))
-//    val viewModel = viewModel<DaysTrackedViewModel>(factory = DaysTrackedViewModelFactory(selectedDays))
-
-//    if(!selectedDays.isEmpty()){
-//        viewModel.populateDaysTracked(selectedDays)
-//    }
-//    val listOfPossibleDays = viewModel.state.listOfDays
-
     if(selectedDays.isNullOrEmpty()){
         selectedDays.addAll(PopulateDayList())
     }
 
     DaysTrackedList(
-//        state = viewModel.state,
         columnState = columnState,
         modifier = modifier,
-//        listOfDays = listOfPossibleDays,
         selectedDays = selectedDays,
-        selectedDaysOnChange = selectedDaysOnChange,
-//        onDayChanged = viewModel::onDayChanged
+        selectedDaysOnChange = selectedDaysOnChange
     ){
         navigateUp.invoke()
     }
@@ -51,15 +37,10 @@ fun DaysTrackedScreen(
 
 @Composable
 fun DaysTrackedList(
-//    state: MutableList<Day>,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
-//    listOfDays: List<Day>,
-//    selectedDays: ListOfDays,
     selectedDays: MutableList<Day>,
-//    selectedDaysOnChange: (ListOfDays) -> Unit,
     selectedDaysOnChange: (List<Day>) -> Unit,
-//    onDayChanged: (Day) -> Unit,
     navigateUp: () -> Unit
 ) {
     Box(
@@ -70,14 +51,11 @@ fun DaysTrackedList(
             modifier = modifier.fillMaxSize()
         ) {
 
-            // using an outdated state when this shit happens
-            for(day in selectedDays){    //state
+            for(day in selectedDays){
                 item{
                     ToggleChip(
                         checked = day.isActive,
                         onCheckedChanged = {
-//                            onDayChanged(day)
-
                             val returnList = mutableStateListOf<Day>()
                             for (dayTest in selectedDays){
                                 val isActive: Boolean = if(dayTest.orderId == day.orderId){
@@ -96,8 +74,6 @@ fun DaysTrackedList(
                             }
 
                             selectedDaysOnChange(returnList)
-                            // I dont think this is working because state is the same list/object?
-//                            selectedDaysOnChange(state)
                         },
                         label = day.text,
                         toggleControl = ToggleChipToggleControl.Switch
