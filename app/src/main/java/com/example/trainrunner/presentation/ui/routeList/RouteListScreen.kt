@@ -6,10 +6,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
 import com.example.trainrunner.R
-import com.example.trainrunner.presentation.menuNameAndCallback
 import com.example.trainrunner.presentation.navigation.Screen
 import com.google.android.horologist.compose.layout.ScalingLazyColumn
 import com.google.android.horologist.compose.layout.ScalingLazyColumnState
@@ -24,17 +24,10 @@ fun RouteListScreen(
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
 ){
-    val addRouteInfo = menuNameAndCallback(
-        onNavigate = onNavigate,
-        menuNameResource = R.string.add_route_button_label,
-        screen = Screen.AddRoute
-    )
+    val viewModel = viewModel(modelClass = RouteListViewModel::class.java)
+    val routes = viewModel.state.routeList
+    val routeNotifications = viewModel.state.routeNotificationsList
 
-    val editRouteInfo = menuNameAndCallback(
-        onNavigate = onNavigate,
-        menuNameResource = R.string.edit_route_button_label,
-        screen = Screen.EditRoute
-    )
 
     Box(
         modifier = modifier.fillMaxSize()
@@ -51,27 +44,42 @@ fun RouteListScreen(
                     text = "Routes"
                 )
             }
-            item{
-                Chip(
-                    label = "TAIT -> WELL",
-                    secondaryLabel = "6:57am M,T,W,T,F",
-                    icon = DrawableResPaintable(R.drawable.ic_train),
-                    onClick = editRouteInfo.clickHandler
-                )
+            if(routes.isNullOrEmpty()){
+                item {
+                    Text(
+                        modifier = Modifier.fillMaxWidth(),
+                        textAlign = TextAlign.Center,
+                        color = MaterialTheme.colors.primary,
+                        text = "No saved routes!"
+                    )
+                }
+
             }
-            item{
-                Chip(
-                    label = "WELL -> TAIT",
-                    secondaryLabel = "4:17pm M,T,W,T,F",
-                    icon = DrawableResPaintable(R.drawable.ic_train),
-                    onClick = editRouteInfo.clickHandler
-                )
+            else{
+                for (route in routes){
+                    val currentRouteUniqueId = route.uniqueValueForRouteNotification
+                    val relevantRouteNotifications = routeNotifications.filter { it.routeUniqueId == currentRouteUniqueId }
+                    var daysTrackedList = ""
+                    for(notification in relevantRouteNotifications){
+                        daysTrackedList += notification.dayShortText + ","
+                    }
+                    daysTrackedList = daysTrackedList.dropLast(1)
+
+                    item{
+                        Chip(
+                            label = "${route.stationOneCode} -> ${route.stationTwoCode}",
+                            secondaryLabel = "10:57am ${daysTrackedList}",
+                            icon = DrawableResPaintable(R.drawable.ic_train),
+                            onClick = { onNavigate(Screen.EditRoute.route) }
+                        )
+                    }
+                }
             }
             item {
                 Button(
                     id = R.drawable.ic_add,
                     contentDescription = "",
-                    onClick = addRouteInfo.clickHandler,
+                    onClick = { onNavigate(Screen.AddRoute.route) },
                     buttonSize = ButtonSize.Small,
                 )
             }

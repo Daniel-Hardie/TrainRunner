@@ -111,7 +111,7 @@ fun PopulateDayList(): MutableList<Day> {
         "M",
         "Tu",
         "W",
-        "Th",
+        "T",
         "F"
     )
 
