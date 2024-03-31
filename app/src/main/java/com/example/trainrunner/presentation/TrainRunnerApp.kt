@@ -31,7 +31,6 @@ import com.example.trainrunner.presentation.ui.SettingsScreen
 import com.example.trainrunner.presentation.ui.daysTracked.Day
 import com.example.trainrunner.presentation.ui.daysTracked.DaysTrackedScreen
 import com.example.trainrunner.presentation.ui.line.LineSelectScreen
-import com.example.trainrunner.presentation.ui.mars.Mars
 import com.example.trainrunner.presentation.ui.mars.MarsObject
 import com.example.trainrunner.presentation.ui.mars.MarsScreen
 import com.example.trainrunner.presentation.ui.route.AddRouteScreen
@@ -55,11 +54,7 @@ fun TrainRunnerApp (
     var selectedStationTwoCode by remember { mutableStateOf("Select destination station") }
 //    var selectedDays by remember { mutableStateOf(ListOfDays()) }
 //    var selectedDays by remember { mutableStateOf(emptyList<Day>()) }
-//    var selectedDays by remember { mutableStateOf(emptyList<Day>()) }
-    var selectedDays = remember { mutableStateListOf<Day>() }
-
-
-    val marsDays = remember { mutableStateListOf<Mars>() } // Initialize with mutableStateListOf
+    val selectedDays = remember { mutableStateListOf<Day>() }
     val marsObjectDays = remember { mutableStateListOf<MarsObject>() }
 
     TrainRunnerTheme(colors = themeColors) {

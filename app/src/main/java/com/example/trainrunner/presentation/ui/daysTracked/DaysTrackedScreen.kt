@@ -3,8 +3,8 @@ package com.example.trainrunner.presentation.ui.daysTracked
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.ui.Modifier
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.trainrunner.R
 import com.google.android.horologist.compose.layout.ScalingLazyColumn
 import com.google.android.horologist.compose.layout.ScalingLazyColumnState
@@ -25,21 +25,25 @@ fun DaysTrackedScreen(
 ){
 //    val viewModel = viewModel(modelClass = DaysTrackedViewModel::class.java)
 //    val viewModel = viewModel<DaysTrackedViewModel>(factory = DaysTrackedViewModelFactory(selectedDays))
-    val viewModel = viewModel<DaysTrackedViewModel>(factory = DaysTrackedViewModelFactory(selectedDays))
+//    val viewModel = viewModel<DaysTrackedViewModel>(factory = DaysTrackedViewModelFactory(selectedDays))
 
 //    if(!selectedDays.isEmpty()){
 //        viewModel.populateDaysTracked(selectedDays)
 //    }
 //    val listOfPossibleDays = viewModel.state.listOfDays
 
+    if(selectedDays.isNullOrEmpty()){
+        selectedDays.addAll(PopulateDayList())
+    }
+
     DaysTrackedList(
-        state = viewModel.state,
+//        state = viewModel.state,
         columnState = columnState,
         modifier = modifier,
 //        listOfDays = listOfPossibleDays,
-//        selectedDays = selectedDays,
+        selectedDays = selectedDays,
         selectedDaysOnChange = selectedDaysOnChange,
-        onDayChanged = viewModel::onDayChanged
+//        onDayChanged = viewModel::onDayChanged
     ){
         navigateUp.invoke()
     }
@@ -47,15 +51,15 @@ fun DaysTrackedScreen(
 
 @Composable
 fun DaysTrackedList(
-    state: MutableList<Day>,
+//    state: MutableList<Day>,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
 //    listOfDays: List<Day>,
 //    selectedDays: ListOfDays,
-//    selectedDays: MutableList<Day>,
+    selectedDays: MutableList<Day>,
 //    selectedDaysOnChange: (ListOfDays) -> Unit,
     selectedDaysOnChange: (List<Day>) -> Unit,
-    onDayChanged: (Day) -> Unit,
+//    onDayChanged: (Day) -> Unit,
     navigateUp: () -> Unit
 ) {
     Box(
@@ -67,22 +71,26 @@ fun DaysTrackedList(
         ) {
 
             // using an outdated state when this shit happens
-            for(day in state){
+            for(day in selectedDays){    //state
                 item{
                     ToggleChip(
                         checked = day.isActive,
                         onCheckedChanged = {
-                            onDayChanged(day)
-//                            selectedDays[day.orderId] = selectedDays[day.orderId].copy(isActive = !day.isActive)
+//                            onDayChanged(day)
 
-                            val returnList = mutableListOf<Day>()
-                            for (dayTest in state){
+                            val returnList = mutableStateListOf<Day>()
+                            for (dayTest in selectedDays){
+                                val isActive: Boolean = if(dayTest.orderId == day.orderId){
+                                    !dayTest.isActive
+                                } else{
+                                    dayTest.isActive
+                                }
                                 returnList.add(
                                     Day(
                                         orderId = dayTest.orderId,
                                         text = dayTest.text,
                                         shortText = dayTest.shortText,
-                                        isActive = dayTest.isActive
+                                        isActive = isActive
                                     )
                                 )
                             }
@@ -110,4 +118,37 @@ fun DaysTrackedList(
 
         }
     }
+}
+
+@Composable
+fun PopulateDayList(): MutableList<Day> {
+    var returnList: MutableList<Day> = mutableListOf()
+    val dayText = listOf<String>(
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+    )
+
+    val dayShortText = listOf<String>(
+        "M",
+        "Tu",
+        "W",
+        "Th",
+        "F"
+    )
+
+    for (i in 0..4){
+        returnList.add(
+            Day(
+                orderId = i,
+                text = dayText[i],
+                shortText = dayShortText[i],
+                isActive = false
+            )
+        )
+    }
+
+    return returnList
 }
