@@ -9,6 +9,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.trainrunner.presentation.Graph
 import com.example.trainrunner.presentation.data.room.models.Route
 import com.example.trainrunner.presentation.repository.Repository
+import com.example.trainrunner.presentation.ui.daysTracked.Day
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import java.util.Date
@@ -69,6 +70,16 @@ class RouteViewModel(
 
     fun onStationTwoCodeChanged(newCode: String){
         state = state.copy(stationTwoCode = newCode)
+    }
+
+    fun onSelectedDaysChanged(selectedDays: List<Day>){
+        var daysActiveCount = 0
+        for (day in selectedDays){
+            if (day.isActive){
+                daysActiveCount++
+            }
+        }
+        state = state.copy(daysTrackedCount = daysActiveCount)
     }
 
     fun onIsActiveChanged(active: Boolean){

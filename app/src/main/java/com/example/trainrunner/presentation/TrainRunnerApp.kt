@@ -117,7 +117,7 @@ fun TrainRunnerApp (
                         selectedTrainLine = selectedTrainLine,
                         selectedStationOneCode = selectedStationOneCode,
                         selectedStationTwoCode = selectedStationTwoCode,
-//                        selectedDays = selectedDays,
+                        selectedDays = selectedDays,
                         columnState = columnState,
                         onNavigate = { swipeDismissableNavController.navigate(it) },
                     ){

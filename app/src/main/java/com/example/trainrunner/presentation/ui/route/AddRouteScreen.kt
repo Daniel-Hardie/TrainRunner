@@ -15,6 +15,7 @@ import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
 import com.example.trainrunner.R
 import com.example.trainrunner.presentation.navigation.Screen
+import com.example.trainrunner.presentation.ui.daysTracked.Day
 import com.google.android.horologist.compose.layout.ScalingLazyColumn
 import com.google.android.horologist.compose.layout.ScalingLazyColumnState
 import com.google.android.horologist.compose.material.Button
@@ -28,7 +29,7 @@ fun AddRouteScreen(
     selectedMetlinkRouteId: String,
     selectedStationOneCode: String,
     selectedStationTwoCode: String,
-//    selectedDays: ListOfDays,
+    selectedDays: List<Day>,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
@@ -42,7 +43,7 @@ fun AddRouteScreen(
         selectedTrainLine = selectedTrainLine,
         selectedStationOneCode = selectedStationOneCode,
         selectedStationTwoCode = selectedStationTwoCode,
-//        selectedDays = selectedDays,
+        selectedDays = selectedDays,
         state = viewModel.state,
         columnState = columnState,
         modifier = modifier,
@@ -51,7 +52,8 @@ fun AddRouteScreen(
         deleteRoute = { viewModel.deleteRoute(routeId) },
         onLineChanged = viewModel::onTrainLineChanged,
         onStationOneCodeChanged = viewModel::onStationOneCodeChanged,
-        onStationTwoCodeChanged = viewModel::onStationTwoCodeChanged
+        onStationTwoCodeChanged = viewModel::onStationTwoCodeChanged,
+        onSelectedDaysChanged = viewModel::onSelectedDaysChanged
     ){
         navigateUp.invoke()
     }
@@ -64,7 +66,7 @@ fun RouteScreen(
     selectedTrainLine: String,
     selectedStationOneCode: String,
     selectedStationTwoCode: String,
-//    selectedDays: ListOfDays,
+    selectedDays: List<Day>,
     state: RouteState,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
@@ -74,6 +76,7 @@ fun RouteScreen(
     onLineChanged: (String, String) -> Unit,
     onStationOneCodeChanged: (String) -> Unit,
     onStationTwoCodeChanged: (String) -> Unit,
+    onSelectedDaysChanged: (List<Day>) -> Unit,
     navigateUp: () -> Unit
 ){
     val daysTracked = state.daysTrackedCount
@@ -103,6 +106,10 @@ fun RouteScreen(
     }
     else{
         isStationTwoChipActive = false
+    }
+
+    if(!selectedDays.isNullOrEmpty()){
+        onSelectedDaysChanged(selectedDays)
     }
 
     Box(
