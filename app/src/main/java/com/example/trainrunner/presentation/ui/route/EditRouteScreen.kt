@@ -1,4 +1,4 @@
-package com.example.trainrunner.presentation.ui
+package com.example.trainrunner.presentation.ui.route
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
