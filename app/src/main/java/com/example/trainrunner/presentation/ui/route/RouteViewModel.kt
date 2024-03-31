@@ -103,71 +103,7 @@ class RouteViewModel(
         }
     }
 
-    fun saveRouteV2(uniqueRouteId: Int, date: Date, savedDays: List<Day>) {
-        viewModelScope.launch {
-            repository.insertRoute(
-                Route(
-                    uniqueValueForRouteNotification = uniqueRouteId,
-                    metlinkRouteId = state.selectedMetlinkRouteId,
-                    metlinkRouteShortName = state.metlinkRouteShortName,
-                    stationOneCode = state.stationOneCode,
-                    stationTwoCode = state.stationTwoCode,
-                    toWellington = false,
-                    isActive = true
-                )
-            )
-        }
-
-        for(savedDay in savedDays){
-            if (savedDay.isActive){
-                viewModelScope.launch {
-                    repository.insertRouteNotification(
-                        RouteNotification(
-                            routeUniqueId = routeId,
-                            orderId = savedDay.orderId,
-                            dayText = savedDay.text,
-                            dayShortText = savedDay.shortText,
-                            date = date,
-                            isActive = true
-                        )
-                    )
-                }
-            }
-        }
-    }
-
-    fun saveRouteNotification(routeId: Int, date: Date, savedDay: Day){
-        viewModelScope.launch {
-            repository.insertRouteNotification(
-                RouteNotification(
-                    routeUniqueId = routeId,
-                    orderId = savedDay.orderId,
-                    dayText = savedDay.text,
-                    dayShortText = savedDay.shortText,
-                    date = date,
-                    isActive = true
-                )
-            )
-        }
-    }
-
     fun saveRouteNotifications(routeId: Int, date: Date, savedDays: List<Day>){
-//        for(savedDay in savedDays){
-//            if (savedDay.isActive){
-//                viewModelScope.launch {
-//                    repository.insertRouteNotification(
-//                        RouteNotification(
-//                            routeUniqueId = routeId,
-//                            orderId = savedDay.orderId,
-//                            dayText = savedDay.text,
-//                            dayShortText = savedDay.shortText,
-//                            date = date,
-//                            isActive = true
-//                        )
-//                    )
-//                }
-//            }
-//        }
         var listToPersist: MutableList<RouteNotification> = mutableListOf()
         for(day in savedDays){
             if(day.isActive){

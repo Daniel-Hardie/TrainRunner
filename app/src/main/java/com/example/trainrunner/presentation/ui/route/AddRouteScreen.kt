@@ -51,8 +51,6 @@ fun AddRouteScreen(
         modifier = modifier,
         onNavigate = onNavigate,
         saveRoute = viewModel::saveRoute,
-        saveRouteV2 = viewModel::saveRouteV2,
-        saveRouteNotification = viewModel::saveRouteNotification,
         saveRouteNotifications = viewModel::saveRouteNotifications,
         deleteRoute = { viewModel.deleteRoute(routeId) },
         onLineChanged = viewModel::onTrainLineChanged,
@@ -77,8 +75,6 @@ fun RouteScreen(
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
     saveRoute: (Int) -> Unit,
-    saveRouteV2: (Int, Date, List<Day>) -> Unit,
-    saveRouteNotification: (Int, Date, Day) -> Unit,
     saveRouteNotifications: (Int, Date, List<Day>) -> Unit,
     deleteRoute: (Int) -> Unit,
     onLineChanged: (String, String) -> Unit,
@@ -188,14 +184,8 @@ fun RouteScreen(
                         id = R.drawable.ic_done,
                         contentDescription = "Save",
                         onClick = {
-                            var uniqueRouteId = Random.nextInt(0, 9999999)
+                            val uniqueRouteId = Random.nextInt(0, 9999999)
                             saveRoute(uniqueRouteId)
-//                            saveRouteV2(uniqueRouteId, Date(), selectedDays)
-//                            for(day in selectedDays){
-//                                if (day.isActive){
-//                                    saveRouteNotification.invoke(uniqueRouteId, Date(), day)
-//                                }
-//                            }
                             saveRouteNotifications.invoke(uniqueRouteId, Date(), selectedDays)
                             navigateUp.invoke()
                         },

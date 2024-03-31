@@ -68,7 +68,7 @@ interface RouteDao {
     fun getNumberRouteDaysTracked(routeId: Int): Flow<Int>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertRoute(route: Route): Long
+    suspend fun insertRoute(route: Route)
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
     suspend fun updateRoute(route: Route)
