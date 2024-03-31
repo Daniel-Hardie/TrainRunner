@@ -24,8 +24,9 @@ class Repository(
 
     fun getNumberRouteDaysTracked(id: Int) = routeDao.getNumberRouteDaysTracked(id)
 
-    suspend fun insertRoute(route: Route){
-        routeDao.insertRoute(route)
+    // Returning id of newly inserted route to be used as FK in RouteNotification table
+    suspend fun insertRoute(route: Route): Long {
+        return routeDao.insertRoute(route)
     }
     suspend fun updateRoute(route: Route){
         routeDao.updateRoute(route)
@@ -53,6 +54,10 @@ class Repository(
 
     suspend fun insertRouteNotification(routeNotification: RouteNotification){
         routeNotificationDao.insertRouteNotification(routeNotification)
+    }
+
+    suspend fun insertRouteNotificationList(routeNotificationList: List<RouteNotification>){
+        routeNotificationDao.insertRouteNotificationList(routeNotificationList)
     }
     suspend fun updateRouteNotification(routeNotification: RouteNotification){
         routeNotificationDao.updateRouteNotification(routeNotification)

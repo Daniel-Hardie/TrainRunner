@@ -12,6 +12,7 @@ data class Route(
     @ColumnInfo(name = "routeId")
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
+    val uniqueValueForRouteNotification: Int = -1,
     val metlinkRouteId: String = "",
     val metlinkRouteShortName: String = "",
     val stationOneCode: String = "",
@@ -25,7 +26,10 @@ data class RouteNotification(
     @ColumnInfo(name = "routeNotificationId")
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
-    val routeId: Int = -1,
+    val routeUniqueId: Int = -1,
+    val orderId: Int,
+    val dayText: String,
+    val dayShortText: String,
     val date: Date,
     val isActive: Boolean = true
 )

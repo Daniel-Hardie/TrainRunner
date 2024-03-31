@@ -21,6 +21,8 @@ import com.google.android.horologist.compose.layout.ScalingLazyColumnState
 import com.google.android.horologist.compose.material.Button
 import com.google.android.horologist.compose.material.ButtonSize
 import com.google.android.horologist.compose.material.Chip
+import java.util.Date
+import kotlin.random.Random
 
 @Composable
 fun AddRouteScreen(
@@ -48,7 +50,10 @@ fun AddRouteScreen(
         columnState = columnState,
         modifier = modifier,
         onNavigate = onNavigate,
-        saveRoute = viewModel::addRoute,
+        saveRoute = viewModel::saveRoute,
+        saveRouteV2 = viewModel::saveRouteV2,
+        saveRouteNotification = viewModel::saveRouteNotification,
+        saveRouteNotifications = viewModel::saveRouteNotifications,
         deleteRoute = { viewModel.deleteRoute(routeId) },
         onLineChanged = viewModel::onTrainLineChanged,
         onStationOneCodeChanged = viewModel::onStationOneCodeChanged,
@@ -71,20 +76,22 @@ fun RouteScreen(
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
-    saveRoute: () -> Unit,
+    saveRoute: (Int) -> Unit,
+    saveRouteV2: (Int, Date, List<Day>) -> Unit,
+    saveRouteNotification: (Int, Date, Day) -> Unit,
+    saveRouteNotifications: (Int, Date, List<Day>) -> Unit,
     deleteRoute: (Int) -> Unit,
     onLineChanged: (String, String) -> Unit,
     onStationOneCodeChanged: (String) -> Unit,
     onStationTwoCodeChanged: (String) -> Unit,
     onSelectedDaysChanged: (List<Day>) -> Unit,
     navigateUp: () -> Unit
-){
+) {
     val daysTracked = state.daysTrackedCount
     val timeTracked = state.timeTracked
-    val isActive: String = if(state.isActive){
+    val isActive: String = if (state.isActive) {
         "Enabled"
-    }
-    else{
+    } else {
         "Disabled"
     }
 
@@ -92,23 +99,21 @@ fun RouteScreen(
     val isStationTwoChipActive: Boolean
     onLineChanged(selectedTrainLine, selectedMetlinkRouteId)
 
-    if(selectedTrainLine != "Select a line"){
+    if (selectedTrainLine != "Select a line") {
         onStationOneCodeChanged(selectedStationOneCode)
         isStationOneChipActive = true
-    }
-    else{
+    } else {
         isStationOneChipActive = false
     }
 
-    if((selectedTrainLine != "Select a line") && (selectedStationOneCode != "Select entry station")){
+    if ((selectedTrainLine != "Select a line") && (selectedStationOneCode != "Select entry station")) {
         onStationTwoCodeChanged(selectedStationTwoCode)
         isStationTwoChipActive = true
-    }
-    else{
+    } else {
         isStationTwoChipActive = false
     }
 
-    if(!selectedDays.isNullOrEmpty()){
+    if (!selectedDays.isNullOrEmpty()) {
         onSelectedDaysChanged(selectedDays)
     }
 
@@ -127,14 +132,14 @@ fun RouteScreen(
                     text = "Add Route"
                 )
             }
-            item{
+            item {
                 Chip(
                     label = "Train Line",
                     secondaryLabel = selectedTrainLine,
-                    onClick = {onNavigate(Screen.LineSelect.route)}
+                    onClick = { onNavigate(Screen.LineSelect.route) }
                 )
             }
-            item{
+            item {
                 Chip(
                     label = "Station One",
                     secondaryLabel = selectedStationOneCode,
@@ -142,7 +147,7 @@ fun RouteScreen(
                     onClick = { onNavigate(Screen.StationSelect.route + "/1") }
                 )
             }
-            item{
+            item {
                 Chip(
                     label = "Station Two",
                     secondaryLabel = selectedStationTwoCode,
@@ -150,21 +155,21 @@ fun RouteScreen(
                     onClick = { onNavigate(Screen.StationSelect.route + "/2") }
                 )
             }
-            item{
+            item {
                 Chip(
                     label = "Days Tracked",
                     secondaryLabel = "$daysTracked selected",
-                    onClick = {onNavigate(Screen.DaysTracked.route)}
+                    onClick = { onNavigate(Screen.DaysTracked.route) }
                 )
             }
-            item{
+            item {
                 Chip(
                     label = "Time",
                     secondaryLabel = timeTracked.time.toString(),
                     onClick = { }
                 )
             }
-            item{
+            item {
                 Chip(
                     label = "Notifications",
                     secondaryLabel = isActive,
@@ -183,7 +188,15 @@ fun RouteScreen(
                         id = R.drawable.ic_done,
                         contentDescription = "Save",
                         onClick = {
-                            saveRoute.invoke()
+                            var uniqueRouteId = Random.nextInt(0, 9999999)
+                            saveRoute(uniqueRouteId)
+//                            saveRouteV2(uniqueRouteId, Date(), selectedDays)
+//                            for(day in selectedDays){
+//                                if (day.isActive){
+//                                    saveRouteNotification.invoke(uniqueRouteId, Date(), day)
+//                                }
+//                            }
+                            saveRouteNotifications.invoke(uniqueRouteId, Date(), selectedDays)
                             navigateUp.invoke()
                         },
                         buttonSize = ButtonSize.Small,

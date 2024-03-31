@@ -61,21 +61,21 @@ interface RouteDao {
 
     @Query("""
        SELECT COUNT(*) FROM route AS r
-       INNER JOIN routeNotification AS rn ON r.routeId = rn.routeId
+       INNER JOIN routeNotification AS rn ON r.routeId = rn.routeUniqueId
        WHERE r.routeId =:routeId
     """
     )
     fun getNumberRouteDaysTracked(routeId: Int): Flow<Int>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertRoute(route: Route)
+    suspend fun insertRoute(route: Route): Long
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
     suspend fun updateRoute(route: Route)
 
     @Query("""
         DELETE FROM route
-        WHERE routeId =:routeId
+        WHERE routeId = :routeId
     """)
     suspend fun deleteRoute(routeId: Int)
 }
@@ -86,15 +86,18 @@ interface RouteNotificationDao {
        SELECT * FROM routeNotification
     """)
     fun getAllRouteNotifications(): Flow<List<RouteNotification>>
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertRouteNotification(routeNotification: RouteNotification)
+
+    @Insert
+    suspend fun insertRouteNotificationList(routeNotificationList: List<RouteNotification>)
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
     suspend fun updateRouteNotification(routeNotification: RouteNotification)
 
     @Query("""
         DELETE FROM routeNotification
-        WHERE routeId =:routeId
+        WHERE routeUniqueId =:routeId
     """)
     suspend fun deleteRouteNotification(routeId: Int)
 }
