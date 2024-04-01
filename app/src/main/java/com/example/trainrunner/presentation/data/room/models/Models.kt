@@ -48,7 +48,9 @@ data class Station(
     val metlinkStopLatitude: Double = -1.00,
     val metlinkStopLongitude: Double = -1.00,
     val metlinkZoneId: Int = -1,
-    val metlinkParentStation: String = ""
+    val metlinkParentStation: String = "",
+    val fromWellington: Boolean = false,
+    val toWellington: Boolean = false
 )
 
 // Populated from https://api.opendata.metlink.org.nz/v1/gtfs/routes

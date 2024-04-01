@@ -21,8 +21,30 @@ function ConvertJsonToStationDataSource {
         $zoneId = $station.zone_id
         $parentStation = $station.parent_station
 
-        #StationObject(metlinkRouteId = "s", metlinkStopId = "s", metlinkStopCode = "s", metlinkStopName = "s", metlinkStopLatitude = 0.00f, metlinkStopLongitude = 0.00f, metlinkZoneId = 0, metlinkParentStation = "S"),
-        $outputString = "StationObject(metlinkRouteId = ""$($routeId)"", metlinkStopId = ""$($stopId)"", metlinkStopCode = ""$($stopCode)"", metlinkStopName = ""$($stopName)"", metlinkStopLatitude = $($stopLat)f, metlinkStopLongitude = $($stopLon)f, metlinkZoneId = $($zoneId), metlinkParentStation = ""$($parentStation)""),"
+        $toWellington = "false"
+        $fromWellington = "false"
+
+        if($stopId[-1] -match "1" -and $stopId -notmatch "PLIM"){
+            $toWellington = "true"
+        }
+        elseif($stopId[-1] -match "2" -and $stopId -notmatch "PLIM"){
+            $fromWellington = "true"
+        }
+        elseif($stopId -match "PLIM"){
+            if($stopId[-1] -match "1" -or $stopId[-1] -match "2"){
+                $toWellington = "true"
+            }
+           elseif($stopId[-1] -match "3"){
+                $fromWellington = "true"
+            }
+            
+        }
+        else {
+            $toWellington = "true"
+            $fromWellington = "true"
+        }
+
+        $outputString = "Station(metlinkRouteId = ""$($routeId)"", metlinkStopId = ""$($stopId)"", metlinkStopCode = ""$($stopCode)"", metlinkStopName = ""$($stopName)"", metlinkStopLatitude = $($stopLat), metlinkStopLongitude = $($stopLon), metlinkZoneId = $($zoneId), metlinkParentStation = ""$($parentStation)"", toWellington = $($toWellington), fromWellington = $($fromWellington)),"
         $outputArray.Add($outputString)
     }
 
@@ -31,27 +53,27 @@ function ConvertJsonToStationDataSource {
 }
 
 
-$inputFilePath = ".\stops\input-stations-kapiti.json"
-$outputFilePath = ".\stops\data-source-stations-kapiti.txt"
+$inputFilePath = ".\input-stations-kapiti.json"
+$outputFilePath = ".\data-source-stations-kapiti.txt"
 $routeId = "2"
 ConvertJsonToStationDataSource -inputFilepath $inputFilePath -outputFilePath $outputFilePath -routeId $routeId
 
-$inputFilePath = ".\stops\input-stations-melling.json"
-$outputFilePath = ".\stops\data-source-stations-melling.txt"
+$inputFilePath = ".\input-stations-melling.json"
+$outputFilePath = ".\data-source-stations-melling.txt"
 $routeId = "3"
 ConvertJsonToStationDataSource -inputFilepath $inputFilePath -outputFilePath $outputFilePath -routeId $routeId
 
-$inputFilePath = ".\stops\input-stations-wairarapa.json"
-$outputFilePath = ".\stops\data-source-stations-wairarapa.txt"
+$inputFilePath = ".\input-stations-wairarapa.json"
+$outputFilePath = ".\data-source-stations-wairarapa.txt"
 $routeId = "4"
 ConvertJsonToStationDataSource -inputFilepath $inputFilePath -outputFilePath $outputFilePath -routeId $routeId
 
-$inputFilePath = ".\stops\input-stations-hutt-valley.json"
-$outputFilePath = ".\stops\data-source-stations-hutt-valley.txt"
+$inputFilePath = ".\input-stations-hutt-valley.json"
+$outputFilePath = ".\data-source-stations-hutt-valley.txt"
 $routeId = "5"
 ConvertJsonToStationDataSource -inputFilepath $inputFilePath -outputFilePath $outputFilePath -routeId $routeId
 
-$inputFilePath = ".\stops\input-stations-johnsonville.json"
-$outputFilePath = ".\stops\data-source-stations-johnsonville.txt"
+$inputFilePath = ".\input-stations-johnsonville.json"
+$outputFilePath = ".\data-source-stations-johnsonville.txt"
 $routeId = "6"
 ConvertJsonToStationDataSource -inputFilepath $inputFilePath -outputFilePath $outputFilePath -routeId $routeId
