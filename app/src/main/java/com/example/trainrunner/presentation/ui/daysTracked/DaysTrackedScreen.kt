@@ -2,9 +2,13 @@ package com.example.trainrunner.presentation.ui.daysTracked
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
+import androidx.wear.compose.material.MaterialTheme
+import androidx.wear.compose.material.Text
 import com.example.trainrunner.R
 import com.google.android.horologist.compose.layout.ScalingLazyColumn
 import com.google.android.horologist.compose.layout.ScalingLazyColumnState
@@ -50,7 +54,14 @@ fun DaysTrackedList(
             columnState = columnState,
             modifier = modifier.fillMaxSize()
         ) {
-
+            item {
+                Text(
+                    modifier = Modifier.fillMaxWidth(),
+                    textAlign = TextAlign.Center,
+                    color = MaterialTheme.colors.primary,
+                    text = "Days Tracked"
+                )
+            }
             for(day in selectedDays){
                 item{
                     ToggleChip(
