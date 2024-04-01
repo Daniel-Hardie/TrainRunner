@@ -35,6 +35,7 @@ import com.example.trainrunner.presentation.ui.route.EditRouteScreen
 import com.example.trainrunner.presentation.ui.routeList.RouteListScreen
 import com.example.trainrunner.presentation.ui.settings.SettingsScreen
 import com.example.trainrunner.presentation.ui.station.StationSelectScreen
+import com.example.trainrunner.presentation.ui.timeSelect.TimeSelectScreen
 import com.google.android.horologist.compose.layout.ScreenScaffold
 import com.google.android.horologist.compose.layout.rememberColumnState
 
@@ -53,6 +54,7 @@ fun TrainRunnerApp (
     var selectedStationOneCode by remember { mutableStateOf("Select entry station") }
     var selectedStationTwoCode by remember { mutableStateOf("Select destination station") }
     val selectedDays = remember { mutableStateListOf<Day>() }
+    var selectedTime by remember { mutableStateOf("Select time") }
 
     TrainRunnerTheme(colors = themeColors) {
         SwipeDismissableNavHost(
@@ -191,8 +193,24 @@ fun TrainRunnerApp (
                     DaysTrackedScreen(
                         columnState = columnState,
                         selectedDays = selectedDays,
-//                        selectedDaysOnChange = { selectedDays = it},
                         selectedDaysOnChange = {selectedDays.clear(); selectedDays.addAll(it)}
+                    ) {
+                        swipeDismissableNavController.navigateUp()
+                    }
+                }
+            }
+
+            // TimeSelect screen
+            composable(
+                route = Screen.TimeSelect.route
+            ){
+                val columnState = rememberColumnState()
+                ScreenScaffold(scrollState = columnState) {
+                    TimeSelectScreen(
+                        columnState = columnState,
+                        selectedTime = {selectedTime = it},
+                        selectedStationOneCode = selectedStationOneCode,
+                        selectedStationTwoCode = selectedStationTwoCode
                     ) {
                         swipeDismissableNavController.navigateUp()
                     }

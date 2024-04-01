@@ -162,7 +162,7 @@ fun RouteScreen(
                 Chip(
                     label = "Time",
                     secondaryLabel = timeTracked.time.toString(),
-                    onClick = { }
+                    onClick = {onNavigate(Screen.TimeSelect.route)}
                 )
             }
             item {
