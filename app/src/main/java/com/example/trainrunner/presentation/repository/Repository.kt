@@ -44,7 +44,7 @@ class Repository(
     // Station table
     val getAllStations = stationDao.getAllStations()
     fun getStationById(id: Int) = stationDao.getStationById(id)
-    fun getAllStationsOnLineByLineShortName(lineShortName: String) = stationDao.getAllStationsOnLine(lineShortName)
+    fun getAllStationsOnLineByLineShortName(lineShortName: String) = stationDao.getAllStationsOnLineByLineShortName(lineShortName)
     fun getStationByCode(code: String) = stationDao.getStationByCode(code)
     suspend fun insertStation(station: Station){
         stationDao.insertStation(station)

@@ -22,11 +22,17 @@ interface StationDao {
     fun getAllStations(): Flow<List<Station>>
 
     @Query("""
-        SELECT * FROM station s 
+        SELECT DISTINCT
+         CASE WHEN s.metlinkParentStation != ""
+         THEN s.metlinkParentStation
+         ELSE s.metlinkStopId
+        END AS stationName
+        FROM station s 
         INNER JOIN metlinkRoute mr ON s.metlinkRouteId = mr.metlinkRouteId
         WHERE mr.metlinkRouteShortName =:lineShortName
+        ORDER BY s.metlinkStopId
     """)
-    fun getAllStationsOnLine(lineShortName: String): Flow<List<Station>>
+    fun getAllStationsOnLineByLineShortName(lineShortName: String): Flow<List<String>>
 
     @Query("""
         SELECT * FROM station WHERE stationId =:id

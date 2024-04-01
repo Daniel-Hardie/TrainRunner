@@ -10,8 +10,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.wear.compose.foundation.lazy.items
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
-import com.example.trainrunner.presentation.data.room.models.Station
-import com.example.trainrunner.presentation.navigation.Screen
 import com.google.android.horologist.compose.layout.ScalingLazyColumn
 import com.google.android.horologist.compose.layout.ScalingLazyColumnState
 import com.google.android.horologist.compose.material.Chip
@@ -51,7 +49,7 @@ fun StationSelectScreen(
     selectedStationOneCode: (String) -> Unit,
     selectedStationTwoCode: (String) -> Unit,
     modifier: Modifier = Modifier,
-    stations: List<Station>,
+    stations: List<String>,
     navigateUp: () -> Unit,
 ){
     Box(
@@ -70,21 +68,20 @@ fun StationSelectScreen(
                 )
             }
             items(stations) { station ->
+//                Chip(
+//                    label = station.metlinkStopId,
+//                    onClick = {
+//                        Screen.AddRoute.route
+//                    }
+//                )
                 Chip(
-                    label = station.metlinkStopId,
-                    onClick = {
-                        Screen.AddRoute.route
-                    }
-                )
-                Chip(
-                    label = station.metlinkStopId,
-                    secondaryLabel = station.metlinkStopCode,
+                    label = station,
                     onClick = {
                         if(stopSelect == 1){
-                            selectedStationOneCode(station.metlinkStopCode)
+                            selectedStationOneCode(station)
                         }
                         else{
-                            selectedStationTwoCode(station.metlinkStopCode)
+                            selectedStationTwoCode(station)
                         }
                         navigateUp.invoke()
                     }

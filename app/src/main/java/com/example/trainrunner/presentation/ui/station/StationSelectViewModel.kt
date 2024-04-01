@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.example.trainrunner.presentation.Graph
-import com.example.trainrunner.presentation.data.room.models.Station
 import com.example.trainrunner.presentation.repository.Repository
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -21,16 +20,6 @@ class StationSelectViewModel(
 
     init {
         getStationsByLineCode(lineShortName)
-    }
-
-    private fun getStations(){
-        viewModelScope.launch {
-            repository.getAllStations.collectLatest {
-                state = state.copy(
-                    stations = it
-                )
-            }
-        }
     }
 
     // If you ever want to add filtering for stations, e.g. by line?
@@ -56,5 +45,5 @@ class StationSelectViewModelFactory(private val lineShortName: String): ViewMode
 }
 
 data class StationListState(
-    val stations: List<Station> = emptyList()
+    val stations: List<String> = emptyList()
 )

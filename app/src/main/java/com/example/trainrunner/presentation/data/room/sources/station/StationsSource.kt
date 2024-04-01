@@ -4,6 +4,7 @@ import com.example.trainrunner.presentation.data.room.models.Station
 
 // MetlinkStopId with 1 at the end = inbound, e.g. to Wellington Station
 // MetlinkStopId with 2 at the end = outbound, e.g. from Wellington Station
+// Apart from PLIM, where PLIM1 and PLIM2 are inbound and PLIM3 is outbound
 object StationsSource {
     val stations = listOf(
         // Kapiti stops
