@@ -86,13 +86,13 @@ fun RouteScreen(
     onSelectedDaysChanged: (List<Day>) -> Unit,
     navigateUp: () -> Unit
 ) {
-    val daysTracked = state.daysTrackedCount
     val isActive: String = if (state.isActive) {
         "Enabled"
     } else {
         "Disabled"
     }
 
+    // Populate the state based on what has been passed in
     val isStationOneChipActive: Boolean
     val isStationTwoChipActive: Boolean
     onLineChanged(selectedTrainLine, selectedMetlinkRouteId)
@@ -114,6 +114,8 @@ fun RouteScreen(
     if (!selectedDays.isNullOrEmpty()) {
         onSelectedDaysChanged(selectedDays)
     }
+
+    val addRouteButtonEnabled = isStationOneChipActive && isStationTwoChipActive && selectedDays.isNotEmpty()
 
     Box(
         modifier = modifier.fillMaxSize()
@@ -156,7 +158,7 @@ fun RouteScreen(
             item {
                 Chip(
                     label = "Days Tracked",
-                    secondaryLabel = "$daysTracked selected",
+                    secondaryLabel = "${state.daysTrackedCount} selected",
                     onClick = { onNavigate(Screen.DaysTracked.route) }
                 )
             }
@@ -192,16 +194,17 @@ fun RouteScreen(
                             navigateUp.invoke()
                         },
                         buttonSize = ButtonSize.Small,
+                        enabled = addRouteButtonEnabled
                     )
                     Button(
                         modifier = modifier.padding(8.dp),
-                        id = R.drawable.ic_delete,
-                        contentDescription = "Delete",
+                        id = R.drawable.ic_cancel,
+                        contentDescription = "Cancel",
                         onClick = {
                             deleteRoute.invoke(routeId)
                             navigateUp.invoke()
                         },
-                        buttonSize = ButtonSize.Small,
+                        buttonSize = ButtonSize.Small
                     )
                 }
             }
