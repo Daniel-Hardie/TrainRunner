@@ -59,21 +59,21 @@ fun StationSelectScreen(
             columnState = columnState,
             modifier = modifier.fillMaxSize()
         ) {
+            val title = if(stopSelect == 1){
+                "Station One"
+            } else{
+                "Station Two"
+            }
+
             item {
                 Text(
                     modifier = Modifier.fillMaxWidth(),
                     textAlign = TextAlign.Center,
                     color = MaterialTheme.colors.primary,
-                    text = "Initial Station"
+                    text = title
                 )
             }
             items(stations) { station ->
-//                Chip(
-//                    label = station.metlinkStopId,
-//                    onClick = {
-//                        Screen.AddRoute.route
-//                    }
-//                )
                 Chip(
                     label = station,
                     onClick = {
