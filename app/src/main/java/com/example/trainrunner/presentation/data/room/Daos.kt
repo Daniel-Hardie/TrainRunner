@@ -6,6 +6,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import com.example.trainrunner.presentation.data.room.models.MetlinkRoute
+import com.example.trainrunner.presentation.data.room.models.MetlinkSchedule
 import com.example.trainrunner.presentation.data.room.models.Route
 import com.example.trainrunner.presentation.data.room.models.RouteNotification
 import com.example.trainrunner.presentation.data.room.models.Station
@@ -121,4 +122,15 @@ interface MetlinkRouteDao {
         DELETE FROM metlinkRoute
     """)
     suspend fun deleteAllMetlinkRoutes()
+}
+
+@Dao
+interface MetlinkScheduleDao {
+    @Insert
+    suspend fun insertAllMetlinkSchedules(scheduleList: List<MetlinkSchedule>)
+
+    @Query("""
+        DELETE FROM metlinkSchedule
+    """)
+    suspend fun deleteAllMetlinkSchedules()
 }

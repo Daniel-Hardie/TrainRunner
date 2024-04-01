@@ -62,3 +62,22 @@ data class MetlinkRoute(
     val metlinkRouteLongName: String = "",
     val metlinkRouteDesc: String = ""
 )
+
+// Populated from https://backend.metlink.org.nz/api/v1/timetable
+// With a JSON body of the following:
+//{
+//    "service": {serviceCode, e.g. "HVL"},
+//    "start": "2024-04-02",
+//    "end": "2024-04-02"
+//}
+@Entity(tableName = "metlinkSchedule")
+data class MetlinkSchedule(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
+    val parentStationCode: String = "",
+    val departTime: String = "",
+    val tripId: String = "",
+    val orderId: Int = -1,
+    val lineId: Int = -1,
+    val toWellington: Boolean
+)

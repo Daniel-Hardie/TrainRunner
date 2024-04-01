@@ -13,7 +13,8 @@ object Graph {
             stationDao = db.stationDao(),
             routeDao = db.routeDao(),
             routeNotificationDao = db.routeNotificationDao(),
-            metlinkRouteDuo = db.metlinkRouteDao()
+            metlinkRouteDao = db.metlinkRouteDao(),
+            metlinkScheduleDao = db.metlinkScheduleDao()
         )
     }
 

@@ -1,10 +1,12 @@
 package com.example.trainrunner.presentation.repository
 
 import com.example.trainrunner.presentation.data.room.MetlinkRouteDao
+import com.example.trainrunner.presentation.data.room.MetlinkScheduleDao
 import com.example.trainrunner.presentation.data.room.RouteDao
 import com.example.trainrunner.presentation.data.room.RouteNotificationDao
 import com.example.trainrunner.presentation.data.room.StationDao
 import com.example.trainrunner.presentation.data.room.models.MetlinkRoute
+import com.example.trainrunner.presentation.data.room.models.MetlinkSchedule
 import com.example.trainrunner.presentation.data.room.models.Route
 import com.example.trainrunner.presentation.data.room.models.RouteNotification
 import com.example.trainrunner.presentation.data.room.models.Station
@@ -15,7 +17,8 @@ class Repository(
     private val stationDao: StationDao,
     private val routeDao: RouteDao,
     private val routeNotificationDao: RouteNotificationDao,
-    private val metlinkRouteDuo: MetlinkRouteDao
+    private val metlinkRouteDao: MetlinkRouteDao,
+    private val metlinkScheduleDao: MetlinkScheduleDao
 ) {
     // Route table
     fun getRoute(id: Int) = routeDao.getRoute(id)
@@ -70,13 +73,23 @@ class Repository(
 
 
     // MetlinkRoute table
-    val getAllMetlinkRoutes = metlinkRouteDuo.getAllMetlinkRoutes()
+    val getAllMetlinkRoutes = metlinkRouteDao.getAllMetlinkRoutes()
 
     suspend fun insertMetlinkRoute(metlinkRoute: MetlinkRoute){
-        metlinkRouteDuo.insertMetlinkRoute(metlinkRoute)
+        metlinkRouteDao.insertMetlinkRoute(metlinkRoute)
     }
 
     suspend fun deleteAllMetlinkRoutes(){
-        metlinkRouteDuo.deleteAllMetlinkRoutes()
+        metlinkRouteDao.deleteAllMetlinkRoutes()
+    }
+
+
+    // MetlinkSchedule table
+    suspend fun insertAllMetlinkSchedules(metlinkSchedules: List<MetlinkSchedule>){
+        metlinkScheduleDao.insertAllMetlinkSchedules(metlinkSchedules)
+    }
+
+    suspend fun deleteAllMetlinkSchedules(){
+        metlinkScheduleDao.deleteAllMetlinkSchedules()
     }
 }

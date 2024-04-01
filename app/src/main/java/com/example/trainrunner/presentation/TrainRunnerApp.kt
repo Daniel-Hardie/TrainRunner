@@ -18,6 +18,8 @@ import androidx.wear.compose.navigation.composable
 import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
 import com.example.trainrunner.presentation.data.room.sources.route.MetlinkRouteModel
 import com.example.trainrunner.presentation.data.room.sources.route.MetlinkRouteModelFactory
+import com.example.trainrunner.presentation.data.room.sources.schedule.MetlinkScheduleModel
+import com.example.trainrunner.presentation.data.room.sources.schedule.ScheduleModelFactory
 import com.example.trainrunner.presentation.data.room.sources.station.StationModel
 import com.example.trainrunner.presentation.data.room.sources.station.StationModelFactory
 import com.example.trainrunner.presentation.navigation.STATION_SELECT_NAV_ARGUMENT
@@ -205,6 +207,7 @@ fun TrainRunnerApp (
 fun PopulateDatabase(){
     viewModel<StationModel>(factory = StationModelFactory())
     viewModel<MetlinkRouteModel>(factory = MetlinkRouteModelFactory())
+    viewModel<MetlinkScheduleModel>(factory = ScheduleModelFactory())
 }
 
 @Composable
