@@ -16,6 +16,7 @@ import androidx.navigation.navArgument
 import androidx.wear.compose.navigation.SwipeDismissableNavHost
 import androidx.wear.compose.navigation.composable
 import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
+import com.example.trainrunner.presentation.data.room.models.MetlinkSchedule
 import com.example.trainrunner.presentation.data.room.sources.route.MetlinkRouteModel
 import com.example.trainrunner.presentation.data.room.sources.route.MetlinkRouteModelFactory
 import com.example.trainrunner.presentation.data.room.sources.schedule.MetlinkScheduleModel
@@ -54,7 +55,7 @@ fun TrainRunnerApp (
     var selectedStationOneCode by remember { mutableStateOf("Select entry station") }
     var selectedStationTwoCode by remember { mutableStateOf("Select destination station") }
     val selectedDays = remember { mutableStateListOf<Day>() }
-    var selectedTime by remember { mutableStateOf("Select time") }
+    var selectedScheduleTime by remember { mutableStateOf(MetlinkSchedule(departTime = "Please select time", toWellington = false))    }
 
     TrainRunnerTheme(colors = themeColors) {
         SwipeDismissableNavHost(
@@ -122,6 +123,7 @@ fun TrainRunnerApp (
                         selectedStationOneCode = selectedStationOneCode,
                         selectedStationTwoCode = selectedStationTwoCode,
                         selectedDays = selectedDays,
+                        selectedScheduleTime = selectedScheduleTime,
                         columnState = columnState,
                         onNavigate = { swipeDismissableNavController.navigate(it) },
                     ){
@@ -208,7 +210,7 @@ fun TrainRunnerApp (
                 ScreenScaffold(scrollState = columnState) {
                     TimeSelectScreen(
                         columnState = columnState,
-                        selectedTime = {selectedTime = it},
+                        selectedScheduleTime = {selectedScheduleTime = it},
                         selectedStationOneCode = selectedStationOneCode,
                         selectedStationTwoCode = selectedStationTwoCode
                     ) {

@@ -3,7 +3,6 @@ package com.example.trainrunner.presentation.data.room.models
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.Date
 
 // Handle custom data types: https://www.youtube.com/watch?v=-DYvjjn9lQ0&list=PLUPcj46QWTDWlxtIwE3A6VEWUFEO8nh0Z&index=4
 
@@ -30,7 +29,7 @@ data class RouteNotification(
     val orderId: Int,
     val dayText: String,
     val dayShortText: String,
-    val date: Date,
+    val time: String,
     val isActive: Boolean = true
 )
 

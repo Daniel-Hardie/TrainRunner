@@ -13,7 +13,6 @@ import com.example.trainrunner.presentation.repository.Repository
 import com.example.trainrunner.presentation.ui.daysTracked.Day
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import java.util.Date
 
 class RouteViewModel(
     private val routeId: Int,
@@ -52,7 +51,6 @@ class RouteViewModel(
                 stationOneCode = "Pick station to board train",
                 stationTwoCode = "Pick station to arrive at",
                 daysTrackedCount = 0,
-                timeTracked = Date(),
                 isActive = true,
             )
         }
@@ -103,7 +101,7 @@ class RouteViewModel(
         }
     }
 
-    fun saveRouteNotifications(routeId: Int, date: Date, savedDays: List<Day>){
+    fun saveRouteNotifications(routeId: Int, time: String, savedDays: List<Day>){
         var listToPersist: MutableList<RouteNotification> = mutableListOf()
         for(day in savedDays){
             if(day.isActive){
@@ -113,7 +111,7 @@ class RouteViewModel(
                         orderId = day.orderId,
                         dayText = day.text,
                         dayShortText = day.shortText,
-                        date = date,
+                        time = time,
                         isActive = true
                     )
                 )
@@ -146,6 +144,5 @@ data class RouteState(
     val stationOneCode: String = "Plz select value",
     val stationTwoCode: String = "Plz select value",
     val daysTrackedCount: Int = 0,
-    val timeTracked: Date = Date(),
     val isActive: Boolean = false,
 )

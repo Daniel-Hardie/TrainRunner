@@ -14,6 +14,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
 import com.example.trainrunner.R
+import com.example.trainrunner.presentation.data.room.models.MetlinkSchedule
 import com.example.trainrunner.presentation.navigation.Screen
 import com.example.trainrunner.presentation.ui.daysTracked.Day
 import com.google.android.horologist.compose.layout.ScalingLazyColumn
@@ -21,7 +22,6 @@ import com.google.android.horologist.compose.layout.ScalingLazyColumnState
 import com.google.android.horologist.compose.material.Button
 import com.google.android.horologist.compose.material.ButtonSize
 import com.google.android.horologist.compose.material.Chip
-import java.util.Date
 import kotlin.random.Random
 
 @Composable
@@ -32,6 +32,7 @@ fun AddRouteScreen(
     selectedStationOneCode: String,
     selectedStationTwoCode: String,
     selectedDays: List<Day>,
+    selectedScheduleTime: MetlinkSchedule,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
@@ -46,6 +47,7 @@ fun AddRouteScreen(
         selectedStationOneCode = selectedStationOneCode,
         selectedStationTwoCode = selectedStationTwoCode,
         selectedDays = selectedDays,
+        selectedScheduleTime = selectedScheduleTime,
         state = viewModel.state,
         columnState = columnState,
         modifier = modifier,
@@ -70,12 +72,13 @@ fun RouteScreen(
     selectedStationOneCode: String,
     selectedStationTwoCode: String,
     selectedDays: List<Day>,
+    selectedScheduleTime: MetlinkSchedule,
     state: RouteState,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
     saveRoute: (Int) -> Unit,
-    saveRouteNotifications: (Int, Date, List<Day>) -> Unit,
+    saveRouteNotifications: (Int, String, List<Day>) -> Unit,
     deleteRoute: (Int) -> Unit,
     onLineChanged: (String, String) -> Unit,
     onStationOneCodeChanged: (String) -> Unit,
@@ -84,7 +87,6 @@ fun RouteScreen(
     navigateUp: () -> Unit
 ) {
     val daysTracked = state.daysTrackedCount
-    val timeTracked = state.timeTracked
     val isActive: String = if (state.isActive) {
         "Enabled"
     } else {
@@ -161,7 +163,7 @@ fun RouteScreen(
             item {
                 Chip(
                     label = "Time",
-                    secondaryLabel = timeTracked.time.toString(),
+                    secondaryLabel = selectedScheduleTime.departTime,
                     onClick = {onNavigate(Screen.TimeSelect.route)}
                 )
             }
@@ -186,7 +188,7 @@ fun RouteScreen(
                         onClick = {
                             val uniqueRouteId = Random.nextInt(0, 9999999)
                             saveRoute(uniqueRouteId)
-                            saveRouteNotifications.invoke(uniqueRouteId, Date(), selectedDays)
+                            saveRouteNotifications.invoke(uniqueRouteId, selectedScheduleTime.departTime, selectedDays)
                             navigateUp.invoke()
                         },
                         buttonSize = ButtonSize.Small,

@@ -63,12 +63,18 @@ fun RouteListScreen(
                     for(notification in relevantRouteNotifications){
                         daysTrackedList += notification.dayShortText + ","
                     }
+
+                    var timeSelected = ""
+                    if(relevantRouteNotifications.isNotEmpty()){
+                        timeSelected = relevantRouteNotifications[0].time
+                    }
+
                     daysTrackedList = daysTrackedList.dropLast(1)
 
                     item{
                         Chip(
                             label = "${route.stationOneCode} -> ${route.stationTwoCode}",
-                            secondaryLabel = "10:57am ${daysTrackedList}",
+                            secondaryLabel = "${timeSelected} ${daysTrackedList}",
                             icon = DrawableResPaintable(R.drawable.ic_train),
                             onClick = { onNavigate(Screen.EditRoute.route) }
                         )
