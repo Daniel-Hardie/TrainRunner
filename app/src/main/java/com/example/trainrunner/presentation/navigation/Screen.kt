@@ -15,5 +15,6 @@ sealed class Screen(
     object LineSelect: Screen("line-select")
     object DaysTracked: Screen("days-tracked")
     object TimeSelect: Screen("time-select")
+    object Hack: Screen("hack")
 
 }

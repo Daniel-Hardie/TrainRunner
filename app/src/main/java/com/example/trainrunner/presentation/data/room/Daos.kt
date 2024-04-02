@@ -10,6 +10,7 @@ import com.example.trainrunner.presentation.data.room.models.MetlinkSchedule
 import com.example.trainrunner.presentation.data.room.models.Route
 import com.example.trainrunner.presentation.data.room.models.RouteNotification
 import com.example.trainrunner.presentation.data.room.models.Station
+import com.example.trainrunner.presentation.data.room.models.SystemNotification
 import kotlinx.coroutines.flow.Flow
 
 
@@ -33,6 +34,28 @@ interface StationDao {
         ORDER BY s.metlinkStopId
     """)
     fun getAllStationsOnLineByLineShortName(lineShortName: String): Flow<List<String>>
+
+    @Query("""
+        SELECT
+        *
+        FROM station s
+        WHERE CASE WHEN s.metlinkParentStation != ""
+            THEN 
+                s.metlinkParentStation = :stationCode
+            ELSE 
+                s.metlinkStopId = :stationCode         
+                AND CASE WHEN :toWellington == true
+                    THEN (toWellington == true)
+                    ELSE (fromWellington == false)
+                END
+                AND CASE WHEN :toWellington == false
+                    THEN (fromWellington == true)
+                    ELSE (toWellington == false)
+                END
+        END
+
+    """)
+    fun getStopIdByParentNameAndDirection(stationCode: String, toWellington: Boolean): Flow<List<Station>>
 
     @Query("""
         SELECT * FROM station WHERE stationId =:id
@@ -62,9 +85,15 @@ interface RouteDao {
 
     @Query("""
         SELECT * FROM route
-        WHERE routeId =:routeId
+        WHERE routeId = :routeId
     """)
-    fun getRoute(routeId: Int): Flow<Route>
+    fun getRouteById(routeId: Int): Flow<Route>
+
+    @Query("""
+        SELECT * FROM route
+        WHERE uniqueValueForRouteNotification = :uniqueRouteId
+    """)
+    fun getRouteByUniqueId(uniqueRouteId: Int): Flow<Route>
 
     @Query("""
         SELECT COUNT(*) from route
@@ -98,6 +127,13 @@ interface RouteNotificationDao {
        SELECT * FROM routeNotification
     """)
     fun getAllRouteNotifications(): Flow<List<RouteNotification>>
+
+    @Query("""
+       SELECT * FROM routeNotification
+       WHERE routeUniqueId = :uniqueId
+    """)
+    fun getRouteNotificationsByUniqueId(uniqueId: Int): Flow<List<RouteNotification>>
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertRouteNotification(routeNotification: RouteNotification)
 
@@ -146,4 +182,18 @@ interface MetlinkScheduleDao {
         DELETE FROM metlinkSchedule
     """)
     suspend fun deleteAllMetlinkSchedules()
+}
+
+@Dao
+interface SystemNotificationDao{
+    @Query("""
+        SELECT * 
+        FROM SystemNotification
+        ORDER BY nextAlertDateTime desc 
+        LIMIT 1
+    """)
+    fun getNextSystemNotification(): Flow<SystemNotification>
+
+    @Insert
+    suspend fun insertSystemNotification(systemNotification: List<SystemNotification>)
 }

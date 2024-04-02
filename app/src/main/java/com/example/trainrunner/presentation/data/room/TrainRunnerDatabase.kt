@@ -11,10 +11,11 @@ import com.example.trainrunner.presentation.data.room.models.MetlinkSchedule
 import com.example.trainrunner.presentation.data.room.models.Route
 import com.example.trainrunner.presentation.data.room.models.RouteNotification
 import com.example.trainrunner.presentation.data.room.models.Station
+import com.example.trainrunner.presentation.data.room.models.SystemNotification
 
 @TypeConverters(value = [DateConverter::class])
 @Database(
-    entities = [Station::class, Route::class, RouteNotification::class, MetlinkRoute::class, MetlinkSchedule::class],
+    entities = [Station::class, Route::class, RouteNotification::class, MetlinkRoute::class, MetlinkSchedule::class, SystemNotification::class],
     version = 1,
     exportSchema = false   //not sure why it is false
 )
@@ -26,6 +27,7 @@ abstract class TrainRunnerDatabase: RoomDatabase() {
     abstract fun routeNotificationDao(): RouteNotificationDao
     abstract fun metlinkRouteDao(): MetlinkRouteDao
     abstract fun metlinkScheduleDao(): MetlinkScheduleDao
+    abstract fun systemNotificationDao(): SystemNotificationDao
 
     // Helps create instance of this class without instantiating it
     companion object {

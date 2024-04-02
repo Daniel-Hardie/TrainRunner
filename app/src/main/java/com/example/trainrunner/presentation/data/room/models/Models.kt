@@ -3,6 +3,7 @@ package com.example.trainrunner.presentation.data.room.models
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.util.Date
 
 // Handle custom data types: https://www.youtube.com/watch?v=-DYvjjn9lQ0&list=PLUPcj46QWTDWlxtIwE3A6VEWUFEO8nh0Z&index=4
 
@@ -81,4 +82,19 @@ data class MetlinkSchedule(
     val orderId: Int = -1,
     val lineId: Int = -1,
     val toWellington: Boolean
+)
+
+@Entity(tableName = "systemNotification")
+data class SystemNotification(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
+    val uniqueValueForRouteNotification: Int = -1,
+    val metlinkRouteShortName: String = "",
+    val stopId: String = "",
+    val stopIdSanitized: String = "",
+    val stationFullName: String = "",
+    val toWellington: Boolean,
+    val day: String = "",
+    val time24hr: String = "",
+    val nextAlertDateTime: Date = Date()
 )

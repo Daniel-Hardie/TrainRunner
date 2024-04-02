@@ -5,11 +5,13 @@ import com.example.trainrunner.presentation.data.room.MetlinkScheduleDao
 import com.example.trainrunner.presentation.data.room.RouteDao
 import com.example.trainrunner.presentation.data.room.RouteNotificationDao
 import com.example.trainrunner.presentation.data.room.StationDao
+import com.example.trainrunner.presentation.data.room.SystemNotificationDao
 import com.example.trainrunner.presentation.data.room.models.MetlinkRoute
 import com.example.trainrunner.presentation.data.room.models.MetlinkSchedule
 import com.example.trainrunner.presentation.data.room.models.Route
 import com.example.trainrunner.presentation.data.room.models.RouteNotification
 import com.example.trainrunner.presentation.data.room.models.Station
+import com.example.trainrunner.presentation.data.room.models.SystemNotification
 
 
 // Can use DI library to set up, look into
@@ -18,10 +20,13 @@ class Repository(
     private val routeDao: RouteDao,
     private val routeNotificationDao: RouteNotificationDao,
     private val metlinkRouteDao: MetlinkRouteDao,
-    private val metlinkScheduleDao: MetlinkScheduleDao
+    private val metlinkScheduleDao: MetlinkScheduleDao,
+    private val systemNotificationDao: SystemNotificationDao
 ) {
     // Route table
-    fun getRoute(id: Int) = routeDao.getRoute(id)
+    fun getRouteById(id: Int) = routeDao.getRouteById(id)
+
+    fun getRouteByUniqueId(id: Int) = routeDao.getRouteByUniqueId(id)
 
     val getAllRoutes = routeDao.getAllRoutes()
 
@@ -45,6 +50,7 @@ class Repository(
     val getAllStations = stationDao.getAllStations()
     fun getStationById(id: Int) = stationDao.getStationById(id)
     fun getAllStationsOnLineByLineShortName(lineShortName: String) = stationDao.getAllStationsOnLineByLineShortName(lineShortName)
+    fun getStopIdByParentNameAndDirection(stationCode: String, toWellington: Boolean) = stationDao.getStopIdByParentNameAndDirection(stationCode, toWellington)
     fun getStationByCode(code: String) = stationDao.getStationByCode(code)
     suspend fun insertStation(station: Station){
         stationDao.insertStation(station)
@@ -56,6 +62,8 @@ class Repository(
 
     // RouteNotification table
     val getAllRouteNotifications = routeNotificationDao.getAllRouteNotifications()
+
+    fun getRouteNotificationsByUniqueId(id: Int) = routeNotificationDao.getRouteNotificationsByUniqueId(id)
 
     suspend fun insertRouteNotification(routeNotification: RouteNotification){
         routeNotificationDao.insertRouteNotification(routeNotification)
@@ -94,5 +102,12 @@ class Repository(
 
     suspend fun deleteAllMetlinkSchedules(){
         metlinkScheduleDao.deleteAllMetlinkSchedules()
+    }
+
+
+    // SystemNotification table
+    val getNextSystemNotification = systemNotificationDao.getNextSystemNotification()
+    suspend fun insertSystemNotification(systemNotification: List<SystemNotification>){
+        systemNotificationDao.insertSystemNotification(systemNotification)
     }
 }

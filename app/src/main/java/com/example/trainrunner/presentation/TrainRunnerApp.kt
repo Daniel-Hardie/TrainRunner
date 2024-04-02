@@ -55,13 +55,27 @@ fun TrainRunnerApp (
     var selectedStationOneCode by remember { mutableStateOf("Select first station") }
     var selectedStationTwoCode by remember { mutableStateOf("Select second station") }
     val selectedDays = remember { mutableStateListOf<Day>() }
-    var selectedScheduleTime by remember { mutableStateOf(MetlinkSchedule(departTime = "Please select time", toWellington = false))    }
+    var selectedScheduleTime by remember { mutableStateOf(MetlinkSchedule(departTime = "Please select time", toWellington = false))}
+//    var uniqueRouteIdValue by remember { mutableStateOf(-1) }
 
     TrainRunnerTheme(colors = themeColors) {
         SwipeDismissableNavHost(
             navController = swipeDismissableNavController,
             startDestination = Screen.Home.route
         ){
+            // This is probably a hack, but seem to only be able to get data from tables at init time in a ViewModel
+            // Make a "page" to do this and then reset these two values back to default
+//            composable(
+//                route = Screen.Hack.route
+//            ){
+//                UpdateSystemNotificationTable(
+//                    selectedScheduleTime = selectedScheduleTime,
+//                    selectedScheduleTimeOnChange = {selectedScheduleTime = it},
+//                    uniqueRouteIdValue = uniqueRouteIdValue,
+//                    uniqueRouteIdValueOnChange = {uniqueRouteIdValue = it}
+//                )
+//            }
+
             // Home screen
             composable(
                 route = Screen.Home.route
@@ -128,6 +142,7 @@ fun TrainRunnerApp (
                         selectedDaysOnChange = {selectedDays.clear(); selectedDays.addAll(it)},
                         selectedScheduleTime = selectedScheduleTime,
                         selectedScheduleTimeOnChange = {selectedScheduleTime = it},
+//                        uniqueRouteIdValueOnChange = {uniqueRouteIdValue = it},
                         columnState = columnState,
                         onNavigate = { swipeDismissableNavController.navigate(it) },
                     ){

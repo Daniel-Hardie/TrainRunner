@@ -14,7 +14,8 @@ object Graph {
             routeDao = db.routeDao(),
             routeNotificationDao = db.routeNotificationDao(),
             metlinkRouteDao = db.metlinkRouteDao(),
-            metlinkScheduleDao = db.metlinkScheduleDao()
+            metlinkScheduleDao = db.metlinkScheduleDao(),
+            systemNotificationDao = db.systemNotificationDao()
         )
     }
 

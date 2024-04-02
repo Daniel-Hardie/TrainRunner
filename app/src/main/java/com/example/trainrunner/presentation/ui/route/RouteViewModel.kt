@@ -7,12 +7,16 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.example.trainrunner.presentation.Graph
+import com.example.trainrunner.presentation.data.room.models.MetlinkSchedule
 import com.example.trainrunner.presentation.data.room.models.Route
 import com.example.trainrunner.presentation.data.room.models.RouteNotification
+import com.example.trainrunner.presentation.data.room.models.Station
+import com.example.trainrunner.presentation.data.room.models.SystemNotification
 import com.example.trainrunner.presentation.repository.Repository
 import com.example.trainrunner.presentation.ui.daysTracked.Day
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import java.util.Date
 
 class RouteViewModel(
     private val routeId: Int,
@@ -25,7 +29,7 @@ class RouteViewModel(
         if (routeId != -1) {
             viewModelScope.launch {
                 repository
-                    .getRoute(routeId)
+                    .getRouteById(routeId)
                     .collectLatest {
                         // Shouldnt really have problem in the end where we query something not in database
                         // TODO see if this can be taken out when routes id is not hardcoded in TrainRunnerApp.kt
@@ -53,6 +57,18 @@ class RouteViewModel(
                 daysTrackedCount = 0,
                 isActive = true,
             )
+        }
+
+        getAllStations()
+    }
+
+    fun getAllStations(){
+        viewModelScope.launch {
+            repository.getAllStations.collectLatest {
+                state = state.copy(
+                    stations = it
+                )
+            }
         }
     }
 
@@ -101,6 +117,7 @@ class RouteViewModel(
         }
     }
 
+//    fun saveRouteNotifications(listToPersist: List<RouteNotification>){
     fun saveRouteNotifications(routeId: Int, time: String, savedDays: List<Day>){
         var listToPersist: MutableList<RouteNotification> = mutableListOf()
         for(day in savedDays){
@@ -120,6 +137,35 @@ class RouteViewModel(
 
         viewModelScope.launch {
             repository.insertRouteNotificationList(listToPersist)
+        }
+    }
+
+    fun saveSystemNotification(
+        uniqueId: Int,
+        selectedScheduleTime: MetlinkSchedule,
+        routeNotificationList: List<RouteNotification>,
+        stationStopId: String,
+        stationFullName: String
+    ){
+        var systemNotificationList: MutableList<SystemNotification> = mutableListOf()   // I am making this to save
+        for (routeNotification in routeNotificationList){
+            systemNotificationList.add(
+                SystemNotification(
+                    uniqueValueForRouteNotification = uniqueId,
+                    metlinkRouteShortName = state.metlinkRouteShortName,
+                    stopId = stationStopId,  // from station table
+                    stopIdSanitized = state.stationOneCode,
+                    stationFullName = stationFullName,   // from station table
+                    toWellington = selectedScheduleTime.toWellington,
+                    day = routeNotification.dayText,
+                    time24hr = routeNotification.time,
+                    nextAlertDateTime = Date()
+                )
+            )
+        }
+
+        viewModelScope.launch {
+            repository.insertSystemNotification(systemNotificationList)
         }
     }
 
@@ -145,4 +191,6 @@ data class RouteState(
     val stationTwoCode: String = "Plz select value",
     val daysTrackedCount: Int = 0,
     val isActive: Boolean = false,
+    val stations: List<Station> = emptyList(),
+    val testRoute: List<Route> = emptyList()
 )
