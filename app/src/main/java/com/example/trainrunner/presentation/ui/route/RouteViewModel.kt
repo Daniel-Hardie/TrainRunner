@@ -81,8 +81,8 @@ class RouteViewModel(
         state = state.copy(daysTrackedCount = daysActiveCount)
     }
 
-    fun onIsActiveChanged(active: Boolean){
-        state = state.copy(isActive = active)
+    fun onDaysTrackedCountChanged(newNumberDaysTracked: Int){
+        state = state.copy(daysTrackedCount = newNumberDaysTracked)
     }
 
     fun saveRoute(uniqueRouteId: Int) {

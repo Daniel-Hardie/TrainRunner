@@ -31,8 +31,12 @@ fun AddRouteScreen(
     selectedMetlinkRouteId: String,
     selectedStationOneCode: String,
     selectedStationTwoCode: String,
+    selectedStationOneCodeGlobalChange: (String) -> Unit,
+    selectedStationTwoCodeGlobalChange: (String) -> Unit,
     selectedDays: List<Day>,
+    selectedDaysOnChange: (List<Day>) -> Unit,
     selectedScheduleTime: MetlinkSchedule,
+    selectedScheduleTimeOnChange: (MetlinkSchedule) -> Unit,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
@@ -46,8 +50,12 @@ fun AddRouteScreen(
         selectedTrainLine = selectedTrainLine,
         selectedStationOneCode = selectedStationOneCode,
         selectedStationTwoCode = selectedStationTwoCode,
+        selectedStationOneCodeGlobalChange = selectedStationOneCodeGlobalChange,
+        selectedStationTwoCodeGlobalChange = selectedStationTwoCodeGlobalChange,
         selectedDays = selectedDays,
+        selectedDaysOnChange = selectedDaysOnChange,
         selectedScheduleTime = selectedScheduleTime,
+        selectedScheduleTimeOnChange = selectedScheduleTimeOnChange,
         state = viewModel.state,
         columnState = columnState,
         modifier = modifier,
@@ -58,7 +66,8 @@ fun AddRouteScreen(
         onLineChanged = viewModel::onTrainLineChanged,
         onStationOneCodeChanged = viewModel::onStationOneCodeChanged,
         onStationTwoCodeChanged = viewModel::onStationTwoCodeChanged,
-        onSelectedDaysChanged = viewModel::onSelectedDaysChanged
+        onSelectedDaysChanged = viewModel::onSelectedDaysChanged,
+        onDaysTrackedCountChanged = viewModel::onDaysTrackedCountChanged
     ){
         navigateUp.invoke()
     }
@@ -71,8 +80,12 @@ fun RouteScreen(
     selectedTrainLine: String,
     selectedStationOneCode: String,
     selectedStationTwoCode: String,
+    selectedStationOneCodeGlobalChange: (String) -> Unit,
+    selectedStationTwoCodeGlobalChange: (String) -> Unit,
     selectedDays: List<Day>,
+    selectedDaysOnChange: (List<Day>) -> Unit,
     selectedScheduleTime: MetlinkSchedule,
+    selectedScheduleTimeOnChange: (MetlinkSchedule) -> Unit,
     state: RouteState,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
@@ -84,6 +97,7 @@ fun RouteScreen(
     onStationOneCodeChanged: (String) -> Unit,
     onStationTwoCodeChanged: (String) -> Unit,
     onSelectedDaysChanged: (List<Day>) -> Unit,
+    onDaysTrackedCountChanged: (Int) -> Unit,
     navigateUp: () -> Unit
 ) {
     val isActive: String = if (state.isActive) {
@@ -104,7 +118,7 @@ fun RouteScreen(
         isStationOneChipActive = false
     }
 
-    if ((selectedTrainLine != "Select a line") && (selectedStationOneCode != "Select entry station")) {
+    if ((selectedTrainLine != "Select a line") && (selectedStationOneCode != "Select first station")) {
         onStationTwoCodeChanged(selectedStationTwoCode)
         isStationTwoChipActive = true
     } else {
@@ -115,7 +129,18 @@ fun RouteScreen(
         onSelectedDaysChanged(selectedDays)
     }
 
-    val addRouteButtonEnabled = isStationOneChipActive && isStationTwoChipActive && selectedDays.isNotEmpty()
+    val isDaysTrackedActive = selectedTrainLine != "Select a line" &&
+            selectedStationOneCode != "Select first station" &&
+            selectedStationTwoCode != "Select second station"
+
+    val isTimeButtonActive = isDaysTrackedActive
+            && state.daysTrackedCount > 0
+
+    val addRouteButtonEnabled = isStationOneChipActive &&
+            isStationTwoChipActive &&
+            selectedDays.isNotEmpty() &&
+            state.daysTrackedCount > 0 &&
+            selectedScheduleTime.departTime != "Please select time"
 
     Box(
         modifier = modifier.fillMaxSize()
@@ -136,7 +161,14 @@ fun RouteScreen(
                 Chip(
                     label = "Train Line",
                     secondaryLabel = selectedTrainLine,
-                    onClick = { onNavigate(Screen.LineSelect.route) }
+                    onClick = {
+                        selectedStationOneCodeGlobalChange("Select first station")
+                        selectedStationTwoCodeGlobalChange("Select second station")
+                        selectedDaysOnChange(emptyList<Day>())
+                        onDaysTrackedCountChanged(0)  // Makes the AddRoute page display = 0
+                        selectedScheduleTimeOnChange(MetlinkSchedule(departTime = "Please select time", toWellington = false))
+                        onNavigate(Screen.LineSelect.route)
+                    }
                 )
             }
             item {
@@ -144,7 +176,13 @@ fun RouteScreen(
                     label = "Station One",
                     secondaryLabel = selectedStationOneCode,
                     enabled = isStationOneChipActive,
-                    onClick = { onNavigate(Screen.StationSelect.route + "/1") }
+                    onClick = {
+                        selectedStationTwoCodeGlobalChange("Select second station")
+                        selectedDaysOnChange(emptyList<Day>())
+                        onDaysTrackedCountChanged(0)  // Makes the AddRoute page display = 0
+                        selectedScheduleTimeOnChange(MetlinkSchedule(departTime = "Please select time", toWellington = false))
+                        onNavigate(Screen.StationSelect.route + "/1")
+                    }
                 )
             }
             item {
@@ -152,28 +190,34 @@ fun RouteScreen(
                     label = "Station Two",
                     secondaryLabel = selectedStationTwoCode,
                     enabled = isStationTwoChipActive,
-                    onClick = { onNavigate(Screen.StationSelect.route + "/2") }
+                    onClick = {
+                        selectedDaysOnChange(emptyList<Day>())
+                        onDaysTrackedCountChanged(0)  // Makes the AddRoute page display = 0
+                        selectedScheduleTimeOnChange(MetlinkSchedule(departTime = "Please select time", toWellington = false))
+                        onNavigate(Screen.StationSelect.route + "/2")
+                    }
                 )
             }
             item {
                 Chip(
                     label = "Days Tracked",
                     secondaryLabel = "${state.daysTrackedCount} selected",
-                    onClick = { onNavigate(Screen.DaysTracked.route) }
+                    enabled = isDaysTrackedActive,
+                    onClick = {
+                        onDaysTrackedCountChanged(0)  // Makes the AddRoute page display = 0
+                        selectedScheduleTimeOnChange(MetlinkSchedule(departTime = "Please select time", toWellington = false))
+                        onNavigate(Screen.DaysTracked.route)
+                    }
                 )
             }
             item {
                 Chip(
                     label = "Time",
                     secondaryLabel = selectedScheduleTime.departTime,
-                    onClick = {onNavigate(Screen.TimeSelect.route)}
-                )
-            }
-            item {
-                Chip(
-                    label = "Notifications",
-                    secondaryLabel = isActive,
-                    onClick = { }
+                    enabled = isTimeButtonActive,
+                    onClick = {
+                        onNavigate(Screen.TimeSelect.route)
+                    }
                 )
             }
             item {
@@ -190,6 +234,10 @@ fun RouteScreen(
                         onClick = {
                             val uniqueRouteId = Random.nextInt(0, 9999999)
                             saveRoute(uniqueRouteId)
+                            println(selectedScheduleTime)
+                            for(d in selectedDays){
+                                println(d)
+                            }
                             saveRouteNotifications.invoke(uniqueRouteId, selectedScheduleTime.departTime, selectedDays)
                             navigateUp.invoke()
                         },

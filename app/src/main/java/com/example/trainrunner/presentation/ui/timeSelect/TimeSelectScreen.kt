@@ -18,7 +18,7 @@ import com.google.android.horologist.compose.material.Chip
 @Composable
 fun TimeSelectScreen(
     columnState: ScalingLazyColumnState,
-    selectedScheduleTime: (MetlinkSchedule) -> Unit,
+    selectedScheduleTimeOnChange: (MetlinkSchedule) -> Unit,
     selectedStationOneCode: String,
     selectedStationTwoCode: String,
     modifier: Modifier = Modifier,
@@ -46,7 +46,7 @@ fun TimeSelectScreen(
                 Chip(
                     label = line.departTime,
                     onClick = {
-                        selectedScheduleTime(line)
+                        selectedScheduleTimeOnChange(line)
                         navigateUp.invoke()
                     }
                 )

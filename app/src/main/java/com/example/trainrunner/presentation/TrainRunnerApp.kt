@@ -52,8 +52,8 @@ fun TrainRunnerApp (
     var routeId by remember { mutableIntStateOf(-1) }
     var selectedMetlinkRouteId by remember  { mutableStateOf("") }
     var selectedTrainLine by remember  { mutableStateOf("Select a line") }
-    var selectedStationOneCode by remember { mutableStateOf("Select entry station") }
-    var selectedStationTwoCode by remember { mutableStateOf("Select destination station") }
+    var selectedStationOneCode by remember { mutableStateOf("Select first station") }
+    var selectedStationTwoCode by remember { mutableStateOf("Select second station") }
     val selectedDays = remember { mutableStateListOf<Day>() }
     var selectedScheduleTime by remember { mutableStateOf(MetlinkSchedule(departTime = "Please select time", toWellington = false))    }
 
@@ -122,8 +122,12 @@ fun TrainRunnerApp (
                         selectedTrainLine = selectedTrainLine,
                         selectedStationOneCode = selectedStationOneCode,
                         selectedStationTwoCode = selectedStationTwoCode,
+                        selectedStationOneCodeGlobalChange = {selectedStationOneCode = it},
+                        selectedStationTwoCodeGlobalChange = {selectedStationTwoCode = it},
                         selectedDays = selectedDays,
+                        selectedDaysOnChange = {selectedDays.clear(); selectedDays.addAll(it)},
                         selectedScheduleTime = selectedScheduleTime,
+                        selectedScheduleTimeOnChange = {selectedScheduleTime = it},
                         columnState = columnState,
                         onNavigate = { swipeDismissableNavController.navigate(it) },
                     ){
@@ -210,7 +214,7 @@ fun TrainRunnerApp (
                 ScreenScaffold(scrollState = columnState) {
                     TimeSelectScreen(
                         columnState = columnState,
-                        selectedScheduleTime = {selectedScheduleTime = it},
+                        selectedScheduleTimeOnChange = {selectedScheduleTime = it},
                         selectedStationOneCode = selectedStationOneCode,
                         selectedStationTwoCode = selectedStationTwoCode
                     ) {
@@ -221,7 +225,6 @@ fun TrainRunnerApp (
         }
     }
 }
-
 
 @Composable
 fun PopulateDatabase(){
