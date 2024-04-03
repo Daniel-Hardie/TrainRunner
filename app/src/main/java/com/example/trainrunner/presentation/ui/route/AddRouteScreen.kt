@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -67,6 +68,7 @@ fun AddRouteScreen(
         saveRouteNotifications = viewModel::saveRouteNotifications,
         saveSystemNotification = viewModel::saveSystemNotification,
 //        saveSystemNotification = viewModel::saveSystemNotification,
+        theBigYeet = viewModel::theBigYeet,
         deleteRoute = { viewModel.deleteRoute(routeId) },
         onLineChanged = viewModel::onTrainLineChanged,
         onStationOneCodeChanged = viewModel::onStationOneCodeChanged,
@@ -91,6 +93,7 @@ fun RouteScreen(
     selectedDaysOnChange: (List<Day>) -> Unit,
     selectedScheduleTime: MetlinkSchedule,
     selectedScheduleTimeOnChange: (MetlinkSchedule) -> Unit,
+    theBigYeet: (Int, List<Day>, MetlinkSchedule, String, String) -> Unit,
 //    uniqueRouteIdValueOnChange: (Int) -> Unit,
     state: RouteState,
     columnState: ScalingLazyColumnState,
@@ -151,6 +154,8 @@ fun RouteScreen(
             state.daysTrackedCount > 0 &&
             selectedScheduleTime.departTime != "Please select time"
 
+    val coroutineScope = rememberCoroutineScope()
+
     Box(
         modifier = modifier.fillMaxSize()
     ) {
@@ -175,7 +180,12 @@ fun RouteScreen(
                         selectedStationTwoCodeGlobalChange("Select second station")
                         selectedDaysOnChange(emptyList<Day>())
                         onDaysTrackedCountChanged(0)  // Makes the AddRoute page display = 0
-                        selectedScheduleTimeOnChange(MetlinkSchedule(departTime = "Please select time", toWellington = false))
+                        selectedScheduleTimeOnChange(
+                            MetlinkSchedule(
+                                departTime = "Please select time",
+                                toWellington = false
+                            )
+                        )
                         onNavigate(Screen.LineSelect.route)
                     }
                 )
@@ -189,7 +199,12 @@ fun RouteScreen(
                         selectedStationTwoCodeGlobalChange("Select second station")
                         selectedDaysOnChange(emptyList<Day>())
                         onDaysTrackedCountChanged(0)  // Makes the AddRoute page display = 0
-                        selectedScheduleTimeOnChange(MetlinkSchedule(departTime = "Please select time", toWellington = false))
+                        selectedScheduleTimeOnChange(
+                            MetlinkSchedule(
+                                departTime = "Please select time",
+                                toWellington = false
+                            )
+                        )
                         onNavigate(Screen.StationSelect.route + "/1")
                     }
                 )
@@ -202,7 +217,12 @@ fun RouteScreen(
                     onClick = {
                         selectedDaysOnChange(emptyList<Day>())
                         onDaysTrackedCountChanged(0)  // Makes the AddRoute page display = 0
-                        selectedScheduleTimeOnChange(MetlinkSchedule(departTime = "Please select time", toWellington = false))
+                        selectedScheduleTimeOnChange(
+                            MetlinkSchedule(
+                                departTime = "Please select time",
+                                toWellington = false
+                            )
+                        )
                         onNavigate(Screen.StationSelect.route + "/2")
                     }
                 )
@@ -214,7 +234,12 @@ fun RouteScreen(
                     enabled = isDaysTrackedActive,
                     onClick = {
                         onDaysTrackedCountChanged(0)  // Makes the AddRoute page display = 0
-                        selectedScheduleTimeOnChange(MetlinkSchedule(departTime = "Please select time", toWellington = false))
+                        selectedScheduleTimeOnChange(
+                            MetlinkSchedule(
+                                departTime = "Please select time",
+                                toWellington = false
+                            )
+                        )
                         onNavigate(Screen.DaysTracked.route)
                     }
                 )
@@ -241,71 +266,87 @@ fun RouteScreen(
                         id = R.drawable.ic_done,
                         contentDescription = "Save",
                         onClick = {
+                            // Use coroutine to ensure the insertion is finished before backing out
+
                             val uniqueRouteId = Random.nextInt(0, 9999999)
                             saveRoute(uniqueRouteId)
-                            saveRouteNotifications.invoke(uniqueRouteId, selectedScheduleTime.departTime, selectedDays)
 
-//                            println(selectedScheduleTime)
-//                            for(d in selectedDays){
-//                                println(d)
-//                            }
+//                            coroutineScope.launch {
+                                saveRouteNotifications.invoke(
+                                    uniqueRouteId,
+                                    selectedScheduleTime.departTime,
+                                    selectedDays
+                                )
 
-                            var routeNotificationListToSave: MutableList<RouteNotification> = mutableListOf()
-                            for(day in selectedDays){
-                                if(day.isActive){
-                                    routeNotificationListToSave.add(
-                                        RouteNotification(
-                                            routeUniqueId = routeId,
+                                var routeNotificationListToSave: MutableList<RouteNotification> =
+                                    mutableListOf()
+                                for (day in selectedDays) {
+                                    if (day.isActive) {
+                                        var x = RouteNotification(
+                                            routeUniqueId = uniqueRouteId,
                                             orderId = day.orderId,
                                             dayText = day.text,
                                             dayShortText = day.shortText,
                                             time = selectedScheduleTime.departTime,
                                             isActive = true
                                         )
-                                    )
+                                        println(x)
+                                        routeNotificationListToSave.add(
+                                            x
+                                        )
+                                    }
                                 }
-                            }
-//                            saveRouteNotifications.invoke(routeNotificationListToSave)
 
+//                                saveRouteNotifications.invoke(routeNotificationListToSave)
 
 
 //                            saveSystemNotification(uniqueRouteId, selectedScheduleTime)
 //                            state.stationOneCode, selectedScheduleTime.toWellington
 //                            var stationMatches: MutableList<Station> = mutableListOf()
-                            var stationMetlinkCode: String = ""
-                            var metlinkStationFullName: String = ""
-                            for(currentStation in state.stations){
-                                if(currentStation.metlinkParentStation == selectedStationOneCode || currentStation.metlinkStopId == selectedStationOneCode){
-                                    if(selectedScheduleTime.toWellington){
-                                        if(currentStation.toWellington){
-                                            stationMetlinkCode = currentStation.metlinkStopId
-                                            metlinkStationFullName = currentStation.metlinkStopName
+                                var stationMetlinkCode: String = ""
+                                var metlinkStationFullName: String = ""
+                                for (currentStation in state.stations) {
+                                    if (currentStation.metlinkParentStation == selectedStationOneCode || currentStation.metlinkStopId == selectedStationOneCode) {
+                                        if (selectedScheduleTime.toWellington) {
+                                            if (currentStation.toWellington) {
+                                                stationMetlinkCode = currentStation.metlinkStopId
+                                                metlinkStationFullName = currentStation.metlinkStopName
 //                                            stationMatches.add(currentStation)
-                                            println(currentStation)
-                                            break
-                                        }
-                                    }
-                                    else{
-                                        if(currentStation.fromWellington){
-                                            stationMetlinkCode = currentStation.metlinkStopId
-                                            metlinkStationFullName = currentStation.metlinkStopName
+                                                println(currentStation)
+                                                break
+                                            }
+                                        } else {
+                                            if (currentStation.fromWellington) {
+                                                stationMetlinkCode = currentStation.metlinkStopId
+                                                metlinkStationFullName = currentStation.metlinkStopName
 //                                            stationMatches.add(currentStation)
-                                            println(currentStation)
-                                            break
+                                                println(currentStation)
+                                                break
+                                            }
                                         }
                                     }
                                 }
-                            }
 
-                            // Add to system notification table
-                            saveSystemNotification(
-                                uniqueRouteId,
-                                selectedScheduleTime,
-                                routeNotificationListToSave,
-                                stationMetlinkCode,
-                                metlinkStationFullName
-                            )
+//                                theBigYeet.invoke(
+//                                    uniqueRouteId,
+//                                    selectedDays,
+//                                    selectedScheduleTime,
+//                                    stationMetlinkCode,
+//                                    metlinkStationFullName
+//                                )
 
+                                // Add to system notification table
+                                saveSystemNotification.invoke(
+                                    uniqueRouteId,
+                                    selectedScheduleTime,
+                                    routeNotificationListToSave,
+                                    stationMetlinkCode,
+                                    metlinkStationFullName
+                                )
+
+
+//                            }
+//                            coroutineScope.cancel()
                             navigateUp.invoke()
                         },
                         buttonSize = ButtonSize.Small,
@@ -325,12 +366,4 @@ fun RouteScreen(
             }
         }
     }
-}
-
-fun GenerateSystemNotifications(
-    state: RouteState,
-    uniqueRouteId: Int,
-    routeNotificationListToSave: List<RouteNotification>
-){
-    println("fsdg")
 }

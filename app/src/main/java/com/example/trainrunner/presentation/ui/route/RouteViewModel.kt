@@ -14,6 +14,8 @@ import com.example.trainrunner.presentation.data.room.models.Station
 import com.example.trainrunner.presentation.data.room.models.SystemNotification
 import com.example.trainrunner.presentation.repository.Repository
 import com.example.trainrunner.presentation.ui.daysTracked.Day
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import java.util.Date
@@ -102,7 +104,8 @@ class RouteViewModel(
     }
 
     fun saveRoute(uniqueRouteId: Int) {
-        viewModelScope.launch {
+//        viewModelScope.launch {
+        CoroutineScope(Dispatchers.IO).launch {
             repository.insertRoute(
                 Route(
                     uniqueValueForRouteNotification = uniqueRouteId,
@@ -117,26 +120,36 @@ class RouteViewModel(
         }
     }
 
-//    fun saveRouteNotifications(listToPersist: List<RouteNotification>){
-    fun saveRouteNotifications(routeId: Int, time: String, savedDays: List<Day>){
-        var listToPersist: MutableList<RouteNotification> = mutableListOf()
-        for(day in savedDays){
-            if(day.isActive){
-                listToPersist.add(
-                    RouteNotification(
-                        routeUniqueId = routeId,
-                        orderId = day.orderId,
-                        dayText = day.text,
-                        dayShortText = day.shortText,
-                        time = time,
-                        isActive = true
-                    )
-                )
+    fun saveRouteNotifications(listToPersist: List<RouteNotification>){
+        viewModelScope.launch {
+            listToPersist.forEach { routeNotification ->
+                repository
+                    .insertRouteNotification(routeNotification)
             }
         }
+    }
 
-        viewModelScope.launch {
+    fun saveRouteNotifications(routeUniqueId: Int, time: String, savedDays: List<Day>){
+        CoroutineScope(Dispatchers.IO).launch {
+            var listToPersist: MutableList<RouteNotification> = mutableListOf()
+            for(day in savedDays){
+                if(day.isActive){
+                    listToPersist.add(
+                        RouteNotification(
+                            routeUniqueId = routeUniqueId,
+                            orderId = day.orderId,
+                            dayText = day.text,
+                            dayShortText = day.shortText,
+                            time = time,
+                            isActive = true
+                        )
+                    )
+                }
+            }
+
+            println("inserting rn now")
             repository.insertRouteNotificationList(listToPersist)
+            println("inserted rn")
         }
     }
 
@@ -147,27 +160,95 @@ class RouteViewModel(
         stationStopId: String,
         stationFullName: String
     ){
-        var systemNotificationList: MutableList<SystemNotification> = mutableListOf()   // I am making this to save
-        for (routeNotification in routeNotificationList){
-            systemNotificationList.add(
-                SystemNotification(
-                    uniqueValueForRouteNotification = uniqueId,
-                    metlinkRouteShortName = state.metlinkRouteShortName,
-                    stopId = stationStopId,  // from station table
-                    stopIdSanitized = state.stationOneCode,
-                    stationFullName = stationFullName,   // from station table
-                    toWellington = selectedScheduleTime.toWellington,
-                    day = routeNotification.dayText,
-                    time24hr = routeNotification.time,
-                    nextAlertDateTime = Date()
+        CoroutineScope(Dispatchers.IO).launch {
+            var systemNotificationList: MutableList<SystemNotification> = mutableListOf()   // I am making this to save
+            for (routeNotification in routeNotificationList){
+                systemNotificationList.add(
+                    SystemNotification(
+                        uniqueValueForRouteNotification = uniqueId,
+                        metlinkRouteShortName = state.metlinkRouteShortName,
+                        stopId = stationStopId,  // from station table
+                        stopIdSanitized = state.stationOneCode,
+                        stationFullName = stationFullName,   // from station table
+                        toWellington = selectedScheduleTime.toWellington,
+                        day = routeNotification.dayText,
+                        time24hr = routeNotification.time,
+                        nextAlertDateTime = Date()
+                    )
                 )
-            )
+            }
+//            println(systemNotificationList[0])
+            println("inserting now")
+            repository.insertSystemNotificationList(systemNotificationList)
+            println("inserted it apprarently")
         }
 
+//        viewModelScope.launch {
+//            systemNotificationList.forEach{
+//                systemNotification ->  repository.insertSystemNotification(systemNotification)
+//            }
+//        }
+    }
+
+    fun theBigYeet(
+        routeUniqueId: Int,
+        savedDays: List<Day>,
+        selectedScheduleTime: MetlinkSchedule,
+        stationStopId: String,
+        stationFullName: String
+    ){
         viewModelScope.launch {
-            repository.insertSystemNotification(systemNotificationList)
+            repository.insertRoute(
+                Route(
+                    uniqueValueForRouteNotification = routeUniqueId,
+                    metlinkRouteId = state.selectedMetlinkRouteId,
+                    metlinkRouteShortName = state.metlinkRouteShortName,
+                    stationOneCode = state.stationOneCode,
+                    stationTwoCode = state.stationTwoCode,
+                    toWellington = false,
+                    isActive = true
+                )
+            )
+
+            var routeNotificationList: MutableList<RouteNotification> = mutableListOf()
+            for(day in savedDays){
+                if(day.isActive){
+                    routeNotificationList.add(
+                        RouteNotification(
+                            routeUniqueId = routeUniqueId,
+                            orderId = day.orderId,
+                            dayText = day.text,
+                            dayShortText = day.shortText,
+                            time = selectedScheduleTime.departTime,
+                            isActive = true
+                        )
+                    )
+                }
+            }
+            println(routeNotificationList[0])
+            repository.insertRouteNotificationList(routeNotificationList)
+
+            var systemNotificationList: MutableList<SystemNotification> = mutableListOf()   // I am making this to save
+            for (routeNotification in routeNotificationList){
+                systemNotificationList.add(
+                    SystemNotification(
+                        uniqueValueForRouteNotification = routeUniqueId,
+                        metlinkRouteShortName = state.metlinkRouteShortName,
+                        stopId = stationStopId,  // from station table
+                        stopIdSanitized = state.stationOneCode,
+                        stationFullName = stationFullName,   // from station table
+                        toWellington = selectedScheduleTime.toWellington,
+                        day = routeNotification.dayText,
+                        time24hr = routeNotification.time,
+                        nextAlertDateTime = Date()
+                    )
+                )
+            }
+            println(systemNotificationList[0])
+            repository.insertSystemNotificationList(systemNotificationList)
         }
     }
+
 
     fun deleteRoute(routeId: Int){
         viewModelScope.launch {

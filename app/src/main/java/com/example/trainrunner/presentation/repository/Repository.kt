@@ -107,7 +107,7 @@ class Repository(
 
     // SystemNotification table
     val getNextSystemNotification = systemNotificationDao.getNextSystemNotification()
-    suspend fun insertSystemNotification(systemNotification: List<SystemNotification>){
-        systemNotificationDao.insertSystemNotification(systemNotification)
+    suspend fun insertSystemNotificationList(systemNotification: List<SystemNotification>){
+        systemNotificationDao.insertSystemNotificationList(systemNotification)
     }
 }

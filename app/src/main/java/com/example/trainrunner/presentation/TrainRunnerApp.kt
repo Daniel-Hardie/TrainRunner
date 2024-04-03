@@ -56,7 +56,6 @@ fun TrainRunnerApp (
     var selectedStationTwoCode by remember { mutableStateOf("Select second station") }
     val selectedDays = remember { mutableStateListOf<Day>() }
     var selectedScheduleTime by remember { mutableStateOf(MetlinkSchedule(departTime = "Please select time", toWellington = false))}
-//    var uniqueRouteIdValue by remember { mutableStateOf(-1) }
 
     TrainRunnerTheme(colors = themeColors) {
         SwipeDismissableNavHost(

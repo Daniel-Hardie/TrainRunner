@@ -134,7 +134,7 @@ interface RouteNotificationDao {
     """)
     fun getRouteNotificationsByUniqueId(uniqueId: Int): Flow<List<RouteNotification>>
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertRouteNotification(routeNotification: RouteNotification)
 
     @Insert
@@ -195,5 +195,5 @@ interface SystemNotificationDao{
     fun getNextSystemNotification(): Flow<SystemNotification>
 
     @Insert
-    suspend fun insertSystemNotification(systemNotification: List<SystemNotification>)
+    suspend fun insertSystemNotificationList(systemNotification: List<SystemNotification>)
 }

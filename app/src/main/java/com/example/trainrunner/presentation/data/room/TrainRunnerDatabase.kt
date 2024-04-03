@@ -27,7 +27,7 @@ abstract class TrainRunnerDatabase: RoomDatabase() {
     abstract fun routeNotificationDao(): RouteNotificationDao
     abstract fun metlinkRouteDao(): MetlinkRouteDao
     abstract fun metlinkScheduleDao(): MetlinkScheduleDao
-    abstract fun systemNotificationDao(): SystemNotificationDao
+    abstract val systemNotificationDao: SystemNotificationDao
 
     // Helps create instance of this class without instantiating it
     companion object {
