@@ -367,7 +367,17 @@ fun RouteScreen(
                         id = R.drawable.ic_cancel,
                         contentDescription = "Cancel",
                         onClick = {
-                            deleteRoute.invoke(routeId)
+                            selectedTrainLineOnChange("Select a line")
+                            selectedStationOneCodeGlobalChange("Select first station")
+                            selectedStationTwoCodeGlobalChange("Select second station")
+                            selectedDaysOnChange(emptyList<Day>())
+                            onDaysTrackedCountChanged(0)
+                            selectedScheduleTimeOnChange(
+                                MetlinkSchedule(
+                                    departTime = "Please select time",
+                                    toWellington = false
+                                )
+                            )
                             navigateUp.invoke()
                         },
                         buttonSize = ButtonSize.Small
