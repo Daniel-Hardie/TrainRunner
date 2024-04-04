@@ -27,9 +27,9 @@ import com.example.trainrunner.presentation.navigation.STATION_SELECT_NAV_ARGUME
 import com.example.trainrunner.presentation.navigation.Screen
 import com.example.trainrunner.presentation.theme.TrainRunnerTheme
 import com.example.trainrunner.presentation.theme.initialThemeValues
-import com.example.trainrunner.presentation.ui.home.HomeScreen
 import com.example.trainrunner.presentation.ui.daysTracked.Day
 import com.example.trainrunner.presentation.ui.daysTracked.DaysTrackedScreen
+import com.example.trainrunner.presentation.ui.home.HomeScreen
 import com.example.trainrunner.presentation.ui.line.LineSelectScreen
 import com.example.trainrunner.presentation.ui.route.AddRouteScreen
 import com.example.trainrunner.presentation.ui.route.EditRouteScreen
@@ -50,6 +50,7 @@ fun TrainRunnerApp (
 
     // Information to pass between screens
     var routeId by remember { mutableIntStateOf(-1) }
+    var timeRemaining by remember { mutableStateOf("No times found") }
     var selectedMetlinkRouteId by remember  { mutableStateOf("") }
     var selectedTrainLine by remember  { mutableStateOf("Select a line") }
     var selectedStationOneCode by remember { mutableStateOf("Select first station") }
@@ -85,13 +86,8 @@ fun TrainRunnerApp (
                 ScreenScaffold(scrollState = columnState) {
                     HomeScreen(
                         columnState = columnState,
-//                        onClickWatchList = {
-//                            swipeDismissableNavController.navigate(Screen.WatchList.route)
-//                        },
-//                        proceedingTimeTextEnabled = showProceedingTextBeforeTime,
-//                        onClickProceedingTimeText = {
-//                            showProceedingTextBeforeTime = !showProceedingTextBeforeTime
-//                        },
+                        timeRemaining = timeRemaining,
+                        timeRemainingOnChange = { timeRemaining = it },
                         onNavigate = { swipeDismissableNavController.navigate(it) }
                     )
                 }

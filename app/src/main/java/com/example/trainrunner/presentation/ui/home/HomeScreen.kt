@@ -4,33 +4,53 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
 import com.example.trainrunner.R
-import com.example.trainrunner.presentation.menuNameAndCallback
 import com.example.trainrunner.presentation.navigation.Screen
 import com.google.android.horologist.compose.layout.ScalingLazyColumn
 import com.google.android.horologist.compose.layout.ScalingLazyColumnState
 import com.google.android.horologist.compose.material.Button
 import com.google.android.horologist.compose.material.ButtonSize
+import kotlinx.coroutines.delay
+import java.time.Duration
+import java.time.LocalDateTime
+import java.time.ZoneId
 
 @Composable
 fun HomeScreen(
     columnState: ScalingLazyColumnState,
-//    onClickSettingsList: () -> Unit,
+    timeRemaining: String,
+    timeRemainingOnChange: (String) -> Unit,
     onNavigate: (String) -> Unit,
-//    proceedingTimeTextEnabled: Boolean,
-//    onClickProceedingTimeText: (Boolean) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val settingsInfo = menuNameAndCallback(
-        onNavigate = onNavigate,
-        menuNameResource = R.string.settings_button_label,
-        screen = Screen.Settings
-    )
+    val viewModel = viewModel(modelClass = HomeViewModel::class.java)
+    val homeState = viewModel.state
+
+    LaunchedEffect(Unit) {
+        while(true) {
+            val nextAlertDateTime = viewModel.state.nextAlertDateTime
+            val currentDateTime = LocalDateTime.now()
+            val targetDateTime = LocalDateTime.ofInstant(nextAlertDateTime.toInstant(), ZoneId.systemDefault());
+
+            // find the difference in time to display
+            val timeDifference = Duration.between(currentDateTime, targetDateTime)
+            val daysDifference = timeDifference.toDays().toString().padStart(2, '0')
+            val hoursDifference = (timeDifference.toHours() % 24).toString().padStart(2, '0')
+            val minutesDifference = (timeDifference.toMinutes() % 60).toString().padStart(2, '0')
+            val secondsDifference = (timeDifference.seconds % 60).toString().padStart(2, '0')
+
+            val timeMessage = "${daysDifference} days, ${hoursDifference} : ${minutesDifference} : ${secondsDifference}"
+            timeRemainingOnChange(timeMessage)
+            delay(1000)
+        }
+    }
 
     Box(modifier = modifier.fillMaxSize()) {
         ScalingLazyColumn(
@@ -50,7 +70,7 @@ fun HomeScreen(
                     modifier = Modifier.fillMaxWidth(),
                     textAlign = TextAlign.Center,
                     color = MaterialTheme.colors.primary,
-                    text = "Taita Station"
+                    text = homeState.stationFullName
                 )
             }
             item {
@@ -58,14 +78,24 @@ fun HomeScreen(
                     modifier = Modifier.fillMaxWidth(),
                     textAlign = TextAlign.Center,
                     color = MaterialTheme.colors.primary,
-                    text = "14 hours 8 mins"
+                    text = timeRemaining
                 )
             }
+//            item {
+//                Text(
+//                    modifier = Modifier.fillMaxWidth(),
+//                    textAlign = TextAlign.Center,
+//                    color = MaterialTheme.colors.primary,
+//                    text = blah.toString()
+//                )
+//            }
             item {
                 Button(
                     id = R.drawable.ic_settings,
                     contentDescription = "",
-                    onClick = settingsInfo.clickHandler,
+                    onClick = {
+                        onNavigate(Screen.Settings.route)
+                    },
                     buttonSize = ButtonSize.Small,
                 )
             }
