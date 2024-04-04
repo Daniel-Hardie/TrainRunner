@@ -138,10 +138,10 @@ fun TrainRunnerApp (
                         selectedStationOneCodeGlobalChange = {selectedStationOneCode = it},
                         selectedStationTwoCodeGlobalChange = {selectedStationTwoCode = it},
                         selectedDays = selectedDays,
+                        selectedTrainLineOnChange = { selectedTrainLine = it},
                         selectedDaysOnChange = {selectedDays.clear(); selectedDays.addAll(it)},
                         selectedScheduleTime = selectedScheduleTime,
                         selectedScheduleTimeOnChange = {selectedScheduleTime = it},
-//                        uniqueRouteIdValueOnChange = {uniqueRouteIdValue = it},
                         columnState = columnState,
                         onNavigate = { swipeDismissableNavController.navigate(it) },
                     ){

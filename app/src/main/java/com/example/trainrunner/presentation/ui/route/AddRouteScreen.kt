@@ -36,10 +36,10 @@ fun AddRouteScreen(
     selectedStationOneCodeGlobalChange: (String) -> Unit,
     selectedStationTwoCodeGlobalChange: (String) -> Unit,
     selectedDays: List<Day>,
+    selectedTrainLineOnChange: (String) -> Unit,
     selectedDaysOnChange: (List<Day>) -> Unit,
     selectedScheduleTime: MetlinkSchedule,
     selectedScheduleTimeOnChange: (MetlinkSchedule) -> Unit,
-//    uniqueRouteIdValueOnChange: (Int) -> Unit,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
     onNavigate: (String) -> Unit,
@@ -56,6 +56,7 @@ fun AddRouteScreen(
         selectedStationOneCodeGlobalChange = selectedStationOneCodeGlobalChange,
         selectedStationTwoCodeGlobalChange = selectedStationTwoCodeGlobalChange,
         selectedDays = selectedDays,
+        selectedTrainLineOnChange = selectedTrainLineOnChange,
         selectedDaysOnChange = selectedDaysOnChange,
         selectedScheduleTime = selectedScheduleTime,
         selectedScheduleTimeOnChange = selectedScheduleTimeOnChange,
@@ -90,11 +91,11 @@ fun RouteScreen(
     selectedStationOneCodeGlobalChange: (String) -> Unit,
     selectedStationTwoCodeGlobalChange: (String) -> Unit,
     selectedDays: List<Day>,
+    selectedTrainLineOnChange: (String) -> Unit,
     selectedDaysOnChange: (List<Day>) -> Unit,
     selectedScheduleTime: MetlinkSchedule,
     selectedScheduleTimeOnChange: (MetlinkSchedule) -> Unit,
     theBigYeet: (Int, List<Day>, MetlinkSchedule, String, String) -> Unit,
-//    uniqueRouteIdValueOnChange: (Int) -> Unit,
     state: RouteState,
     columnState: ScalingLazyColumnState,
     modifier: Modifier = Modifier,
@@ -344,9 +345,18 @@ fun RouteScreen(
                                     metlinkStationFullName
                                 )
 
+                            selectedTrainLineOnChange("Select a line")
+                            selectedStationOneCodeGlobalChange("Select first station")
+                            selectedStationTwoCodeGlobalChange("Select second station")
+                            selectedDaysOnChange(emptyList<Day>())
+                            onDaysTrackedCountChanged(0)  // Makes the AddRoute page display = 0
+                            selectedScheduleTimeOnChange(
+                                MetlinkSchedule(
+                                    departTime = "Please select time",
+                                    toWellington = false
+                                )
+                            )
 
-//                            }
-//                            coroutineScope.cancel()
                             navigateUp.invoke()
                         },
                         buttonSize = ButtonSize.Small,
