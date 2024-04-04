@@ -189,7 +189,7 @@ interface SystemNotificationDao{
     @Query("""
         SELECT * 
         FROM SystemNotification
-        ORDER BY nextAlertDateTime desc 
+        ORDER BY nextAlertDateTime ASC 
         LIMIT 1
     """)
     fun getNextSystemNotification(): Flow<SystemNotification>

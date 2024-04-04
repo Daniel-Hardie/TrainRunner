@@ -33,6 +33,8 @@ fun HomeScreen(
     val viewModel = viewModel(modelClass = HomeViewModel::class.java)
     val homeState = viewModel.state
 
+    var scheduledForMsg = "Scheduled: ${viewModel.state.day} ${viewModel.state.time24hr}"
+
     LaunchedEffect(Unit) {
         while(true) {
             val nextAlertDateTime = viewModel.state.nextAlertDateTime
@@ -78,17 +80,17 @@ fun HomeScreen(
                     modifier = Modifier.fillMaxWidth(),
                     textAlign = TextAlign.Center,
                     color = MaterialTheme.colors.primary,
+                    text = scheduledForMsg
+                )
+            }
+            item {
+                Text(
+                    modifier = Modifier.fillMaxWidth(),
+                    textAlign = TextAlign.Center,
+                    color = MaterialTheme.colors.primary,
                     text = timeRemaining
                 )
             }
-//            item {
-//                Text(
-//                    modifier = Modifier.fillMaxWidth(),
-//                    textAlign = TextAlign.Center,
-//                    color = MaterialTheme.colors.primary,
-//                    text = blah.toString()
-//                )
-//            }
             item {
                 Button(
                     id = R.drawable.ic_settings,
