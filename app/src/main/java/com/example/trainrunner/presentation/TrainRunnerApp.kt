@@ -27,7 +27,7 @@ import com.example.trainrunner.presentation.navigation.STATION_SELECT_NAV_ARGUME
 import com.example.trainrunner.presentation.navigation.Screen
 import com.example.trainrunner.presentation.theme.TrainRunnerTheme
 import com.example.trainrunner.presentation.theme.initialThemeValues
-import com.example.trainrunner.presentation.ui.HomeScreen
+import com.example.trainrunner.presentation.ui.home.HomeScreen
 import com.example.trainrunner.presentation.ui.daysTracked.Day
 import com.example.trainrunner.presentation.ui.daysTracked.DaysTrackedScreen
 import com.example.trainrunner.presentation.ui.line.LineSelectScreen
