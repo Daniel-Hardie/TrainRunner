@@ -18,6 +18,12 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import java.time.DayOfWeek
+import java.time.LocalDateTime
+import java.time.LocalTime
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
+import java.time.temporal.TemporalAdjusters
 import java.util.Date
 
 class RouteViewModel(
@@ -163,6 +169,31 @@ class RouteViewModel(
         CoroutineScope(Dispatchers.IO).launch {
             var systemNotificationList: MutableList<SystemNotification> = mutableListOf()   // I am making this to save
             for (routeNotification in routeNotificationList){
+                val formatter = DateTimeFormatter.ofPattern("HH:mm")
+                val timeConverted = LocalTime.parse(routeNotification.time, formatter)
+
+                val dayOfWeekValue = when(routeNotification.dayText){
+                    "Monday" -> DayOfWeek.MONDAY
+                    "Tuesday" -> DayOfWeek.TUESDAY
+                    "Wednesday" -> DayOfWeek.WEDNESDAY
+                    "Thursday" -> DayOfWeek.THURSDAY
+                    else -> {
+                        DayOfWeek.FRIDAY
+                    }
+                }
+
+                val currentDateTime = LocalDateTime.now()
+                val nextDay = currentDateTime.with(TemporalAdjusters.next(dayOfWeekValue))
+                val trainArrivalTime = nextDay.withHour(timeConverted.hour).withMinute(timeConverted.minute).withSecond(0)
+                val resultDateTime = if (currentDateTime.dayOfWeek == dayOfWeekValue &&
+                    currentDateTime.toLocalTime().isAfter(trainArrivalTime.toLocalTime())) {
+                    trainArrivalTime.plusWeeks(1).withHour(6).withMinute(57).withSecond(0)
+                } else {
+                    trainArrivalTime
+                }
+                val nextAlertDateTime: Date = Date.from(trainArrivalTime.atZone(ZoneId.systemDefault()).toInstant());
+
+
                 systemNotificationList.add(
                     SystemNotification(
                         uniqueValueForRouteNotification = uniqueId,
@@ -173,7 +204,7 @@ class RouteViewModel(
                         toWellington = selectedScheduleTime.toWellington,
                         day = routeNotification.dayText,
                         time24hr = routeNotification.time,
-                        nextAlertDateTime = Date()
+                        nextAlertDateTime = nextAlertDateTime
                     )
                 )
             }
