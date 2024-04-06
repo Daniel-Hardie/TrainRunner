@@ -9,9 +9,11 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.wear.compose.material.CircularProgressIndicator
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
 import com.example.trainrunner.R
@@ -88,71 +90,83 @@ fun HomeScreen(
                         val timeMessage = "${daysDifference} days, ${hoursDifference} : ${minutesDifference} : ${secondsDifference}"
                         timeRemainingOnChange(timeMessage)
                     }
-                    break
+                    else{
+                        isLoadingOnChange(false)
+                    }
+//                    break
                 }
             }
-
-
-            delay(10000)
-
+            if(isLoading){
+                delay(1000)
+            }
+            else{
+                delay(10000)
+            }
 
         }
     }
 
-    Box(modifier = modifier.fillMaxSize()) {
-        ScalingLazyColumn(
-            columnState = columnState,
-            modifier = modifier.fillMaxSize()
-        ) {
-            item {
-                Text(
-                    modifier = Modifier.fillMaxWidth(),
-                    textAlign = TextAlign.Center,
-                    color = MaterialTheme.colors.primary,
-                    text = isLoading.toString()
-                )
-            }
-            item {
-                Text(
-                    modifier = Modifier.fillMaxWidth(),
-                    textAlign = TextAlign.Center,
-                    color = MaterialTheme.colors.primary,
-                    text = homeState.stationFullName
-                )
-            }
-            item {
-                Text(
-                    modifier = Modifier.fillMaxWidth(),
-                    textAlign = TextAlign.Center,
-                    color = MaterialTheme.colors.primary,
-                    text = scheduledForMsg
-                )
-            }
-            item {
-                Text(
-                    modifier = Modifier.fillMaxWidth(),
-                    textAlign = TextAlign.Center,
-                    color = MaterialTheme.colors.primary,
-                    text = timeRemaining
-                )
-            }
-            item {
-                Text(
-                    modifier = Modifier.fillMaxWidth(),
-                    textAlign = TextAlign.Center,
-                    color = MaterialTheme.colors.primary,
-                    text = liveTrackingTime.toString()
-                )
-            }
-            item {
-                Button(
-                    id = R.drawable.ic_settings,
-                    contentDescription = "",
-                    onClick = {
-                        onNavigate(Screen.Settings.route)
-                    },
-                    buttonSize = ButtonSize.Small,
-                )
+    if(isLoading){
+        Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            CircularProgressIndicator()
+        }
+    }
+    else {
+        Box(modifier = modifier.fillMaxSize()) {
+            ScalingLazyColumn(
+                columnState = columnState,
+                modifier = modifier.fillMaxSize()
+            ) {
+                item {
+                    Text(
+                        modifier = Modifier.fillMaxWidth(),
+                        textAlign = TextAlign.Center,
+                        color = MaterialTheme.colors.primary,
+                        text = isLoading.toString()
+                    )
+                }
+                item {
+                    Text(
+                        modifier = Modifier.fillMaxWidth(),
+                        textAlign = TextAlign.Center,
+                        color = MaterialTheme.colors.primary,
+                        text = homeState.stationFullName
+                    )
+                }
+                item {
+                    Text(
+                        modifier = Modifier.fillMaxWidth(),
+                        textAlign = TextAlign.Center,
+                        color = MaterialTheme.colors.primary,
+                        text = scheduledForMsg
+                    )
+                }
+                item {
+                    Text(
+                        modifier = Modifier.fillMaxWidth(),
+                        textAlign = TextAlign.Center,
+                        color = MaterialTheme.colors.primary,
+                        text = timeRemaining
+                    )
+                }
+                item {
+                    Text(
+                        modifier = Modifier.fillMaxWidth(),
+                        textAlign = TextAlign.Center,
+                        color = MaterialTheme.colors.primary,
+                        text = liveTrackingTime.toString()
+                    )
+                }
+                item {
+                    Button(
+                        id = R.drawable.ic_settings,
+                        contentDescription = "",
+                        onClick = {
+                            onNavigate(Screen.Settings.route)
+                        },
+                        buttonSize = ButtonSize.Small,
+                    )
+                }
             }
         }
     }

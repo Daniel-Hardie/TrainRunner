@@ -1,0 +1,2152 @@
+{
+    "farezone": "9",
+    "closed": false,
+    "departures": [
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT10S",
+            "vehicle_id": "4236",
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T14:08:00+13:00",
+                "expected": "2024-04-01T14:08:10+13:00"
+            },
+            "departure": {
+                "aimed": "2024-04-01T14:08:00+13:00",
+                "expected": "2024-04-01T14:08:10+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6440__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T14:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T14:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6441__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T14:38:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T14:38:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6442__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T15:06:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T15:06:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6443__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T15:08:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T15:08:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6444__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T15:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T15:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6445__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T15:38:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T15:38:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6446__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T16:06:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T16:06:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6447__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T16:08:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T16:08:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6448__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T16:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T16:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6449__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T16:38:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T16:38:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6450__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T17:06:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T17:06:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6451__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T17:08:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T17:08:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6452__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T17:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T17:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6453__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T17:38:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T17:38:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6454__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T18:06:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T18:06:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6455__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T18:08:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T18:08:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6456__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T18:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T18:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6457__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T18:38:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T18:38:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6458__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T19:06:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T19:06:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6459__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T19:08:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T19:08:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6460__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T19:38:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T19:38:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6462__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T20:06:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T20:06:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6463__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T20:08:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T20:08:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6464__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T21:06:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T21:06:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6465__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T21:08:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T21:08:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6466__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T22:06:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T22:06:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6467__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T22:08:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T22:08:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6468__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T23:06:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T23:06:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6469__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-01T23:08:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-01T23:08:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6470__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T00:08:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T00:08:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6472__RAIL__Rail_SaSu+Hol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T05:06:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T05:06:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6203__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T05:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T05:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6205__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL - Express"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T06:06:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T06:06:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6207__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL - Express"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T06:34:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T06:34:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6209__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T06:46:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T06:46:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6210__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL - Express"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T06:52:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T06:52:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6241__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL - Express"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T07:04:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T07:04:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6211__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T07:14:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T07:14:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6214__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL - Express"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T07:24:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T07:24:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6213__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL - Express"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T07:44:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T07:44:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6215__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T07:44:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T07:44:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6216__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL - Express"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T08:04:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T08:04:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6217__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T08:04:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T08:04:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6218__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T08:25:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T08:25:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6220__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T08:31:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T08:31:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6219__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T08:51:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T08:51:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6221__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T08:52:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T08:52:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6222__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T09:07:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T09:07:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6224__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T09:11:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T09:11:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6223__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T09:26:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T09:26:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6225__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T09:27:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T09:27:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6226__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T09:46:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T09:46:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6227__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T09:47:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T09:47:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6228__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T10:06:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T10:06:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6229__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T10:07:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T10:07:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6230__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T10:26:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T10:26:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6231__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T10:27:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T10:27:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6232__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T10:46:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T10:46:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6233__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T10:47:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T10:47:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6234__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T11:06:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T11:06:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6235__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T11:07:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T11:07:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6236__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T11:26:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T11:26:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6237__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T11:27:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T11:27:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6238__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T11:46:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T11:46:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6239__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T11:47:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T11:47:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6240__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T12:06:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T12:06:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6301__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T12:07:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T12:07:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6242__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T12:26:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T12:26:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6303__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T12:27:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T12:27:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6244__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T12:46:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T12:46:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6305__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T12:47:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T12:47:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6246__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA1",
+            "service_id": "KPL",
+            "direction": "inbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WAIK",
+                "name": "WaikanaeStn"
+            },
+            "destination": {
+                "stop_id": "WELL1",
+                "name": "WELL-All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T13:06:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T13:06:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__1__6307__RAIL__Rail_MTuWThF-XHol_20240317"
+        },
+        {
+            "stop_id": "PARA2",
+            "service_id": "KPL",
+            "direction": "outbound",
+            "operator": "RAIL",
+            "origin": {
+                "stop_id": "WELL1",
+                "name": "WgtnStn"
+            },
+            "destination": {
+                "stop_id": "WAIK",
+                "name": "WAIK - All stops"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "ParaparaumuStn",
+            "arrival": {
+                "aimed": "2024-04-02T13:07:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2024-04-02T13:07:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": true,
+            "trip_id": "KPL__0__6308__RAIL__Rail_MTuWThF-XHol_20240317"
+        }
+    ]
+}
