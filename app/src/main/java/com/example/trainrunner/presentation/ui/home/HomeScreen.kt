@@ -7,12 +7,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.wear.compose.material.MaterialTheme
@@ -26,7 +23,6 @@ import com.google.android.horologist.compose.layout.ScalingLazyColumnState
 import com.google.android.horologist.compose.material.Button
 import com.google.android.horologist.compose.material.ButtonSize
 import kotlinx.coroutines.delay
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -34,45 +30,72 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.time.Duration
 import java.time.LocalDateTime
+import java.time.OffsetDateTime
 import java.time.ZoneId
+import java.time.format.DateTimeFormatter
+import java.util.Date
 
 @Composable
 fun HomeScreen(
     columnState: ScalingLazyColumnState,
     timeRemaining: String,
     timeRemainingOnChange: (String) -> Unit,
+    liveTrackingTime: Date,
+    liveTrackingTimeOnChange: (Date) -> Unit,
+    isLoading: Boolean,
+    isLoadingOnChange: (Boolean) -> Unit,
     onNavigate: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val viewModel = viewModel(modelClass = HomeViewModel::class.java)
     val homeState = viewModel.state
-    val context = LocalContext.current
-    var responseData by remember { mutableStateOf(JSONObject()) }
 
     var scheduledForMsg = "Scheduled: ${viewModel.state.day} ${viewModel.state.time24hr}"
     val livePrediction = remember { mutableStateOf(MetlinkLivePredictionModel()) }
 
-    val predictionTime = sendRequest(
+    val predictionTimeRequest = sendRequest(
         stationId = homeState.stopIdSanitized,
         livePredictionState = livePrediction
     )
 
+
+
+
+
+
     LaunchedEffect(Unit) {
         while(true) {
-            val nextAlertDateTime = viewModel.state.nextAlertDateTime
-            val currentDateTime = LocalDateTime.now()
-            val targetDateTime = LocalDateTime.ofInstant(nextAlertDateTime.toInstant(), ZoneId.systemDefault());
+            val departureList = livePrediction.component1().departures
+            for (departure in departureList){
+                val arrivalDate: Date = Date.from(OffsetDateTime.parse(departure.arrival.aimed, DateTimeFormatter.ISO_OFFSET_DATE_TIME).toInstant())
+                if (departure.stopId == homeState.stopId && arrivalDate == viewModel.state.nextAlertDateTime) {
+                    if(departure.arrival.expected != null){
+                        var expectedTime = Date.from(OffsetDateTime.parse(departure.arrival.expected.toString(), DateTimeFormatter.ISO_OFFSET_DATE_TIME).toInstant())
+                        liveTrackingTimeOnChange(expectedTime)
+                        isLoadingOnChange(false)
 
-            // find the difference in time to display
-            val timeDifference = Duration.between(currentDateTime, targetDateTime)
-            val daysDifference = timeDifference.toDays().toString().padStart(2, '0')
-            val hoursDifference = (timeDifference.toHours() % 24).toString().padStart(2, '0')
-            val minutesDifference = (timeDifference.toMinutes() % 60).toString().padStart(2, '0')
-            val secondsDifference = (timeDifference.seconds % 60).toString().padStart(2, '0')
+                        val nextAlertDateTime = viewModel.state.nextAlertDateTime
+                        val currentDateTime = LocalDateTime.now()
+                        val targetDateTime = LocalDateTime.ofInstant(expectedTime.toInstant(), ZoneId.systemDefault());
 
-            val timeMessage = "${daysDifference} days, ${hoursDifference} : ${minutesDifference} : ${secondsDifference}"
-            timeRemainingOnChange(timeMessage)
+                        // find the difference in time to display
+                        val timeDifference = Duration.between(currentDateTime, targetDateTime)
+                        val daysDifference = timeDifference.toDays().toString().padStart(2, '0')
+                        val hoursDifference = (timeDifference.toHours() % 24).toString().padStart(2, '0')
+                        val minutesDifference = (timeDifference.toMinutes() % 60).toString().padStart(2, '0')
+                        val secondsDifference = (timeDifference.seconds % 60).toString().padStart(2, '0')
+
+                        val timeMessage = "${daysDifference} days, ${hoursDifference} : ${minutesDifference} : ${secondsDifference}"
+                        timeRemainingOnChange(timeMessage)
+                    }
+                    break
+                }
+            }
+
+
             delay(10000)
+
+
         }
     }
 
@@ -86,8 +109,7 @@ fun HomeScreen(
                     modifier = Modifier.fillMaxWidth(),
                     textAlign = TextAlign.Center,
                     color = MaterialTheme.colors.primary,
-//                    text = stringResource(R.string.next_train)
-                    text = livePrediction.component1().farezone
+                    text = isLoading.toString()
                 )
             }
             item {
@@ -112,6 +134,14 @@ fun HomeScreen(
                     textAlign = TextAlign.Center,
                     color = MaterialTheme.colors.primary,
                     text = timeRemaining
+                )
+            }
+            item {
+                Text(
+                    modifier = Modifier.fillMaxWidth(),
+                    textAlign = TextAlign.Center,
+                    color = MaterialTheme.colors.primary,
+                    text = liveTrackingTime.toString()
                 )
             }
             item {

@@ -39,6 +39,7 @@ import com.example.trainrunner.presentation.ui.station.StationSelectScreen
 import com.example.trainrunner.presentation.ui.timeSelect.TimeSelectScreen
 import com.google.android.horologist.compose.layout.ScreenScaffold
 import com.google.android.horologist.compose.layout.rememberColumnState
+import java.util.Date
 
 @Composable
 fun TrainRunnerApp (
@@ -51,6 +52,8 @@ fun TrainRunnerApp (
     // Information to pass between screens
     var routeId by remember { mutableIntStateOf(-1) }
     var timeRemaining by remember { mutableStateOf("No times found") }
+    var liveTrackingTime by remember { mutableStateOf(Date()) }
+    var isLoading by remember { mutableStateOf(true) }
     var selectedMetlinkRouteId by remember  { mutableStateOf("") }
     var selectedTrainLine by remember  { mutableStateOf("Select a line") }
     var selectedStationOneCode by remember { mutableStateOf("Select first station") }
@@ -88,6 +91,10 @@ fun TrainRunnerApp (
                         columnState = columnState,
                         timeRemaining = timeRemaining,
                         timeRemainingOnChange = { timeRemaining = it },
+                        liveTrackingTime = liveTrackingTime,
+                        liveTrackingTimeOnChange = {liveTrackingTime = it},
+                        isLoading = isLoading,
+                        isLoadingOnChange = {isLoading = it},
                         onNavigate = { swipeDismissableNavController.navigate(it) }
                     )
                 }
