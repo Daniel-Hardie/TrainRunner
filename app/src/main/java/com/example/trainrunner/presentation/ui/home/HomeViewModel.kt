@@ -4,6 +4,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.example.trainrunner.presentation.Graph
 import com.example.trainrunner.presentation.repository.Repository
@@ -12,6 +13,7 @@ import kotlinx.coroutines.launch
 import java.util.Date
 
 class HomeViewModel(
+    private val isLoading: Boolean,
     private val repository: Repository = Graph.repository
 ) : ViewModel() {
 
@@ -19,7 +21,17 @@ class HomeViewModel(
         private set
 
     init {
+        state = state.copy(
+            isLoading = isLoading
+        )
+        updateExpiredTrainTimes()
         getNextTrainTime()
+    }
+
+    fun updateExpiredTrainTimes(){
+        viewModelScope.launch {
+            repository.updateExpiredSystemNotifications()
+        }
     }
 
     fun getNextTrainTime(){
@@ -33,13 +45,27 @@ class HomeViewModel(
                             stopId = it.stopId,
                             stopIdSanitized = it.stopIdSanitized,
                             toWellington = it.toWellington,
-                            nextAlertDateTime = it.nextAlertDateTime,
+                            savedScheduleTime = it.nextAlertDateTime,
                             day = it.day,
                             time24hr = it.time24hr
                         )
                     }
                 }
         }
+    }
+
+    fun updateIsLoading(isLoading: Boolean){
+        state = state.copy(
+            isLoading = isLoading
+        )
+    }
+}
+
+
+@Suppress("UNCHECKED_CAST")
+class HomeViewModelFactory(private val isLoading: Boolean): ViewModelProvider.Factory{
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        return HomeViewModel(isLoading = isLoading) as T
     }
 }
 
@@ -49,7 +75,8 @@ data class HomeState(
     val stopId: String = "",
     val stopIdSanitized: String = "",
     val toWellington: Boolean = false,
-    val nextAlertDateTime: Date = Date(),
+    val savedScheduleTime: Date = Date(),
     val day: String = "",
-    val time24hr: String = ""
+    val time24hr: String = "",
+    val isLoading: Boolean = true
 )

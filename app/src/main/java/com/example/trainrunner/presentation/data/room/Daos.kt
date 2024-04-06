@@ -196,4 +196,11 @@ interface SystemNotificationDao{
 
     @Insert
     suspend fun insertSystemNotificationList(systemNotification: List<SystemNotification>)
+
+    @Query("""
+        UPDATE systemNotification
+        SET nextAlertDateTime = nextAlertDateTime + (7 * 24 * 60 * 60 * 1000) -- adding 7 days in milliseconds
+        WHERE nextAlertDateTime < strftime('%s', 'now') * 1000;
+    """)
+    suspend fun updateExpiredSystemNotifications()
 }

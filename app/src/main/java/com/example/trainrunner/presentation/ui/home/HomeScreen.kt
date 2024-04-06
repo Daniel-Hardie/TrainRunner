@@ -49,10 +49,11 @@ fun HomeScreen(
     onNavigate: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val viewModel = viewModel(modelClass = HomeViewModel::class.java)
+//    val viewModel = viewModel(modelClass = HomeViewModel::class.java)
+    val viewModel = viewModel<HomeViewModel>(factory = HomeViewModelFactory(isLoading))
     val homeState = viewModel.state
 
-    var scheduledForMsg = "Scheduled: ${viewModel.state.day} ${viewModel.state.time24hr}"
+    val scheduledForMsg = "Scheduled: ${viewModel.state.day} ${viewModel.state.time24hr}"
     val livePrediction = remember { mutableStateOf(MetlinkLivePredictionModel()) }
 
     val predictionTimeRequest = sendRequest(
@@ -60,23 +61,26 @@ fun HomeScreen(
         livePredictionState = livePrediction
     )
 
-
-
-
-
-
     LaunchedEffect(Unit) {
         while(true) {
+            val savedDirection = if (viewModel.state.toWellington){
+                "inbound"
+            } else {
+                "outbound"
+            }
+            var foundTrainInProgress = false
+
             val departureList = livePrediction.component1().departures
             for (departure in departureList){
+                // Convert response train arrival time to date object
                 val arrivalDate: Date = Date.from(OffsetDateTime.parse(departure.arrival.aimed, DateTimeFormatter.ISO_OFFSET_DATE_TIME).toInstant())
-                if (departure.stopId == homeState.stopId && arrivalDate == viewModel.state.nextAlertDateTime) {
+                // If this departure is going in same direction and is expected to arrive at the saved schedule time
+                if (departure.direction == savedDirection && arrivalDate == viewModel.state.savedScheduleTime) {
+                    // If this is null, it indicates the train for this service is not on the track yet
                     if(departure.arrival.expected != null){
-                        var expectedTime = Date.from(OffsetDateTime.parse(departure.arrival.expected.toString(), DateTimeFormatter.ISO_OFFSET_DATE_TIME).toInstant())
+                        val expectedTime = Date.from(OffsetDateTime.parse(departure.arrival.expected.toString(), DateTimeFormatter.ISO_OFFSET_DATE_TIME).toInstant())
                         liveTrackingTimeOnChange(expectedTime)
-                        isLoadingOnChange(false)
 
-                        val nextAlertDateTime = viewModel.state.nextAlertDateTime
                         val currentDateTime = LocalDateTime.now()
                         val targetDateTime = LocalDateTime.ofInstant(expectedTime.toInstant(), ZoneId.systemDefault());
 
@@ -88,15 +92,21 @@ fun HomeScreen(
                         val secondsDifference = (timeDifference.seconds % 60).toString().padStart(2, '0')
 
                         val timeMessage = "${daysDifference} days, ${hoursDifference} : ${minutesDifference} : ${secondsDifference}"
+                        foundTrainInProgress = true
                         timeRemainingOnChange(timeMessage)
                     }
-                    else{
-                        isLoadingOnChange(false)
-                    }
-//                    break
                 }
             }
-            if(isLoading){
+
+            // The live tracking we are searching for is gone as the train has departed the station
+            if(!foundTrainInProgress && viewModel.state.savedScheduleTime < Date()){
+                viewModel.updateExpiredTrainTimes()
+                viewModel.getNextTrainTime()
+            }
+
+            if(viewModel.state.isLoading){
+                isLoadingOnChange(false)  // only will get in here on first iteration of page on app startup
+                viewModel.updateIsLoading(false)
                 delay(1000)
             }
             else{

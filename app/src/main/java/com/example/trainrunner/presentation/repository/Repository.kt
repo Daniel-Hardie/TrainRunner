@@ -110,4 +110,8 @@ class Repository(
     suspend fun insertSystemNotificationList(systemNotification: List<SystemNotification>){
         systemNotificationDao.insertSystemNotificationList(systemNotification)
     }
+
+    suspend fun updateExpiredSystemNotifications() {
+        systemNotificationDao.updateExpiredSystemNotifications()
+    }
 }
