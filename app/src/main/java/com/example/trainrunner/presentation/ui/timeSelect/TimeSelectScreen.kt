@@ -21,10 +21,11 @@ fun TimeSelectScreen(
     selectedScheduleTimeOnChange: (MetlinkSchedule) -> Unit,
     selectedStationOneCode: String,
     selectedStationTwoCode: String,
+    selectedMetlinkRouteId: String,
     modifier: Modifier = Modifier,
     navigateUp: () -> Unit
 ){
-    val viewModel = viewModel<TimeSelectViewModel>(factory = TimeSelectViewModelFactory(selectedStationOneCode, selectedStationTwoCode))
+    val viewModel = viewModel<TimeSelectViewModel>(factory = TimeSelectViewModelFactory(selectedStationOneCode, selectedStationTwoCode, selectedMetlinkRouteId.toInt()))
     val list = viewModel.state.availableTimes
 
     Box(
@@ -45,6 +46,7 @@ fun TimeSelectScreen(
             items(list) { line ->
                 Chip(
                     label = line.departTime,
+                    secondaryLabel = line.parentStationCode,
                     onClick = {
                         selectedScheduleTimeOnChange(line)
                         navigateUp.invoke()

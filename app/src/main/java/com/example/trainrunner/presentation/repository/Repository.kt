@@ -93,8 +93,8 @@ class Repository(
 
 
     // MetlinkSchedule table
-    fun getAvailableTimesForStop(selectedStationOneCode: String, selectedStationTwoCode: String) =
-        metlinkScheduleDao.getAvailableTimesForStop(selectedStationOneCode, selectedStationTwoCode)
+    fun getAvailableTimesForStop(selectedStationOneCode: String, selectedStationTwoCode: String, selectedMetlinkRouteId: Int) =
+        metlinkScheduleDao.getAvailableTimesForStop(selectedStationOneCode, selectedStationTwoCode, selectedMetlinkRouteId)
 
     suspend fun insertAllMetlinkSchedules(metlinkSchedules: List<MetlinkSchedule>){
         metlinkScheduleDao.insertAllMetlinkSchedules(metlinkSchedules)

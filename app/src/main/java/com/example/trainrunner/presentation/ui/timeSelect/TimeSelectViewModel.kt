@@ -16,20 +16,22 @@ class TimeSelectViewModel(
     private val repository: Repository = Graph.repository,
     private val selectedStationOneCode: String,
     private val selectedStationTwoCode: String,
+    private val selectedMetlinkRouteId: Int
 ) : ViewModel(){
     var state by mutableStateOf(TimeSelectState())
         private set
 
     init {
-        getScheduleTimes(selectedStationOneCode, selectedStationTwoCode)
+        getScheduleTimes(selectedStationOneCode, selectedStationTwoCode, selectedMetlinkRouteId)
     }
     private fun getScheduleTimes(
         selectedStationOneCode: String,
-        selectedStationTwoCode: String
+        selectedStationTwoCode: String,
+        selectedMetlinkRouteId: Int
     ){
         viewModelScope.launch {
             repository
-                .getAvailableTimesForStop(selectedStationOneCode, selectedStationTwoCode)
+                .getAvailableTimesForStop(selectedStationOneCode, selectedStationTwoCode, selectedMetlinkRouteId)
                 .collectLatest {
                     state = state.copy(
                         availableTimes = it
@@ -41,9 +43,9 @@ class TimeSelectViewModel(
 
 
 @Suppress("UNCHECKED_CAST")
-class TimeSelectViewModelFactory(private val stationOneCode: String, private val stationTwoCode: String): ViewModelProvider.Factory{
+class TimeSelectViewModelFactory(private val stationOneCode: String, private val stationTwoCode: String, private val selectedMetlinkRouteId: Int): ViewModelProvider.Factory{
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return TimeSelectViewModel(selectedStationOneCode = stationOneCode, selectedStationTwoCode = stationTwoCode) as T
+        return TimeSelectViewModel(selectedStationOneCode = stationOneCode, selectedStationTwoCode = stationTwoCode, selectedMetlinkRouteId = selectedMetlinkRouteId) as T
     }
 }
 

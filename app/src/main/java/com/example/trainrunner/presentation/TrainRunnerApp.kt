@@ -233,7 +233,8 @@ fun TrainRunnerApp (
                         columnState = columnState,
                         selectedScheduleTimeOnChange = {selectedScheduleTime = it},
                         selectedStationOneCode = selectedStationOneCode,
-                        selectedStationTwoCode = selectedStationTwoCode
+                        selectedStationTwoCode = selectedStationTwoCode,
+                        selectedMetlinkRouteId = selectedMetlinkRouteId
                     ) {
                         swipeDismissableNavController.navigateUp()
                     }

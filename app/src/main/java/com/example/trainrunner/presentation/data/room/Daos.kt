@@ -173,8 +173,15 @@ interface MetlinkScheduleDao {
         INNER JOIN metlinkSchedule ms2 ON ms.tripId = ms2.tripId
         WHERE ms.parentStationCode = :selectedStationOneCode
         AND ms2.parentStationCode = :selectedStationTwoCode
+        AND ms.orderId < ms2.orderId
+        AND ms.lineId = :selectedMetlinkRouteId
+        AND ms.departTime != ""
+        AND (ms2.departTime != "" OR ms2.parentStationCode IN ("WELL", "UPPE", "JOHN", "WAIK", "MELL", "MAST"))
     """)
-    fun getAvailableTimesForStop(selectedStationOneCode: String, selectedStationTwoCode: String): Flow<List<MetlinkSchedule>>
+    fun getAvailableTimesForStop(
+        selectedStationOneCode: String,
+        selectedStationTwoCode: String,
+        selectedMetlinkRouteId: Int): Flow<List<MetlinkSchedule>>
     @Insert
     suspend fun insertAllMetlinkSchedules(scheduleList: List<MetlinkSchedule>)
 

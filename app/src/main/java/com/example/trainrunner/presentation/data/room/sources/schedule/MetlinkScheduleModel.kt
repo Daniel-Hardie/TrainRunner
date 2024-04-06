@@ -7,6 +7,7 @@ import com.example.trainrunner.presentation.Graph
 import com.example.trainrunner.presentation.repository.Repository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class MetlinkScheduleModel(
@@ -18,15 +19,16 @@ class MetlinkScheduleModel(
             repository
                 .deleteAllMetlinkSchedules()
         }
-        insertAllMetlinkSchedules()
+        insertHVLMetlinkSchedules()
         insertJVLMetlinkSchedules()
         insertKPLMetlinkSchedules()
         insertMELMetlinkSchedules()
         insertWRLMetlinkSchedules()
     }
 
-    fun insertAllMetlinkSchedules() {
+    fun insertHVLMetlinkSchedules() {
         CoroutineScope(Dispatchers.IO).launch {
+            delay(timeMillis = 100)
             repository
                 .insertAllMetlinkSchedules(MetlinkScheduleSourceHVL.schedules)
         }
@@ -34,6 +36,7 @@ class MetlinkScheduleModel(
 
     fun insertJVLMetlinkSchedules() {
         CoroutineScope(Dispatchers.IO).launch {
+            delay(timeMillis = 1000)
             repository
                 .insertAllMetlinkSchedules(MetlinkScheduleSourceJVL.schedules)
         }
@@ -41,6 +44,7 @@ class MetlinkScheduleModel(
 
     fun insertKPLMetlinkSchedules() {
         CoroutineScope(Dispatchers.IO).launch {
+            delay(timeMillis = 1000)
             repository
                 .insertAllMetlinkSchedules(MetlinkScheduleSourceKPL.schedules)
         }
@@ -48,6 +52,7 @@ class MetlinkScheduleModel(
 
     fun insertMELMetlinkSchedules() {
         CoroutineScope(Dispatchers.IO).launch {
+            delay(timeMillis = 1000)
             repository
                 .insertAllMetlinkSchedules(MetlinkScheduleSourceMEL.schedules)
         }
@@ -55,6 +60,7 @@ class MetlinkScheduleModel(
 
     fun insertWRLMetlinkSchedules() {
         CoroutineScope(Dispatchers.IO).launch {
+            delay(timeMillis = 1000)
             repository
                 .insertAllMetlinkSchedules(MetlinkScheduleSourceWRL.schedules)
         }

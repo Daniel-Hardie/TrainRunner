@@ -24,7 +24,6 @@ class HomeViewModel(
         state = state.copy(
             isLoading = isLoading
         )
-        updateExpiredTrainTimes()
         getNextTrainTime()
     }
 
