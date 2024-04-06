@@ -30,6 +30,9 @@ class HomeViewModel(
                     if(it != null){
                         state = state.copy(
                             stationFullName = it.stationFullName,
+                            stopId = it.stopId,
+                            stopIdSanitized = it.stopIdSanitized,
+                            toWellington = it.toWellington,
                             nextAlertDateTime = it.nextAlertDateTime,
                             day = it.day,
                             time24hr = it.time24hr
@@ -43,6 +46,9 @@ class HomeViewModel(
 
 data class HomeState(
     val stationFullName: String = "",
+    val stopId: String = "",
+    val stopIdSanitized: String = "",
+    val toWellington: Boolean = false,
     val nextAlertDateTime: Date = Date(),
     val day: String = "",
     val time24hr: String = ""
