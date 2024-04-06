@@ -1,0 +1,2616 @@
+{
+    "inbound": {
+        "title": "Melling Line (Melling - Wellington)",
+        "trips": [
+            {
+                "id": "MEL__1__5601__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "06:35",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "06:38",
+                        "depart": "06:38",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "06:41",
+                        "depart": "06:41",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "06:47",
+                        "depart": "06:47",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "06:53",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5603__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "07:16",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "07:19",
+                        "depart": "07:19",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "07:22",
+                        "depart": "07:22",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "07:28",
+                        "depart": "07:28",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "07:34",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5605__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "07:33",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "07:36",
+                        "depart": "07:36",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "07:39",
+                        "depart": "07:39",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "07:45",
+                        "depart": "07:45",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "07:52",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5607__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "07:56",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "07:59",
+                        "depart": "07:59",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "08:02",
+                        "depart": "08:02",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "08:08",
+                        "depart": "08:08",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "08:14",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5609__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "08:16",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "08:19",
+                        "depart": "08:19",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "08:22",
+                        "depart": "08:22",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "08:28",
+                        "depart": "08:28",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "08:34",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5611__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "08:36",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "08:39",
+                        "depart": "08:39",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "08:42",
+                        "depart": "08:42",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "08:48",
+                        "depart": "08:48",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "08:54",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5613__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "09:01",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "09:04",
+                        "depart": "09:04",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "09:07",
+                        "depart": "09:07",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "09:13",
+                        "depart": "09:13",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "09:19",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5615__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "09:31",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "09:34",
+                        "depart": "09:34",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "09:37",
+                        "depart": "09:37",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "09:43",
+                        "depart": "09:43",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "09:49",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5617__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "10:01",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "10:04",
+                        "depart": "10:04",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "10:07",
+                        "depart": "10:07",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "10:13",
+                        "depart": "10:13",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "10:19",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5619__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "10:39",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "10:42",
+                        "depart": "10:42",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "10:45",
+                        "depart": "10:45",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "10:51",
+                        "depart": "10:51",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "10:57",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5621__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "11:39",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "11:42",
+                        "depart": "11:42",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "11:45",
+                        "depart": "11:45",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "11:51",
+                        "depart": "11:51",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "11:57",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5623__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "12:39",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "12:42",
+                        "depart": "12:42",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "12:45",
+                        "depart": "12:45",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "12:51",
+                        "depart": "12:51",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "12:57",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5625__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "13:39",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "13:42",
+                        "depart": "13:42",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "13:45",
+                        "depart": "13:45",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "13:51",
+                        "depart": "13:51",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "13:57",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5627__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "14:39",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "14:42",
+                        "depart": "14:42",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "14:45",
+                        "depart": "14:45",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "14:51",
+                        "depart": "14:51",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "14:57",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5629__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "15:49",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "15:52",
+                        "depart": "15:52",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "15:55",
+                        "depart": "15:55",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "16:01",
+                        "depart": "16:01",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "16:07",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5631__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "16:08",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "16:11",
+                        "depart": "16:11",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "16:14",
+                        "depart": "16:14",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "16:20",
+                        "depart": "16:20",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "16:26",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5633__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "16:25",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "16:28",
+                        "depart": "16:28",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "16:31",
+                        "depart": "16:31",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "16:37",
+                        "depart": "16:37",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "16:44",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5635__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "16:45",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "16:48",
+                        "depart": "16:48",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "16:51",
+                        "depart": "16:51",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "16:57",
+                        "depart": "16:57",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "17:03",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5637__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "17:04",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "17:07",
+                        "depart": "17:07",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "17:10",
+                        "depart": "17:10",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "17:16",
+                        "depart": "17:16",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "17:22",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5639__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "17:23",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "17:26",
+                        "depart": "17:26",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "17:29",
+                        "depart": "17:29",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "17:35",
+                        "depart": "17:35",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "17:42",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5641__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "17:40",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "17:43",
+                        "depart": "17:43",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "17:46",
+                        "depart": "17:46",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "17:52",
+                        "depart": "17:52",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "17:58",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5643__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "18:00",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "18:03",
+                        "depart": "18:03",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "18:06",
+                        "depart": "18:06",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "18:12",
+                        "depart": "18:12",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "18:18",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__1__5645__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "18:37",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "18:40",
+                        "depart": "18:40",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "18:43",
+                        "depart": "18:43",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "18:49",
+                        "depart": "18:49",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "18:55",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 4
+                    }
+                ]
+            }
+        ],
+        "stops": [
+            {
+                "id": "MELL",
+                "name": "Melling Station",
+                "zone": "4",
+                "position": "-41.203486, 174.9054",
+                "sequence": 0
+            },
+            {
+                "id": "WEST",
+                "name": "Western Hutt Station",
+                "zone": "4",
+                "position": "-41.21187, 174.889995",
+                "sequence": 1
+            },
+            {
+                "id": "PETO",
+                "name": "Petone Station",
+                "zone": "4",
+                "position": "-41.222011, 174.869488",
+                "sequence": 2
+            },
+            {
+                "id": "NGAU",
+                "name": "Ngauranga Station",
+                "zone": "3",
+                "position": "-41.249038, 174.813013",
+                "sequence": 3
+            },
+            {
+                "id": "WELL",
+                "name": "Wellington Station",
+                "zone": "1",
+                "position": "-41.278452, 174.780872",
+                "sequence": 4
+            }
+        ]
+    },
+    "outbound": {
+        "title": "Melling Line (Wellington - Melling)",
+        "trips": [
+            {
+                "id": "MEL__0__5600__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "06:14",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": null,
+                        "depart": null,
+                        "can_board": false,
+                        "can_alight": false,
+                        "is_timing_point": false,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "06:25",
+                        "depart": "06:25",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "06:28",
+                        "depart": "06:28",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "06:31",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5602__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "06:55",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": null,
+                        "depart": null,
+                        "can_board": false,
+                        "can_alight": false,
+                        "is_timing_point": false,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "07:06",
+                        "depart": "07:06",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "07:09",
+                        "depart": "07:09",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "07:12",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5604__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "07:13",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": null,
+                        "depart": null,
+                        "can_board": false,
+                        "can_alight": false,
+                        "is_timing_point": false,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "07:24",
+                        "depart": "07:24",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "07:27",
+                        "depart": "07:27",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "07:30",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5606__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "07:34",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "07:40",
+                        "depart": "07:40",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "07:46",
+                        "depart": "07:46",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "07:49",
+                        "depart": "07:49",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "07:52",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5608__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "07:50",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "07:56",
+                        "depart": "07:56",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "08:02",
+                        "depart": "08:02",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "08:05",
+                        "depart": "08:05",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "08:08",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5610__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "08:15",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": null,
+                        "depart": null,
+                        "can_board": false,
+                        "can_alight": false,
+                        "is_timing_point": false,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "08:26",
+                        "depart": "08:26",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "08:29",
+                        "depart": "08:29",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "08:32",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5612__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "08:40",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": null,
+                        "depart": null,
+                        "can_board": false,
+                        "can_alight": false,
+                        "is_timing_point": false,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "08:51",
+                        "depart": "08:51",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "08:54",
+                        "depart": "08:54",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "08:57",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5614__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "08:58",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "09:04",
+                        "depart": "09:04",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "09:10",
+                        "depart": "09:10",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "09:13",
+                        "depart": "09:13",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "09:16",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5616__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "09:27",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "09:33",
+                        "depart": "09:33",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "09:39",
+                        "depart": "09:39",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "09:42",
+                        "depart": "09:42",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "09:45",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5618__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "10:17",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "10:23",
+                        "depart": "10:23",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "10:29",
+                        "depart": "10:29",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "10:32",
+                        "depart": "10:32",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "10:35",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5620__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "11:17",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "11:23",
+                        "depart": "11:23",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "11:29",
+                        "depart": "11:29",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "11:32",
+                        "depart": "11:32",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "11:35",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5622__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "12:17",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "12:23",
+                        "depart": "12:23",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "12:29",
+                        "depart": "12:29",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "12:32",
+                        "depart": "12:32",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "12:35",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5624__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "13:17",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "13:23",
+                        "depart": "13:23",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "13:29",
+                        "depart": "13:29",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "13:32",
+                        "depart": "13:32",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "13:35",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5626__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "14:17",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "14:23",
+                        "depart": "14:23",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "14:29",
+                        "depart": "14:29",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "14:32",
+                        "depart": "14:32",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "14:35",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5628__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "15:25",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "15:31",
+                        "depart": "15:31",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "15:37",
+                        "depart": "15:37",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "15:40",
+                        "depart": "15:40",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "15:43",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5630__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "15:45",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "15:51",
+                        "depart": "15:51",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "15:57",
+                        "depart": "15:57",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "16:00",
+                        "depart": "16:00",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "16:03",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5632__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "16:03",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "16:09",
+                        "depart": "16:09",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "16:15",
+                        "depart": "16:15",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "16:18",
+                        "depart": "16:18",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "16:21",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5634__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "16:19",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "16:25",
+                        "depart": "16:25",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "16:31",
+                        "depart": "16:31",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "16:34",
+                        "depart": "16:34",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "16:37",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5636__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "16:39",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "16:45",
+                        "depart": "16:45",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "16:51",
+                        "depart": "16:51",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "16:54",
+                        "depart": "16:54",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "16:57",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5638__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "16:59",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "17:05",
+                        "depart": "17:05",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "17:11",
+                        "depart": "17:11",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "17:14",
+                        "depart": "17:14",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "17:17",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5640__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "17:18",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "17:24",
+                        "depart": "17:24",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "17:30",
+                        "depart": "17:30",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "17:33",
+                        "depart": "17:33",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "17:36",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5642__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "17:37",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "17:43",
+                        "depart": "17:43",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "17:49",
+                        "depart": "17:49",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "17:52",
+                        "depart": "17:52",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "17:55",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            },
+            {
+                "id": "MEL__0__5644__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "18:07",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "18:13",
+                        "depart": "18:13",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "NGAU",
+                        "zone": "3",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "18:19",
+                        "depart": "18:19",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "18:22",
+                        "depart": "18:22",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WEST",
+                        "zone": "4",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "18:25",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MELL",
+                        "zone": "4",
+                        "sequence": 4
+                    }
+                ]
+            }
+        ],
+        "stops": [
+            {
+                "id": "WELL",
+                "name": "Wellington Station",
+                "zone": "1",
+                "position": "-41.278452, 174.780872",
+                "sequence": 0
+            },
+            {
+                "id": "NGAU",
+                "name": "Ngauranga Station",
+                "zone": "3",
+                "position": "-41.249038, 174.813013",
+                "sequence": 1
+            },
+            {
+                "id": "PETO",
+                "name": "Petone Station",
+                "zone": "4",
+                "position": "-41.222011, 174.869488",
+                "sequence": 2
+            },
+            {
+                "id": "WEST",
+                "name": "Western Hutt Station",
+                "zone": "4",
+                "position": "-41.21187, 174.889995",
+                "sequence": 3
+            },
+            {
+                "id": "MELL",
+                "name": "Melling Station",
+                "zone": "4",
+                "position": "-41.203486, 174.9054",
+                "sequence": 4
+            }
+        ]
+    }
+}

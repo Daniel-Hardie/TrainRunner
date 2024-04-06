@@ -26,25 +26,17 @@ function ConvertJsonToScheduleDataSource {
             $outputArray.Add($outputString)
         }
     }
-
-    
-
-    # foreach ($station in $stationArray){
-    #     $stopId = $station.stop_id
-    #     $stopCode = $station.stop_code
-    #     $stopName = $station.stop_name
-    #     $stopLat = $station.stop_lat
-    #     $stopLon = $station.stop_lon
-    #     $zoneId = $station.zone_id
-    #     $parentStation = $station.parent_station
-
-    #     #MetlinkSchedule(parentStationCode = "UPPE", departTime = "04:30", tripId = "TripId1", orderId = 0, lineId = 5, toWellington = true),
-    
-    #     $outputString = "StationObject(metlinkRouteId = ""$($routeId)"", metlinkStopId = ""$($stopId)"", metlinkStopCode = ""$($stopCode)"", metlinkStopName = ""$($stopName)"", metlinkStopLatitude = $($stopLat)f, metlinkStopLongitude = $($stopLon)f, metlinkZoneId = $($zoneId), metlinkParentStation = ""$($parentStation)""),"
-    #     $outputArray.Add($outputString)
-    # }
-
-
+    foreach ($outboundSchedule in $outboundScheduleTripsArray){
+        $tripId = $outboundSchedule.id
+        $toWellington = "false"
+        foreach($stop in $outboundSchedule.stops){
+            $parentStationCode = $stop.stop
+            $departTime = $stop.depart
+            $orderId = $stop.sequence
+            $outputString = "MetlinkSchedule(parentStationCode = ""$($parentStationCode)"", departTime = ""$($departTime)"", tripId = ""($tripId)"", orderId = $($orderId), lineId = $($routeId), toWellington = $($toWellington)),"
+            $outputArray.Add($outputString)
+        }
+    }
     $outputArray | Out-File -FilePath $outputFilePath -Force
 }
 
@@ -52,4 +44,24 @@ function ConvertJsonToScheduleDataSource {
 $inputFilePath = ".\HVL-Schedule-Modified.json"
 $outputFilePath = ".\data-source-schedules-HVL.txt"
 $routeId = "5"
+ConvertJsonToScheduleDataSource -inputFilepath $inputFilePath -outputFilePath $outputFilePath -routeId $routeId
+
+$inputFilePath = ".\JVL-Schedule-Modified.json"
+$outputFilePath = ".\data-source-schedules-JVL.txt"
+$routeId = "6"
+ConvertJsonToScheduleDataSource -inputFilepath $inputFilePath -outputFilePath $outputFilePath -routeId $routeId
+
+$inputFilePath = ".\KPL-Schedule-Modified.json"
+$outputFilePath = ".\data-source-schedules-KPL.txt"
+$routeId = "2"
+ConvertJsonToScheduleDataSource -inputFilepath $inputFilePath -outputFilePath $outputFilePath -routeId $routeId
+
+$inputFilePath = ".\MEL-Schedule-Modified.json"
+$outputFilePath = ".\data-source-schedules-MEL.txt"
+$routeId = "3"
+ConvertJsonToScheduleDataSource -inputFilepath $inputFilePath -outputFilePath $outputFilePath -routeId $routeId
+
+$inputFilePath = ".\WRL-Schedule-Modified.json"
+$outputFilePath = ".\data-source-schedules-WRL.txt"
+$routeId = "4"
 ConvertJsonToScheduleDataSource -inputFilepath $inputFilePath -outputFilePath $outputFilePath -routeId $routeId

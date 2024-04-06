@@ -1,0 +1,1445 @@
+{
+    "start": "2024-04-09",
+    "end": "2024-04-09",
+    "inbound": {
+        "title": "Wairarapa Line (Masterton - Wellington)",
+        "trips": [
+            {
+                "id": "WRL__1__1601__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "05:46",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MAST",
+                        "zone": "14",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "05:49",
+                        "depart": "05:49",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "RENA",
+                        "zone": "14",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "05:53",
+                        "depart": "05:53",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "SOLW",
+                        "zone": "14",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "06:04",
+                        "depart": "06:04",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "CART",
+                        "zone": "13",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "06:14",
+                        "depart": "06:14",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MATA",
+                        "zone": "13",
+                        "sequence": 4
+                    },
+                    {
+                        "arrive": "06:19",
+                        "depart": "06:19",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WOOD",
+                        "zone": "12",
+                        "sequence": 5
+                    },
+                    {
+                        "arrive": "06:27",
+                        "depart": "06:27",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "FEAT",
+                        "zone": "11",
+                        "sequence": 6
+                    },
+                    {
+                        "arrive": "06:48",
+                        "depart": "06:48",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MAYM",
+                        "zone": "8",
+                        "sequence": 7
+                    },
+                    {
+                        "arrive": "06:56",
+                        "depart": "06:56",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "UPPE",
+                        "zone": "7",
+                        "sequence": 8
+                    },
+                    {
+                        "arrive": "07:12",
+                        "depart": "07:12",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WATE",
+                        "zone": "4",
+                        "sequence": 9
+                    },
+                    {
+                        "arrive": "07:18",
+                        "depart": "07:18",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 10
+                    },
+                    {
+                        "arrive": "07:30",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 11
+                    }
+                ]
+            },
+            {
+                "id": "WRL__1__1603__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "06:20",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MAST",
+                        "zone": "14",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "06:23",
+                        "depart": "06:23",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "RENA",
+                        "zone": "14",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "06:27",
+                        "depart": "06:27",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "SOLW",
+                        "zone": "14",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "06:38",
+                        "depart": "06:38",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "CART",
+                        "zone": "13",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "06:48",
+                        "depart": "06:48",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MATA",
+                        "zone": "13",
+                        "sequence": 4
+                    },
+                    {
+                        "arrive": "06:53",
+                        "depart": "06:53",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WOOD",
+                        "zone": "12",
+                        "sequence": 5
+                    },
+                    {
+                        "arrive": "07:02",
+                        "depart": "07:02",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "FEAT",
+                        "zone": "11",
+                        "sequence": 6
+                    },
+                    {
+                        "arrive": "07:23",
+                        "depart": "07:23",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MAYM",
+                        "zone": "8",
+                        "sequence": 7
+                    },
+                    {
+                        "arrive": "07:32",
+                        "depart": "07:32",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "UPPE",
+                        "zone": "7",
+                        "sequence": 8
+                    },
+                    {
+                        "arrive": "07:50",
+                        "depart": "07:50",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WATE",
+                        "zone": "4",
+                        "sequence": 9
+                    },
+                    {
+                        "arrive": "07:58",
+                        "depart": "07:58",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 10
+                    },
+                    {
+                        "arrive": "08:10",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 11
+                    }
+                ]
+            },
+            {
+                "id": "WRL__1__1605__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "06:47",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MAST",
+                        "zone": "14",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "06:50",
+                        "depart": "06:50",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "RENA",
+                        "zone": "14",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "06:54",
+                        "depart": "06:54",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "SOLW",
+                        "zone": "14",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "07:05",
+                        "depart": "07:05",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "CART",
+                        "zone": "13",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "07:15",
+                        "depart": "07:15",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MATA",
+                        "zone": "13",
+                        "sequence": 4
+                    },
+                    {
+                        "arrive": "07:20",
+                        "depart": "07:20",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WOOD",
+                        "zone": "12",
+                        "sequence": 5
+                    },
+                    {
+                        "arrive": "07:28",
+                        "depart": "07:28",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "FEAT",
+                        "zone": "11",
+                        "sequence": 6
+                    },
+                    {
+                        "arrive": "07:49",
+                        "depart": "07:49",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MAYM",
+                        "zone": "8",
+                        "sequence": 7
+                    },
+                    {
+                        "arrive": "07:57",
+                        "depart": "07:57",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "UPPE",
+                        "zone": "7",
+                        "sequence": 8
+                    },
+                    {
+                        "arrive": "08:13",
+                        "depart": "08:13",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WATE",
+                        "zone": "4",
+                        "sequence": 9
+                    },
+                    {
+                        "arrive": "08:19",
+                        "depart": "08:19",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 10
+                    },
+                    {
+                        "arrive": "08:31",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 11
+                    }
+                ]
+            },
+            {
+                "id": "WRL__1__1607__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "10:30",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MAST",
+                        "zone": "14",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "10:33",
+                        "depart": "10:33",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "RENA",
+                        "zone": "14",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "10:37",
+                        "depart": "10:37",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "SOLW",
+                        "zone": "14",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "10:48",
+                        "depart": "10:48",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "CART",
+                        "zone": "13",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "10:57",
+                        "depart": "10:57",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MATA",
+                        "zone": "13",
+                        "sequence": 4
+                    },
+                    {
+                        "arrive": "11:02",
+                        "depart": "11:02",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WOOD",
+                        "zone": "12",
+                        "sequence": 5
+                    },
+                    {
+                        "arrive": "11:10",
+                        "depart": "11:10",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "FEAT",
+                        "zone": "11",
+                        "sequence": 6
+                    },
+                    {
+                        "arrive": "11:29",
+                        "depart": "11:29",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MAYM",
+                        "zone": "8",
+                        "sequence": 7
+                    },
+                    {
+                        "arrive": "11:36",
+                        "depart": "11:36",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "UPPE",
+                        "zone": "7",
+                        "sequence": 8
+                    },
+                    {
+                        "arrive": "11:51",
+                        "depart": "11:51",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WATE",
+                        "zone": "4",
+                        "sequence": 9
+                    },
+                    {
+                        "arrive": "11:57",
+                        "depart": "11:57",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 10
+                    },
+                    {
+                        "arrive": "12:10",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 11
+                    }
+                ]
+            },
+            {
+                "id": "WRL__1__1609__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "15:38",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "MAST",
+                        "zone": "14",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "15:41",
+                        "depart": "15:41",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "RENA",
+                        "zone": "14",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "15:45",
+                        "depart": "15:45",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "SOLW",
+                        "zone": "14",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "15:56",
+                        "depart": "15:56",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "CART",
+                        "zone": "13",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "16:05",
+                        "depart": "16:05",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MATA",
+                        "zone": "13",
+                        "sequence": 4
+                    },
+                    {
+                        "arrive": "16:10",
+                        "depart": "16:10",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WOOD",
+                        "zone": "12",
+                        "sequence": 5
+                    },
+                    {
+                        "arrive": "16:18",
+                        "depart": "16:18",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "FEAT",
+                        "zone": "11",
+                        "sequence": 6
+                    },
+                    {
+                        "arrive": "16:37",
+                        "depart": "16:37",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MAYM",
+                        "zone": "8",
+                        "sequence": 7
+                    },
+                    {
+                        "arrive": "16:44",
+                        "depart": "16:44",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "UPPE",
+                        "zone": "7",
+                        "sequence": 8
+                    },
+                    {
+                        "arrive": "16:59",
+                        "depart": "16:59",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WATE",
+                        "zone": "4",
+                        "sequence": 9
+                    },
+                    {
+                        "arrive": "17:05",
+                        "depart": "17:05",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 10
+                    },
+                    {
+                        "arrive": "17:18",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 11
+                    }
+                ]
+            }
+        ],
+        "stops": [
+            {
+                "id": "MAST",
+                "name": "Masterton Station",
+                "zone": "14",
+                "position": "-40.940433, 175.654748",
+                "sequence": 0
+            },
+            {
+                "id": "RENA",
+                "name": "Renall Street Station",
+                "zone": "14",
+                "position": "-40.94765, 175.638408",
+                "sequence": 1
+            },
+            {
+                "id": "SOLW",
+                "name": "Solway Station",
+                "zone": "14",
+                "position": "-40.953389, 175.625518",
+                "sequence": 2
+            },
+            {
+                "id": "CART",
+                "name": "Carterton Station",
+                "zone": "13",
+                "position": "-41.021683, 175.523313",
+                "sequence": 3
+            },
+            {
+                "id": "MATA",
+                "name": "Matarawa Station",
+                "zone": "13",
+                "position": "-41.048809, 175.448736",
+                "sequence": 4
+            },
+            {
+                "id": "WOOD",
+                "name": "Woodside Station",
+                "zone": "12",
+                "position": "-41.067362, 175.401898",
+                "sequence": 5
+            },
+            {
+                "id": "FEAT",
+                "name": "Featherston Station",
+                "zone": "11",
+                "position": "-41.113454, 175.329763",
+                "sequence": 6
+            },
+            {
+                "id": "MAYM",
+                "name": "Maymorn Station",
+                "zone": "8",
+                "position": "-41.108086, 175.13409",
+                "sequence": 7
+            },
+            {
+                "id": "UPPE",
+                "name": "Upper Hutt Station",
+                "zone": "7",
+                "position": "-41.126232, 175.070318",
+                "sequence": 8
+            },
+            {
+                "id": "WATE",
+                "name": "Waterloo Station",
+                "zone": "4",
+                "position": "-41.213922, 174.921132",
+                "sequence": 9
+            },
+            {
+                "id": "PETO",
+                "name": "Petone Station",
+                "zone": "4",
+                "position": "-41.222011, 174.869488",
+                "sequence": 10
+            },
+            {
+                "id": "WELL",
+                "name": "Wellington Station",
+                "zone": "1",
+                "position": "-41.278452, 174.780872",
+                "sequence": 11
+            }
+        ]
+    },
+    "outbound": {
+        "title": "Wairarapa Line (Wellington - Masterton)",
+        "trips": [
+            {
+                "id": "WRL__0__1602__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "08:21",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "08:34",
+                        "depart": "08:34",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "08:40",
+                        "depart": "08:40",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WATE",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "08:55",
+                        "depart": "08:55",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "UPPE",
+                        "zone": "7",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "09:02",
+                        "depart": "09:02",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MAYM",
+                        "zone": "8",
+                        "sequence": 4
+                    },
+                    {
+                        "arrive": "09:21",
+                        "depart": "09:21",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "FEAT",
+                        "zone": "11",
+                        "sequence": 5
+                    },
+                    {
+                        "arrive": "09:29",
+                        "depart": "09:29",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WOOD",
+                        "zone": "12",
+                        "sequence": 6
+                    },
+                    {
+                        "arrive": "09:34",
+                        "depart": "09:34",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MATA",
+                        "zone": "13",
+                        "sequence": 7
+                    },
+                    {
+                        "arrive": "09:43",
+                        "depart": "09:43",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "CART",
+                        "zone": "13",
+                        "sequence": 8
+                    },
+                    {
+                        "arrive": "09:54",
+                        "depart": "09:54",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "SOLW",
+                        "zone": "14",
+                        "sequence": 9
+                    },
+                    {
+                        "arrive": "09:58",
+                        "depart": "09:58",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "RENA",
+                        "zone": "14",
+                        "sequence": 10
+                    },
+                    {
+                        "arrive": "10:01",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MAST",
+                        "zone": "14",
+                        "sequence": 11
+                    }
+                ]
+            },
+            {
+                "id": "WRL__0__1604__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "12:45",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "12:58",
+                        "depart": "12:58",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "13:04",
+                        "depart": "13:04",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WATE",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "13:19",
+                        "depart": "13:19",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "UPPE",
+                        "zone": "7",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "13:26",
+                        "depart": "13:26",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MAYM",
+                        "zone": "8",
+                        "sequence": 4
+                    },
+                    {
+                        "arrive": "13:45",
+                        "depart": "13:45",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "FEAT",
+                        "zone": "11",
+                        "sequence": 5
+                    },
+                    {
+                        "arrive": "13:53",
+                        "depart": "13:53",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WOOD",
+                        "zone": "12",
+                        "sequence": 6
+                    },
+                    {
+                        "arrive": "13:58",
+                        "depart": "13:58",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MATA",
+                        "zone": "13",
+                        "sequence": 7
+                    },
+                    {
+                        "arrive": "14:07",
+                        "depart": "14:07",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "CART",
+                        "zone": "13",
+                        "sequence": 8
+                    },
+                    {
+                        "arrive": "14:18",
+                        "depart": "14:18",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "SOLW",
+                        "zone": "14",
+                        "sequence": 9
+                    },
+                    {
+                        "arrive": "14:22",
+                        "depart": "14:22",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "RENA",
+                        "zone": "14",
+                        "sequence": 10
+                    },
+                    {
+                        "arrive": "14:25",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MAST",
+                        "zone": "14",
+                        "sequence": 11
+                    }
+                ]
+            },
+            {
+                "id": "WRL__0__1606__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "16:25",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "16:38",
+                        "depart": "16:38",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "16:44",
+                        "depart": "16:44",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WATE",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "17:03",
+                        "depart": "17:03",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "UPPE",
+                        "zone": "7",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "17:12",
+                        "depart": "17:12",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MAYM",
+                        "zone": "8",
+                        "sequence": 4
+                    },
+                    {
+                        "arrive": "17:33",
+                        "depart": "17:33",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "FEAT",
+                        "zone": "11",
+                        "sequence": 5
+                    },
+                    {
+                        "arrive": "17:42",
+                        "depart": "17:42",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WOOD",
+                        "zone": "12",
+                        "sequence": 6
+                    },
+                    {
+                        "arrive": "17:47",
+                        "depart": "17:47",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MATA",
+                        "zone": "13",
+                        "sequence": 7
+                    },
+                    {
+                        "arrive": "17:56",
+                        "depart": "17:56",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "CART",
+                        "zone": "13",
+                        "sequence": 8
+                    },
+                    {
+                        "arrive": "18:07",
+                        "depart": "18:07",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "SOLW",
+                        "zone": "14",
+                        "sequence": 9
+                    },
+                    {
+                        "arrive": "18:11",
+                        "depart": "18:11",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "RENA",
+                        "zone": "14",
+                        "sequence": 10
+                    },
+                    {
+                        "arrive": "18:13",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MAST",
+                        "zone": "14",
+                        "sequence": 11
+                    }
+                ]
+            },
+            {
+                "id": "WRL__0__1608__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "17:30",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "17:43",
+                        "depart": "17:43",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "17:49",
+                        "depart": "17:49",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WATE",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "18:07",
+                        "depart": "18:07",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "UPPE",
+                        "zone": "7",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "18:15",
+                        "depart": "18:15",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MAYM",
+                        "zone": "8",
+                        "sequence": 4
+                    },
+                    {
+                        "arrive": "18:36",
+                        "depart": "18:36",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "FEAT",
+                        "zone": "11",
+                        "sequence": 5
+                    },
+                    {
+                        "arrive": "18:44",
+                        "depart": "18:44",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WOOD",
+                        "zone": "12",
+                        "sequence": 6
+                    },
+                    {
+                        "arrive": "18:49",
+                        "depart": "18:49",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MATA",
+                        "zone": "13",
+                        "sequence": 7
+                    },
+                    {
+                        "arrive": "18:58",
+                        "depart": "18:58",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "CART",
+                        "zone": "13",
+                        "sequence": 8
+                    },
+                    {
+                        "arrive": "19:09",
+                        "depart": "19:09",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "SOLW",
+                        "zone": "14",
+                        "sequence": 9
+                    },
+                    {
+                        "arrive": "19:13",
+                        "depart": "19:13",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "RENA",
+                        "zone": "14",
+                        "sequence": 10
+                    },
+                    {
+                        "arrive": "19:15",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MAST",
+                        "zone": "14",
+                        "sequence": 11
+                    }
+                ]
+            },
+            {
+                "id": "WRL__0__1610__RAIL__Rail_MTuWThF-XHol_20240317",
+                "stops": [
+                    {
+                        "arrive": "",
+                        "depart": "18:18",
+                        "can_board": true,
+                        "can_alight": false,
+                        "is_timing_point": true,
+                        "stop": "WELL",
+                        "zone": "1",
+                        "sequence": 0
+                    },
+                    {
+                        "arrive": "18:31",
+                        "depart": "18:31",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "PETO",
+                        "zone": "4",
+                        "sequence": 1
+                    },
+                    {
+                        "arrive": "18:37",
+                        "depart": "18:37",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WATE",
+                        "zone": "4",
+                        "sequence": 2
+                    },
+                    {
+                        "arrive": "18:55",
+                        "depart": "18:55",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "UPPE",
+                        "zone": "7",
+                        "sequence": 3
+                    },
+                    {
+                        "arrive": "19:02",
+                        "depart": "19:02",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MAYM",
+                        "zone": "8",
+                        "sequence": 4
+                    },
+                    {
+                        "arrive": "19:22",
+                        "depart": "19:22",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "FEAT",
+                        "zone": "11",
+                        "sequence": 5
+                    },
+                    {
+                        "arrive": "19:30",
+                        "depart": "19:30",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "WOOD",
+                        "zone": "12",
+                        "sequence": 6
+                    },
+                    {
+                        "arrive": "19:35",
+                        "depart": "19:35",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MATA",
+                        "zone": "13",
+                        "sequence": 7
+                    },
+                    {
+                        "arrive": "19:44",
+                        "depart": "19:44",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "CART",
+                        "zone": "13",
+                        "sequence": 8
+                    },
+                    {
+                        "arrive": "19:55",
+                        "depart": "19:55",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "SOLW",
+                        "zone": "14",
+                        "sequence": 9
+                    },
+                    {
+                        "arrive": "20:01",
+                        "depart": "20:01",
+                        "can_board": true,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "RENA",
+                        "zone": "14",
+                        "sequence": 10
+                    },
+                    {
+                        "arrive": "20:03",
+                        "depart": "",
+                        "can_board": false,
+                        "can_alight": true,
+                        "is_timing_point": true,
+                        "stop": "MAST",
+                        "zone": "14",
+                        "sequence": 11
+                    }
+                ]
+            }
+        ],
+        "stops": [
+            {
+                "id": "WELL",
+                "name": "Wellington Station",
+                "zone": "1",
+                "position": "-41.278452, 174.780872",
+                "sequence": 0
+            },
+            {
+                "id": "PETO",
+                "name": "Petone Station",
+                "zone": "4",
+                "position": "-41.222011, 174.869488",
+                "sequence": 1
+            },
+            {
+                "id": "WATE",
+                "name": "Waterloo Station",
+                "zone": "4",
+                "position": "-41.213922, 174.921132",
+                "sequence": 2
+            },
+            {
+                "id": "UPPE",
+                "name": "Upper Hutt Station",
+                "zone": "7",
+                "position": "-41.126232, 175.070318",
+                "sequence": 3
+            },
+            {
+                "id": "MAYM",
+                "name": "Maymorn Station",
+                "zone": "8",
+                "position": "-41.108086, 175.13409",
+                "sequence": 4
+            },
+            {
+                "id": "FEAT",
+                "name": "Featherston Station",
+                "zone": "11",
+                "position": "-41.113454, 175.329763",
+                "sequence": 5
+            },
+            {
+                "id": "WOOD",
+                "name": "Woodside Station",
+                "zone": "12",
+                "position": "-41.067362, 175.401898",
+                "sequence": 6
+            },
+            {
+                "id": "MATA",
+                "name": "Matarawa Station",
+                "zone": "13",
+                "position": "-41.048809, 175.448736",
+                "sequence": 7
+            },
+            {
+                "id": "CART",
+                "name": "Carterton Station",
+                "zone": "13",
+                "position": "-41.021683, 175.523313",
+                "sequence": 8
+            },
+            {
+                "id": "SOLW",
+                "name": "Solway Station",
+                "zone": "14",
+                "position": "-40.953389, 175.625518",
+                "sequence": 9
+            },
+            {
+                "id": "RENA",
+                "name": "Renall Street Station",
+                "zone": "14",
+                "position": "-40.94765, 175.638408",
+                "sequence": 10
+            },
+            {
+                "id": "MAST",
+                "name": "Masterton Station",
+                "zone": "14",
+                "position": "-40.940433, 175.654748",
+                "sequence": 11
+            }
+        ]
+    },
+    "timetablePdf": "https://backend.metlink.org.nz/assets/PDF-Timetables/WRL-200-206-Timetable-January-2024-v2.pdf",
+    "timetablePdfs": [
+        {
+            "id": 1352,
+            "title": "WRL 200 206 Timetable January 2024 v2",
+            "link": "https://backend.metlink.org.nz/assets/PDF-Timetables/WRL-200-206-Timetable-January-2024-v2.pdf"
+        }
+    ],
+    "lastEdited": "2022-08-01 15:00:15"
+}

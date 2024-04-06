@@ -1,0 +1,13 @@
+To get schedule info, I copied what the Metlink site does, which is the following in postman:
+
+Performed a POST on https://backend.metlink.org.nz/api/v1/timetable
+Had a JSON body of the following and would just update service:
+{
+  "service": "HVL",
+  "start": "2024-04-02",
+  "end": "2024-04-02"
+}
+
+{Linecode}-Schedule-Original.json holds the raw response from Metlink
+{Linecode}-Schedule-Modified.json removes the extra cruft and just leaves the inbound and outbound arrays
+data-source-schedules-{Linecode}.txt is the output code to copy into the TrainRunner app
