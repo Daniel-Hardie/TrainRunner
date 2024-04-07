@@ -182,15 +182,15 @@ class RouteViewModel(
                     }
                 }
 
-                val currentDateTime = LocalDateTime.now()
+                val currentDateTime = LocalDateTime.now().withNano(0)
                 val nextDay = currentDateTime.with(TemporalAdjusters.next(dayOfWeekValue))
                 val trainArrivalTime = nextDay.withHour(timeConverted.hour).withMinute(timeConverted.minute).withSecond(0)
-                val resultDateTime = if (currentDateTime.dayOfWeek == dayOfWeekValue &&
-                    currentDateTime.toLocalTime().isAfter(trainArrivalTime.toLocalTime())) {
-                    trainArrivalTime.plusWeeks(1).withHour(6).withMinute(57).withSecond(0)
-                } else {
-                    trainArrivalTime
-                }
+//                val resultDateTime = if (currentDateTime.dayOfWeek == dayOfWeekValue &&
+//                    currentDateTime.toLocalTime().isAfter(trainArrivalTime.toLocalTime())) {
+//                    trainArrivalTime.plusWeeks(1).withHour(6).withMinute(57).withSecond(0)
+//                } else {
+//                    trainArrivalTime
+//                }
                 val nextAlertDateTime: Date = Date.from(trainArrivalTime.atZone(ZoneId.systemDefault()).toInstant());
 
 
