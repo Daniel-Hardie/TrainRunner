@@ -104,6 +104,7 @@ fun HomeScreen(
             if(!foundTrainInProgress && viewModel.state.savedScheduleTime < Date()){
                 viewModel.updateExpiredTrainTimes()
                 viewModel.getNextTrainTime()
+                timeRemainingOnChange("No times found")
             }
 
             if(viewModel.state.isLoading){
