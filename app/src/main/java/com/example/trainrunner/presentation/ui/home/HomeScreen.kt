@@ -73,27 +73,29 @@ fun HomeScreen(
             val departureList = livePrediction.component1().departures
             for (departure in departureList){
                 // Convert response train arrival time to date object
-                val arrivalDate: Date = Date.from(OffsetDateTime.parse(departure.arrival.aimed, DateTimeFormatter.ISO_OFFSET_DATE_TIME).toInstant())
-                // If this departure is going in same direction and is expected to arrive at the saved schedule time
-                if (departure.direction == savedDirection && arrivalDate == viewModel.state.savedScheduleTime) {
-                    // If this is null, it indicates the train for this service is not on the track yet
-                    if(departure.arrival.expected != null){
-                        val expectedTime = Date.from(OffsetDateTime.parse(departure.arrival.expected.toString(), DateTimeFormatter.ISO_OFFSET_DATE_TIME).toInstant())
-                        liveTrackingTimeOnChange(expectedTime)
+                if(departure.arrival.aimed != ""){
+                    val arrivalDate: Date = Date.from(OffsetDateTime.parse(departure.arrival.aimed, DateTimeFormatter.ISO_OFFSET_DATE_TIME).toInstant())
+                    // If this departure is going in same direction and is expected to arrive at the saved schedule time
+                    if (departure.direction == savedDirection && arrivalDate == viewModel.state.savedScheduleTime) {
+                        // If this is null, it indicates the train for this service is not on the track yet
+                        if(departure.arrival.expected != null){
+                            val expectedTime = Date.from(OffsetDateTime.parse(departure.arrival.expected.toString(), DateTimeFormatter.ISO_OFFSET_DATE_TIME).toInstant())
+                            liveTrackingTimeOnChange(expectedTime)
 
-                        val currentDateTime = LocalDateTime.now()
-                        val targetDateTime = LocalDateTime.ofInstant(expectedTime.toInstant(), ZoneId.systemDefault());
+                            val currentDateTime = LocalDateTime.now()
+                            val targetDateTime = LocalDateTime.ofInstant(expectedTime.toInstant(), ZoneId.systemDefault());
 
-                        // find the difference in time to display
-                        val timeDifference = Duration.between(currentDateTime, targetDateTime)
-                        val daysDifference = timeDifference.toDays().toString().padStart(2, '0')
-                        val hoursDifference = (timeDifference.toHours() % 24).toString().padStart(2, '0')
-                        val minutesDifference = (timeDifference.toMinutes() % 60).toString().padStart(2, '0')
-                        val secondsDifference = (timeDifference.seconds % 60).toString().padStart(2, '0')
+                            // find the difference in time to display
+                            val timeDifference = Duration.between(currentDateTime, targetDateTime)
+                            val daysDifference = timeDifference.toDays().toString().padStart(2, '0')
+                            val hoursDifference = (timeDifference.toHours() % 24).toString().padStart(2, '0')
+                            val minutesDifference = (timeDifference.toMinutes() % 60).toString().padStart(2, '0')
+                            val secondsDifference = (timeDifference.seconds % 60).toString().padStart(2, '0')
 
-                        val timeMessage = "${daysDifference} days, ${hoursDifference} : ${minutesDifference} : ${secondsDifference}"
-                        foundTrainInProgress = true
-                        timeRemainingOnChange(timeMessage)
+                            val timeMessage = "${daysDifference} days, ${hoursDifference} : ${minutesDifference} : ${secondsDifference}"
+                            foundTrainInProgress = true
+                            timeRemainingOnChange(timeMessage)
+                        }
                     }
                 }
             }
